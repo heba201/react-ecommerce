@@ -163,7 +163,7 @@ Brands
         placeholder="Search products..."
         className="w-full  font-medium text-sm leading-none text-[#36415380] w-[288px] h-[46px] rounded-[12px] border border-[1px] px-[48px] pl-[16px] pt-[12px] pb-[13px] bg-[#F9FAFB] border-t border-[#E5E7EB]"
       />
-      <button className="absolute flex items-center justify-center w-8 h-8 rounded-lg bg-[#16A34A] text-white">
+      <button className="absolute top-[7px] bottom-[7px] right-[8px] flex items-center justify-center w-8 h-8 rounded-lg bg-[#16A34A] text-white">
         <IoIosSearch className='w-[17.5px] h-[14px]' />
       </button>
     </div>
