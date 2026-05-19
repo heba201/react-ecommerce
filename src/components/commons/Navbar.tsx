@@ -144,7 +144,7 @@ Brands
   >
 
     {/* Top */}
-    <div className="flex items-center justify-between border-b border-[#F3F4F6] pt-[18px] pl-[16px] pb-[18px] pr-[16px]">
+    <div className="w-full flex items-center justify-between border-b border-[#F3F4F6] pt-[18px] pl-[16px] pb-[18px] pr-[16px]">
       <Image src={fresh_cart} alt='fresh_cart' />
       <button
         onClick={() => setOpen(false)}
@@ -156,7 +156,7 @@ Brands
     </div>
 
     {/* Search */}
-    <form className="p-4 border-b border-[#F3F4F6]">
+    <form className="w-full pt-4 pb-4 border-b border-[#F3F4F6]">
  <div className="relative">
       <input
         type="text"
@@ -192,7 +192,7 @@ Brands
     <div className='border-t border-[#F3F4F6]'></div>
       
  
-      <div className='p-[16px]'>
+      <div className='pt-[16px] pb-[16px]'>
          <a className="flex items-center justify-between">
                <div className="flex  items-center gap-[2px] pt-[12px] pl-[12px] pb-[16px]">
                 <div className="flex  items-center  justify-center bg-[#FEF2F2] rounded-full w-[36px] h-[36px]">
@@ -200,7 +200,7 @@ Brands
                 </div>
                 <span className='font-medium text-base leading-6 text-[#64153]'>Wishlist</span>
                </div>
-               <span className='text-center font-medium text-base leading-6 text-[#FB2C36] w-[28px] h-[24px] rounded-full px-[10px] py-[4px]'>5</span>
+               <span className='text-center font-medium text-base leading-6 text-white bg-[#FB2C36] w-[28px] h-[24px] rounded-full px-[10px] py-[4px]'>5</span>
           </a>
 
          <a className="flex items-center justify-between">
@@ -208,15 +208,15 @@ Brands
                 <div className="flex  items-center  justify-center bg-[#F0FDF4] rounded-full w-[36px] h-[36px]">
                  <IoCart className='w-5 h-4 text-[#16A34A]' />
                 </div>
-                <span className='font-medium text-base leading-6 text-[#16A34A] w-[27px] h-[24px] rounded-full px-[10px] py-[4px]'>3</span>
+                <span className='font-medium text-base leading-6 text-white bg-[#16A34A] w-[27px] h-[24px] rounded-full px-[10px] py-[4px]'>3</span>
                </div>
           </a>
            
      </div>
 
+ <div className='border-t border-[#F3F4F6] w-[188px] h-[1px]'></div>
 
-
-     <div className='p-[16px]'>
+     <div className='pt-[16px] pb-[16px]'>
          <a className="flex items-center justify-between">
                <div className="flex  items-center gap-[2px] pt-[12px] pl-[12px] pb-[16px]">
                 <div className="flex  items-center  justify-center bg-[#F3F4F6] rounded-full w-[36px] h-[36px]">
@@ -237,7 +237,7 @@ Brands
            <div className='border-t border-[#F3F4F6]'></div>
      </div>
 
-     <a className='flex items-center gap-[12px] bg-[#F9FAFB] border-t border-[#F3F4F6] p-[16px] rounded-xl border border-[1px]'>
+     <a className='flex items-center gap-[12px] bg-[#F9FAFB] border-t border-[#F3F4F6] pt-[16px] pb-[16px] rounded-xl border border-[1px]'>
        <div className='flex items-center justify-center bg-[#DCFCE7] rounded-full w-[40px] h-[40px]'>
         <BiSupport className='w-5 h-4 text-[#16A34A]' />
        </div>
