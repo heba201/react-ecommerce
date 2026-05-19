@@ -157,7 +157,7 @@ Brands
 
     {/* Search */}
     <form className="p-4 border-b border-[#F3F4F6]">
- <div className="relative border-b">
+ <div className="relative">
       <input
         type="text"
         placeholder="Search products..."
