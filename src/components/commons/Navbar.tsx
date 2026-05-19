@@ -161,9 +161,9 @@ Brands
       <input
         type="text"
         placeholder="Search products..."
-        className="w-full  font-medium text-sm leading-none text-[#36415380] bg-[#F9FAFB]"
+        className="w-full  font-medium text-sm leading-none text-[#36415380] w-[288px] h-[46px] rounded-[12px] border border-[1px] px-[48px] pl-[16px] pt-[12px] pb-[13px] bg-[#F9FAFB] border-t border-[#E5E7EB]"
       />
-      <button className="flex items-center justify-center w-8 h-8 rounded-lg bg-[#16A34A] text-white">
+      <button className="absolute flex items-center justify-center w-8 h-8 rounded-lg bg-[#16A34A] text-white">
         <IoIosSearch className='w-[17.5px] h-[14px]' />
       </button>
     </div>
@@ -203,7 +203,7 @@ Brands
 
          <button className="flex items-center justify-between">
                <div className="flex  items-center gap-[2px]">
-                <div className="flex  items-center  justify-center bg-[#FEF2F2] w-[36px] h-[36px]">
+                <div className="flex  items-center  justify-center bg-[#FEF2F2] rounded-full  w-[36px] h-[36px]">
                  <FaSignOutAlt className='w-5 h-4 text-[#16A34A]' />
                 </div>
                 <span className='font-medium text-base leading-6 text-[#FB2C36]'>Sign Out</span>
@@ -212,8 +212,8 @@ Brands
            <div className='border-t border-[#F3F4F6]'></div>
      </div>
 
-     <a className='flex items-center gap-[12px] bg-[#F9FAFB] border-t border-[#F3F4F6] p-[16px]'>
-       <div className='flex items-center justify-center bg-[#DCFCE7] w-[40px] h-[40px]'>
+     <a className='flex items-center gap-[12px] bg-[#F9FAFB] border-t border-[#F3F4F6] p-[16px] rounded-xl border border-[1px]'>
+       <div className='flex items-center justify-center bg-[#DCFCE7] rounded-full w-[40px] h-[40px]'>
         <BiSupport className='w-5 h-4 text-[#16A34A]' />
        </div>
        <div>
