@@ -208,8 +208,9 @@ Brands
                 <div className="flex  items-center  justify-center bg-[#F0FDF4] rounded-full w-[36px] h-[36px]">
                  <IoCart className='w-5 h-4 text-[#16A34A]' />
                 </div>
+                 <span className='font-medium text-base leading-6 text-[#364153]'>Cart</span>
                </div>
-                <span className='font-medium text-base leading-6 text-white bg-[#16A34A] w-[27px] h-[24px] rounded-full px-[10px] py-[4px]'>3</span>
+                <span className='flex items-center justify-center font-medium text-base leading-6 text-white bg-[#16A34A] w-[27px] h-[24px] rounded-full px-[10px] py-[4px]'>3</span>
           </a>
            
      </div>
