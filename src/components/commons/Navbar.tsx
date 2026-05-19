@@ -235,7 +235,7 @@ Brands
                 <span className='font-medium text-base leading-6 text-[#FB2C36]'>Sign Out</span>
                </div>
          </button>
-           <div className='border-t border-[#F3F4F6] p-[16px]'></div>
+           <div className='border-t border-[#F3F4F6] pl-[16px] pr-[16px]'></div>
      </div>
 
      <a className='flex items-center gap-[12px] bg-[#F9FAFB] border-t border-[#F3F4F6]  p-[16px] rounded-xl border border-[1px]'>
