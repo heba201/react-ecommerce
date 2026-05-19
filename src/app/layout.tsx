@@ -6,6 +6,7 @@ import Footer from "@/components/commons/Footer";
 import { Toaster } from "@/components/ui/sonner";
 import AuthProvider from "@/provider/auth-provider";
 import CartContextProvider from "@/provider/cart-provider";
+ 
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,15 +33,17 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col overflow-x-hidden max-w-full">
         <AuthProvider>
           <CartContextProvider>
+           
         <Navbar/>
-        <div className="mt-21">
- {children}
+        <div className="w-full overflow-x-hidden max-w-full">
+         {children}
+        
         </div>
        <Toaster position="top-center" richColors/>
-      <Footer/>
+       <Footer/>
        </CartContextProvider>
       </AuthProvider>
       </body>
