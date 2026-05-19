@@ -136,7 +136,7 @@ Brands
 
  {/* Sidebar */}
   <div
-    className={`absolute top-[70px] right-0 w-[320px] bg-white z-50   shadow-[0px_25px_50px_-12px_#00000040] transition-all duration-300 overflow-hidden ${
+    className={`p-[16px] absolute top-[70px] right-0 w-[320px] bg-white z-50   shadow-[0px_25px_50px_-12px_#00000040] transition-all duration-300 overflow-hidden ${
       open
         ? "opacity-100 visible translate-y-0"
         : "opacity-0 invisible -translate-y-2"
