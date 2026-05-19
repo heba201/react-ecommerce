@@ -145,7 +145,7 @@ Brands
 
     {/* Top */}
     <div className="border-b border-[#F3F4F6]">
-    <div className="w-full flex items-center justify-between  pt-[18px] pb-[18px] pr-[16px] bg-blue-500">
+    <div className="w-full flex items-center justify-between  pt-[18px] pb-[18px] pr-[16px]">
       <Image src={fresh_cart} alt='fresh_cart' />
       <button
         onClick={() => setOpen(false)}
