@@ -194,7 +194,7 @@ Brands
  
       <div className='pt-[16px] pb-[16px]'>
          <a className="flex items-center justify-between">
-               <div className="flex  items-center gap-[2px] pt-[12px] pl-[12px] pb-[16px]">
+               <div className="flex  items-center gap-[12px] pt-[12px] pl-[12px] pb-[16px]">
                 <div className="flex  items-center  justify-center bg-[#FEF2F2] rounded-full w-[36px] h-[36px]">
                  <CiHeart className='w-5 h-4 text-[#FB2C36]' />
                 </div>
@@ -204,7 +204,7 @@ Brands
           </a>
 
          <a className="flex items-center justify-between">
-               <div className="flex  items-center gap-[2px] pt-[12px] pl-[12px] pb-[16px]">
+               <div className="flex  items-center gap-[12px] pt-[12px] pl-[12px] pb-[16px]">
                 <div className="flex  items-center  justify-center bg-[#F0FDF4] rounded-full w-[36px] h-[36px]">
                  <IoCart className='w-5 h-4 text-[#16A34A]' />
                 </div>
@@ -219,7 +219,7 @@ Brands
 
      <div className='pt-[16px] pb-[16px]'>
          <a className="flex items-center justify-between">
-               <div className="flex  items-center gap-[2px] pt-[12px] pl-[12px] pb-[16px]">
+               <div className="flex  items-center gap-[12px] pt-[12px] pl-[12px] pb-[16px]">
                 <div className="flex  items-center  justify-center bg-[#F3F4F6] rounded-full w-[36px] h-[36px]">
                  <FiUser className='w-5 h-4 text-[#6A7282]' />
                 </div>
@@ -228,7 +228,7 @@ Brands
           </a>
 
          <button className="flex items-center justify-between">
-               <div className="flex  items-center gap-[2px]  pt-[12px] pl-[12px] pb-[16px]">
+               <div className="flex  items-center gap-[12px]  pt-[12px] pl-[12px] pb-[16px]">
                 <div className="flex  items-center  justify-center bg-[#FEF2F2] rounded-full  w-[36px] h-[36px]">
                  <FaSignOutAlt className='w-5 h-4 text-[#16A34A]' />
                 </div>
@@ -238,7 +238,7 @@ Brands
            <div className='border-t border-[#F3F4F6]'></div>
      </div>
 
-     <a className='flex items-center gap-[12px] bg-[#F9FAFB] border-t border-[#F3F4F6] pt-[16px] pb-[16px] rounded-xl border border-[1px]'>
+     <a className='flex items-center gap-[12px] bg-[#F9FAFB] border-t border-[#F3F4F6]  pl-[16px] pt-[16px] pb-[16px] rounded-xl border border-[1px]'>
        <div className='flex items-center justify-center bg-[#DCFCE7] rounded-full w-[40px] h-[40px]'>
         <BiSupport className='w-5 h-4 text-[#16A34A]' />
        </div>
