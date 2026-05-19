@@ -191,10 +191,35 @@ Brands
 
     <div className='border-t border-[#F3F4F6]'></div>
       
+ 
+      <div className='p-[16px]'>
+         <a className="flex items-center justify-between">
+               <div className="flex  items-center gap-[2px] pt-[12px] pl-[12px] pb-[16px]">
+                <div className="flex  items-center  justify-center bg-[#FEF2F2] rounded-full w-[36px] h-[36px]">
+                 <CiHeart className='w-5 h-4 text-[#FB2C36]' />
+                </div>
+                <span className='font-medium text-base leading-6 text-[#64153]'>Wishlist</span>
+               </div>
+               <span className='text-center font-medium text-base leading-6 text-[#FB2C36] w-[28px] h-[24px] rounded-full px-[10px] py-[4px]'>5</span>
+          </a>
+
+         <a className="flex items-center justify-between">
+               <div className="flex  items-center gap-[2px] pt-[12px] pl-[12px] pb-[16px]">
+                <div className="flex  items-center  justify-center bg-[#F0FDF4] rounded-full w-[36px] h-[36px]">
+                 <IoCart className='w-5 h-4 text-[#16A34A]' />
+                </div>
+                <span className='font-medium text-base leading-6 text-[#16A34A] w-[27px] h-[24px] rounded-full px-[10px] py-[4px]'>3</span>
+               </div>
+          </a>
+           
+     </div>
+
+
+
      <div className='p-[16px]'>
          <a className="flex items-center justify-between">
-               <div className="flex  items-center gap-[2px]">
-                <div className="flex  items-center  justify-center bg-[#F3F4F6] w-[36px] h-[36px]">
+               <div className="flex  items-center gap-[2px] pt-[12px] pl-[12px] pb-[16px]">
+                <div className="flex  items-center  justify-center bg-[#F3F4F6] rounded-full w-[36px] h-[36px]">
                  <FiUser className='w-5 h-4 text-[#6A7282]' />
                 </div>
                 <span className='font-medium text-base leading-6 text-[#64153]'>Usama</span>
@@ -202,7 +227,7 @@ Brands
           </a>
 
          <button className="flex items-center justify-between">
-               <div className="flex  items-center gap-[2px]">
+               <div className="flex  items-center gap-[2px]  pt-[12px] pl-[12px] pb-[16px]">
                 <div className="flex  items-center  justify-center bg-[#FEF2F2] rounded-full  w-[36px] h-[36px]">
                  <FaSignOutAlt className='w-5 h-4 text-[#16A34A]' />
                 </div>
