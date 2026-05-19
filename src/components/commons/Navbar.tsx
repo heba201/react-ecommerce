@@ -208,13 +208,13 @@ Brands
                 <div className="flex  items-center  justify-center bg-[#F0FDF4] rounded-full w-[36px] h-[36px]">
                  <IoCart className='w-5 h-4 text-[#16A34A]' />
                 </div>
-                <span className='font-medium text-base leading-6 text-white bg-[#16A34A] w-[27px] h-[24px] rounded-full px-[10px] py-[4px]'>3</span>
                </div>
+                <span className='font-medium text-base leading-6 text-white bg-[#16A34A] w-[27px] h-[24px] rounded-full px-[10px] py-[4px]'>3</span>
           </a>
            
      </div>
 
- <div className='border-t border-[#F3F4F6] w-[188px] h-[1px]'></div>
+ <div className='border-t border-[#F3F4F6]'></div>
 
      <div className='pt-[16px] pb-[16px]'>
          <a className="flex items-center justify-between">
