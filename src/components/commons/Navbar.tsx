@@ -136,7 +136,7 @@ Brands
 
  {/* Sidebar */}
   <div
-    className={`pl-[16px] absolute top-[70px] right-0 w-[320px] bg-white z-50   shadow-[0px_25px_50px_-12px_#00000040] transition-all duration-300 overflow-hidden ${
+    className={`absolute top-[70px] right-0 w-[320px] bg-white z-50   shadow-[0px_25px_50px_-12px_#00000040] transition-all duration-300 overflow-hidden ${
       open
         ? "opacity-100 visible translate-y-0"
         : "opacity-0 invisible -translate-y-2"
@@ -144,8 +144,7 @@ Brands
   >
 
     {/* Top */}
-    <div className="border-b border-[#F3F4F6]">
-    <div className="w-full flex items-center justify-between  pt-[18px] pb-[18px] pr-[16px]">
+    <div className="w-full flex items-center justify-between border-b border-[#F3F4F6]  pt-[18px] pb-[18px] pr-[16px]">
       <Image src={fresh_cart} alt='fresh_cart' />
       <button
         onClick={() => setOpen(false)}
@@ -154,7 +153,7 @@ Brands
       <IoIosClose className='text-[#4A5565] w-5 h-4' />
       </button>
 </div>
-    </div>
+    
 
     {/* Search */}
     <form className="w-full pt-4 pb-4 border-b border-[#F3F4F6]">
