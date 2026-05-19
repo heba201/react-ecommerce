@@ -27,8 +27,18 @@ export default async function Products() {
   const data = await  getAllProducts();
   const products : productI[]= data.data; 
   return (
-     <main>
-      <CarouselComponent/>
-     </main>
+     <div className='min-h-screen'>
+      <div className='bg-[linear-gradient(135deg,#16A34A_0%,#22C55E_50%,#4ADE80_100%)] pl-48 pr-48'>
+        <div className="container pt-14 pl-4">
+            <nav className='flex items-center gap-2'>
+              <a className="font-medium text-sm leading-5 align-middle text-white/70">
+                Home
+              </a>
+              <span className="font-medium text-sm leading-5 align-middle text-white/40">/</span>
+              <span className="font-medium text-sm leading-5 align-middle text-white">All Products</span>
+            </nav>
+        </div>
+      </div>
+     </div>
   )
 }
