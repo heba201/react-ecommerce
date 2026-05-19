@@ -200,7 +200,7 @@ Brands
                 </div>
                 <span className='font-medium text-base leading-6 text-[#64153]'>Wishlist</span>
                </div>
-               <span className='text-center font-medium text-base leading-6 text-white bg-[#FB2C36] w-[28px] h-[24px] rounded-full px-[10px] py-[4px]'>5</span>
+               <span className='flex items-center justify-center text-center font-medium text-base leading-6 text-white bg-[#FB2C36] w-[28px] h-[24px] rounded-full px-[10px] py-[4px]'>5</span>
           </a>
 
          <a className="flex items-center justify-between">
