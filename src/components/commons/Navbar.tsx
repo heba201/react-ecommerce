@@ -144,7 +144,7 @@ Brands
   >
 
     {/* Top */}
-    <div className="w-full flex items-center justify-between border-b border-[#F3F4F6]  pt-[18px] pb-[18px] pr-[16px]">
+    <div className="w-full flex items-center justify-between border-b border-[#F3F4F6]  pt-[18px] pb-[18px] pr-[16px] pl-[16px]">
       <Image src={fresh_cart} alt='fresh_cart' />
       <button
         onClick={() => setOpen(false)}
@@ -189,7 +189,7 @@ Brands
        </a>
     </div>
 
-    <div className='border-t border-[#F3F4F6]'></div>
+    <div className='border-t border-[#F3F4F6] p-[16px]'></div>
       
  
       <div className='pt-[16px] pb-[16px]'>
@@ -215,7 +215,7 @@ Brands
            
      </div>
 
- <div className='border-t border-[#F3F4F6]'></div>
+ <div className='border-t border-[#F3F4F6] p-[16px]'></div>
 
      <div className='pt-[16px] pb-[16px]'>
          <a className="flex items-center justify-between">
@@ -235,10 +235,10 @@ Brands
                 <span className='font-medium text-base leading-6 text-[#FB2C36]'>Sign Out</span>
                </div>
          </button>
-           <div className='border-t border-[#F3F4F6]'></div>
+           <div className='border-t border-[#F3F4F6] p-[16px]'></div>
      </div>
 
-     <a className='flex items-center gap-[12px] bg-[#F9FAFB] border-t border-[#F3F4F6]  pl-[16px] pt-[16px] pb-[16px] rounded-xl border border-[1px]'>
+     <a className='flex items-center gap-[12px] bg-[#F9FAFB] border-t border-[#F3F4F6]  p-[16px] rounded-xl border border-[1px]'>
        <div className='flex items-center justify-center bg-[#DCFCE7] rounded-full w-[40px] h-[40px]'>
         <BiSupport className='w-5 h-4 text-[#16A34A]' />
        </div>
