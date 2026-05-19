@@ -156,7 +156,7 @@ Brands
     
 
     {/* Search */}
-    <form className="w-full pt-4 pb-4 border-b border-[#F3F4F6]">
+    <form className="w-full p-[16px] border-b border-[#F3F4F6]">
  <div className="relative">
       <input
         type="text"
