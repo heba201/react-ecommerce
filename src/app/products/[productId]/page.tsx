@@ -38,6 +38,7 @@ params:Promise<{productId:string}>
      console.log(relatedProducts);
   return (
      <>
+     <div className='min-h-screen'>
      <h1>asasssssssssssssss</h1>
       <Breadcrumb className='px-52 pt-[15.5px]'>
       <BreadcrumbList>
@@ -63,7 +64,7 @@ params:Promise<{productId:string}>
         </BreadcrumbItem>
       </BreadcrumbList>
     </Breadcrumb>
-      
+      </div>
      </>
   )
 }
