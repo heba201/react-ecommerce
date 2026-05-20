@@ -72,7 +72,10 @@ export default async function Products() {
                    ))}
         </div>
       </div>
-       <FeaturesBar/>
+      <div className=' mx-48'>
+  <FeaturesBar/>
+      </div>
+     
      </div>
     
   )
