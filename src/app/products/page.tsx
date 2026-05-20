@@ -39,19 +39,19 @@ export default async function Products() {
               <span className="font-medium text-sm leading-5 align-middle text-white/40">/</span>
               <span className="font-medium text-sm leading-5 align-middle text-white">All Products</span>
             </nav>
-            <div className="flex items-center gap-5">
+            <div className="flex items-center gap-5 bottom-14">
                
                <div className="w-16 h-16 bg-[#FFFFFF33] backdrop-blur-sm">
-                 <div className='flex items-center justify-center  shadow-[0px_8px_10px_-6px_#0000001A,0px_20px_25px_-5px_#0000001A,0px_0px_0px_1px_#FFFFFF4D'>
-                  <FaBoxOpen  className='w-[37.5px] h-[30px] text-white'/>
+                 <div className='flex items-center justify-center w-full rounded-full  shadow-[0px_8px_10px_-6px_#0000001A,0px_20px_25px_-5px_#0000001A,0px_0px_0px_1px_#FFFFFF4D'>
+                  <FaBoxOpen  className='w-[37.5px] h-7.5 text-white'/>
                  </div>
                </div>
 
                 <div className="flex flex-col gap-1">
-                  <h1 className='text-[36px] font-bold leading-[40px] tracking-[-0.9px] text-white'>
+                  <h1 className='text-[36px] font-bold leading-10 tracking-[-0.9px] text-white'>
                     All Products
                   </h1>
-                  <p className='text-[16px] font-medium leading-6 mt-[1px]'>
+                  <p className='text-[16px] font-medium leading-6 text-white/80'>
                     Explore our complete product collection
                   </p>
                 </div>
