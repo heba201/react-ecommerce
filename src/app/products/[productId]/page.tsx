@@ -25,17 +25,8 @@ import AddToCartBtn from '@/components/cart/AddToCartBtn'
 import { FaHome } from "react-icons/fa";
 import { MdChevronRight } from "react-icons/md";
 
-export default async function ProductDetails({
-  params}:{
-params:Promise<{productId:string}>
-  }) {
-     const {productId} = await params
-     const response = await fetch(`${process.env.BASE_URL}/products/${productId}`)
-     const data = await response.json()
-     const product : productI =  data.data
-     const related =  await  getAllProducts(product.category._id);
-     const relatedProducts : productI[] = related.data;
-     console.log(relatedProducts);
+export default async function ProductDetails() {
+      
   return (
      <>
      <div className='min-h-screen h-231'>
@@ -60,7 +51,7 @@ params:Promise<{productId:string}>
         </BreadcrumbItem>
         <BreadcrumbSeparator />
         <BreadcrumbItem>
-          <BreadcrumbPage className='text-xl font-bold'>{product.title}</BreadcrumbPage>
+          <BreadcrumbPage className='text-xl font-bold'></BreadcrumbPage>
         </BreadcrumbItem>
       </BreadcrumbList>
     </Breadcrumb>
