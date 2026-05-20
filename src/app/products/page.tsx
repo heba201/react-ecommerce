@@ -25,6 +25,7 @@ import { getAllProducts } from '@/services/product.service'
 import CarouselComponent from '@/components/commons/CarouselComponent'
 import { FaBoxOpen } from "react-icons/fa";
 import ProductCard from '@/components/product/ProductCard'
+import FeaturesBar from '@/components/featuresBar/FeaturesBar'
 
 export default async function Products() {
   const data = await  getAllProducts();
@@ -71,6 +72,8 @@ export default async function Products() {
                    ))}
         </div>
       </div>
+       <FeaturesBar/>
      </div>
+    
   )
 }
