@@ -27,8 +27,8 @@ export default async function ProductDetails() {
   return (
      <>
     <div className='min-h-screen'>
-      <div className='px-48 pt-14'>
-      <Breadcrumb className='pt-5'>
+     
+      <Breadcrumb className='px-48 pt-[28px]'>
       <BreadcrumbList>
         <BreadcrumbItem>
           <BreadcrumbLink asChild>
@@ -47,7 +47,7 @@ export default async function ProductDetails() {
         </BreadcrumbItem>
       </BreadcrumbList>
     </Breadcrumb>
-      </div>
+       
       </div>
      </>
   )
