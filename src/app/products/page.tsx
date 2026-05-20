@@ -24,6 +24,7 @@ import AddToCartBtn from '@/components/cart/AddToCartBtn'
 import { getAllProducts } from '@/services/product.service'
 import CarouselComponent from '@/components/commons/CarouselComponent'
 import { FaBoxOpen } from "react-icons/fa";
+import ProductCard from '@/components/product/ProductCard'
 
 export default async function Products() {
   const data = await  getAllProducts();
@@ -56,6 +57,18 @@ export default async function Products() {
                   </p>
                 </div>
             </div>
+        </div>
+      </div>
+
+      {/* products */}
+      <div className="container pl-4 pr-4 pt-8 pb-8">
+        <div className='text-[14px] font-medium leading-5 text-[#6A7282] mb-6'>
+        Showing 40 products
+        </div>
+        <div className="grid grid-cols-5">
+        {Array.from({ length: 10 }).map((_, i) => (
+                <ProductCard key={`product-${i}`}/>
+                   ))}
         </div>
       </div>
      </div>
