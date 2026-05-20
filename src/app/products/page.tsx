@@ -34,14 +34,14 @@ export default async function Products() {
      <div className='min-h-screen pl-48 pr-48'>
       <div className='bg-[linear-gradient(135deg,#16A34A_0%,#22C55E_50%,#4ADE80_100%)] w-screen -mx-48 pl-48 pr-48'>
         <div className="container pt-14 pl-4 pb-14">
-            <nav className='flex items-center gap-2 mb-6 pl-4'>
+            <nav className='flex items-center gap-2 mb-6'>
               <a className="font-medium text-sm leading-5 align-middle text-white/70">
                 Home
               </a>
               <span className="font-medium text-sm leading-5 align-middle text-white/40">/</span>
               <span className="font-medium text-sm leading-5 align-middle text-white">All Products</span>
             </nav>
-            <div className="flex items-center gap-5 pl-4">
+            <div className="flex items-center gap-5">
                
                <div className="w-16 h-16  rounded-2xl  bg-[#FFFFFF33] backdrop-blur-sm">
                  <div className='flex items-center justify-center w-16 h-16 rounded-2xl  shadow-[0px_8px_10px_-6px_#0000001A,0px_20px_25px_-5px_#0000001A,0px_0px_0px_1px_#FFFFFF4D'>
