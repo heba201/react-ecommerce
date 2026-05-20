@@ -72,7 +72,7 @@ export default async function Products() {
                    ))}
         </div>
       </div>
-      <div className=' mx-48'>
+      <div className='w-screen mx-48'>
   <FeaturesBar/>
       </div>
      
