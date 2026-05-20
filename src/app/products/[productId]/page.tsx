@@ -57,7 +57,7 @@ export default async function ProductDetails() {
     </Breadcrumb>
        
 
-       <Breadcrumb className=''>
+       <Breadcrumb className='px-48'>
              <BreadcrumbList>
                <BreadcrumbItem>
                  <BreadcrumbLink asChild>
