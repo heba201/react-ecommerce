@@ -28,7 +28,7 @@ export default async function ProductDetails() {
      <>
     <div className='min-h-screen'>
      
-      <Breadcrumb className='px-48 pt-[28px]'>
+      <Breadcrumb className='px-208 pt-[28px]'>
       <BreadcrumbList>
         <BreadcrumbItem>
           <BreadcrumbLink asChild>
