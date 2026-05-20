@@ -31,28 +31,29 @@ export default async function ProductDetails() {
     <div className='min-h-screen'>
      
       <Breadcrumb className='px-208 pt-[28px]'>
-      <BreadcrumbList>
+      <BreadcrumbList className='flex items-center gap-[4px]'>
         <BreadcrumbItem className='flex items-center'>
           <BreadcrumbLink asChild>
-       
             <Link href="/" className='text-lg font-semibold flex items-center'>
                <FaHome />
                Home
-            
             </Link>
           </BreadcrumbLink>
           <MdChevronRight />
         </BreadcrumbItem>
-        <BreadcrumbSeparator />
-        <BreadcrumbItem>
+        
+
+        <BreadcrumbItem className='flex items-center'>
           <BreadcrumbLink asChild>
-            <Link href="/products" className='text-lg font-semibold'>Products</Link>
+            <Link href="/" className='text-lg font-semibold flex items-center'>
+               <FaHome />
+               Home
+            </Link>
           </BreadcrumbLink>
+          <MdChevronRight />
         </BreadcrumbItem>
-        <BreadcrumbSeparator />
-        <BreadcrumbItem>
-          <BreadcrumbPage className='text-xl font-bold'></BreadcrumbPage>
-        </BreadcrumbItem>
+
+        
       </BreadcrumbList>
     </Breadcrumb>
        
