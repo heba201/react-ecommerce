@@ -61,7 +61,7 @@ export default async function ProductDetails() {
              <BreadcrumbList>
                <BreadcrumbItem>
                  <BreadcrumbLink asChild>
-                   <Link href="/" className='text-lg font-semibold flex items-center gap-0.5'>
+                   <Link href="/" className='text-lg font-semibold'>
                <FaHome />
                Home
             </Link>
