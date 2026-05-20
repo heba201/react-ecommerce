@@ -54,7 +54,7 @@ export default function ProductCard({variant}: { variant: string }) {
                 </div>
              </div>
 
-             <span className="font-medium text-[12px] leading-[16px] tracking-normal align-middle text-[#6A7282] whitespace-nowrap">4.2 (10)</span>
+             <span className={`font-medium text-[12px] leading-[16px] tracking-normal align-middle text-[#6A7282] ${variant === 'products' ? '' : 'whitespace-nowrap'}`}>4.2 (10)</span>
            </div>
            <div className="flex items-center xl:justify-between md:gap-2 justify-between">
                 <div className="flex items-center xl:gap-2 md:gap-1">
