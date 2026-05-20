@@ -56,6 +56,27 @@ export default async function ProductDetails() {
       </BreadcrumbList>
     </Breadcrumb>
        
+
+       <Breadcrumb className='pt-5'>
+             <BreadcrumbList>
+               <BreadcrumbItem>
+                 <BreadcrumbLink asChild>
+                   <Link href="/" className='text-lg font-semibold'>Home</Link>
+                 </BreadcrumbLink>
+               </BreadcrumbItem>
+               <BreadcrumbSeparator />
+               <BreadcrumbItem>
+                 <BreadcrumbLink asChild>
+                   <Link href="/products" className='text-lg font-semibold'>Products</Link>
+                 </BreadcrumbLink>
+               </BreadcrumbItem>
+               <BreadcrumbSeparator />
+               <BreadcrumbItem>
+                 <BreadcrumbPage className='text-xl font-bold'></BreadcrumbPage>
+               </BreadcrumbItem>
+             </BreadcrumbList>
+           </Breadcrumb>
+
       </div>
      </>
   )
