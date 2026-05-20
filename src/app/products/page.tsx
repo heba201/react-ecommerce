@@ -67,7 +67,7 @@ export default async function Products() {
         <div className='text-[14px] font-medium leading-5 text-[#6A7282] mb-6'>
         Showing 40 products
         </div>
-        <div className="grid xl:grid-cols-5 md:grid-cols-5 xl:gap-[24.01px] md:gap-6">
+        <div className="grid xl:grid-cols-5 md:grid-cols-5 xl:gap-[24.01px] md:gap-4">
         {Array.from({ length: 10 }).map((_, i) => (
                 <ProductCard key={`product-${i}`} variant="products"/>
                    ))}
