@@ -33,8 +33,8 @@ export default async function ProductDetails() {
              <BreadcrumbList>
                <BreadcrumbItem>
                  <BreadcrumbLink asChild>
-                   <Link href="/" className='flex items-center gap-2 text-lg font-semibold'>
-               <FaHome />
+                   <Link href="/" className='flex items-center gap-1.5 text-[#6A7282] text-[14px] font-medium leading-5'>
+               <FaHome  className='w-[15px] h-3 text-[#6A7282]'/>
                Home
             </Link>
                  </BreadcrumbLink>
@@ -42,13 +42,17 @@ export default async function ProductDetails() {
                <BreadcrumbSeparator />
                <BreadcrumbItem>
                  <BreadcrumbLink asChild>
-                   <Link href="/products" className='text-lg font-semibold'>Woman's Fashion</Link>
+                   <Link href="/products" className='text-[#6A7282] text-[14px] font-medium leading-5'>Women's Fashion</Link>
                  </BreadcrumbLink>
                </BreadcrumbItem>
                <BreadcrumbSeparator />
-               <BreadcrumbItem>
-                 <BreadcrumbPage className='text-xl font-bold'></BreadcrumbPage>
+
+                <BreadcrumbItem>
+                 <BreadcrumbLink asChild>
+                   <Link href="/products" className='text-[14px] font-medium leading-5 text-[#101828]'>Woman Shawl</Link>
+                 </BreadcrumbLink>
                </BreadcrumbItem>
+
              </BreadcrumbList>
            </Breadcrumb>
 
