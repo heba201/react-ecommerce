@@ -47,7 +47,7 @@ export default async function Products() {
                  </div>
                </div>
 
-                <div className="flex flex-col gap-1">
+                <div className="flex flex-col gap-0.5">
                   <h1 className='text-[36px] font-bold leading-10 tracking-[-0.9px] text-white'>
                     All Products
                   </h1>
