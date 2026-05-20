@@ -73,7 +73,18 @@ export default async function ProductDetails() {
                   </div>
                 </div>
                 <div className="product-info">
+                   <div className="bg-white shadow-[0px_1px_2px_-1px_#0000001A,0px_1px_3px_0px_#0000001A] pt-6 px-6">
+                      <div className="flex items center gap-2">
+                         <a className='w-[122px] h-7 rounded-full py-[6px] px-3 bg-[#F0FDF4] text-[12px] font-medium leading-4 text-[#15803D]'>
+                          Women's Fashion
+                         </a>
 
+                         <a className='w-[69px] h-7 rounded-full py-[6px] px-3 bg-[#F3F4F6] text-[12px] font-medium leading-4 text-[#364153]'>
+                          DeFacto
+                         </a>
+
+                      </div>
+                   </div>
                 </div>
               </div>
       </div>
