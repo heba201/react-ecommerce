@@ -161,7 +161,7 @@ export default function Home() {
       </div>
       <div className="grid xl:grid-cols-5 md:grid-cols-4 gap-y-4 gap-x-5">
  {Array.from({ length: 10 }).map((_, i) => (
-        <ProductCard key={`product-${i}`}/>
+        <ProductCard key={`product-${i}`} variant="home"/>
            ))}
       </div>
      </div>
