@@ -8,7 +8,7 @@ import { FaRegEye } from "react-icons/fa6";
 import { CiStar } from "react-icons/ci";
 import { GoPlus } from "react-icons/go";
 
-export default function ProductCard() {
+export default function ProductCard({variant}: { variant: string }) {
   return (
     <div className="col-span-1 left-[1196.8px]  rounded-[8px] border">
      <div className="relative p-5">
@@ -58,7 +58,7 @@ export default function ProductCard() {
            </div>
            <div className="flex items-center xl:justify-between md:gap-2 justify-between">
                 <div className="flex items-center xl:gap-2 md:gap-1">
-                     <span className="font-bold md:text-[18px] xl:text-lg leading-7 tracking-normal align-middle text-[#16A34A] whitespace-nowrap">349 EGP</span>
+                     <span className={`font-bold md:text-[18px] xl:text-lg leading-7 tracking-normal align-middle text-[#16A34A] ${variant === 'products' ? '' : 'whitespace-nowrap'}`}>349 EGP</span>
                     <span className="font-medium text-[14px] leading-[20px] tracking-normal line-through align-middle top-[5.5px] left-[79.06px] text-[#6A7282] whitespace-nowrap">499 EGP</span>
                    
                 </div>

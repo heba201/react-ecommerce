@@ -69,7 +69,7 @@ export default async function Products() {
         </div>
         <div className="grid xl:grid-cols-5 md:grid-cols-5 xl:gap-[24.01px] md:gap-6">
         {Array.from({ length: 10 }).map((_, i) => (
-                <ProductCard key={`product-${i}`}/>
+                <ProductCard key={`product-${i}`} variant="products"/>
                    ))}
         </div>
       </div>
