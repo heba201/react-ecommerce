@@ -38,7 +38,7 @@ params:Promise<{productId:string}>
      console.log(relatedProducts);
   return (
      <>
-     <div className='min-h-screen'>
+     <div className='min-h-screen h-231'>
      <h1>asasssssssssssssss</h1>
       <Breadcrumb className='px-52 pt-[15.5px]'>
       <BreadcrumbList>
