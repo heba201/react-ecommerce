@@ -107,7 +107,13 @@ export default async function ProductDetails() {
                       In Stock
                      </span>
                      </div>
+                      
+                      <div className='border-t border-[#F3F4F6] pt-5 mt-6'>
+                         <p className='text-[16px] font-medium leading-[26px] text-[#4A5565]'>
+                          Material Polyester Blend Colour Name Multicolour Department Women
+                         </p>
 
+                      </div>
                    </div>
                 </div>
               </div>
