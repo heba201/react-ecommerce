@@ -22,6 +22,7 @@ import {
 } from "@/components/ui/carousel"
 import { MdChevronRight } from "react-icons/md";
 import { FaHome } from "react-icons/fa";
+import woman_shawl from "@/assets/home/woman_shawl.png";
 
 
 export default async function ProductDetails() {
@@ -46,16 +47,26 @@ export default async function ProductDetails() {
                  </BreadcrumbLink>
                </BreadcrumbItem>
                <BreadcrumbSeparator />
-
                 <BreadcrumbItem>
                  <BreadcrumbLink asChild>
                    <Link href="/products" className='text-[14px] font-medium leading-5 text-[#101828]'>Woman Shawl</Link>
                  </BreadcrumbLink>
                </BreadcrumbItem>
-
              </BreadcrumbList>
            </Breadcrumb>
 
+              <div className="flex items-center mt-[40.5px] gap-8">
+                <div className="product-images p-4">
+                  <div className='shadow-[0px_1px_2px_-1px_#0000001A,0px_1px_3px_0px_#0000001A] bg-white'>
+                     <div className="gallary-content">
+                      <Image  src={woman_shawl} alt='woman_shawl'/>
+                     </div>
+                  </div>
+                </div>
+                <div className="product-info">
+
+                </div>
+              </div>
       </div>
      </>
   )
