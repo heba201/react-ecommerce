@@ -25,6 +25,8 @@ import { FaHome } from "react-icons/fa";
 import woman_shawl from "@/assets/home/woman_shawl.png";
 import { FaStar } from "react-icons/fa6";
 import half_star from "@/assets/home/half_star.png";
+import { CiSquareMinus } from "react-icons/ci";
+import { FaPlus } from "react-icons/fa";
 
 export default async function ProductDetails() {
       
@@ -112,8 +114,29 @@ export default async function ProductDetails() {
                          <p className='text-[16px] font-medium leading-[26px] text-[#4A5565]'>
                           Material Polyester Blend Colour Name Multicolour Department Women
                          </p>
-
                       </div>
+                       
+                       <div>
+                        <label className='block text-[14px] font-medium leading-5 text-[#364153] mt-6' >
+                          Quantity
+                        </label>
+                        <div className="flex items-center gap-4 mt-2">
+                          <div className="flex items-center border-t-2 border-t-[#E5E7EB] w-[172px] h-[52px] rounded-lg border">
+                            <button id="decrease-qty" className='w-[52px] h-12 opacity-50 pt-[15px] pr-4 pb-[17px] pl-4 flex items-center justify-center'>
+                              <CiSquareMinus className='w-5 h-4 text-[#4A5565]'  />
+                            </button>
+                            <input id="quantity"/>
+                            <button className='w-[52px] h-12 pt-[15px] pr-4 pb-[17px] pl-4 flex items-center justify-center'>
+                              <FaPlus className='w-5 h-4 text-[#4A5565]'/>
+                            </button>
+                          
+                          </div>
+                          <span className='text-[14px] font-medium leading-5 text-[#6A7282]'>
+                            220 available
+                          </span>
+                        </div>
+                       </div>
+
                    </div>
                 </div>
               </div>
