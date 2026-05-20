@@ -20,6 +20,8 @@ import {
   CarouselItem,
   
 } from "@/components/ui/carousel"
+import { MdChevronRight } from "react-icons/md";
+import { FaHome } from "react-icons/fa";
 
 
 export default async function ProductDetails() {
@@ -30,10 +32,16 @@ export default async function ProductDetails() {
      
       <Breadcrumb className='px-208 pt-[28px]'>
       <BreadcrumbList>
-        <BreadcrumbItem>
+        <BreadcrumbItem className='flex items-center'>
           <BreadcrumbLink asChild>
-            <Link href="/" className='text-lg font-semibold'>Home</Link>
+       
+            <Link href="/" className='text-lg font-semibold flex items-center'>
+               <FaHome />
+               Home
+            
+            </Link>
           </BreadcrumbLink>
+          <MdChevronRight />
         </BreadcrumbItem>
         <BreadcrumbSeparator />
         <BreadcrumbItem>
