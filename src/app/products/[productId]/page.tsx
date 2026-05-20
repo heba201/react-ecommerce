@@ -1,6 +1,25 @@
 
 
 import React from 'react'
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb"
+import Link from 'next/link'
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
+import Image from 'next/image'
+import { Heart, ShoppingCart, Star } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  
+} from "@/components/ui/carousel"
 
 
 export default async function ProductDetails() {
