@@ -30,7 +30,7 @@ export default async function ProductDetails() {
      <>
     <div className='min-h-screen'>
       <Breadcrumb className='flex items-center px-208 pt-[28px] bg-blue-500'>
-      <BreadcrumbList className='flex items-center gap-[4px]'>
+      <BreadcrumbList className=''>
         <BreadcrumbItem className='flex items-center'>
           <BreadcrumbLink asChild>
             <Link href="/" className='text-lg font-semibold flex items-center'>
