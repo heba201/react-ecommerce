@@ -8,7 +8,7 @@ export default async function ProductDetails() {
   return (
      <>
     <div className='min-h-screen'>
-        <div className="container">
+        <div className="container text-black">
             <nav className='flex items-center gap-2 mb-6'>
               <a className="font-medium text-sm leading-5 align-middle text-white/70">
                 Home
