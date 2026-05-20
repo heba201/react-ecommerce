@@ -42,7 +42,7 @@ export default async function Products() {
             <div className="flex items-center gap-5 bottom-14">
                
                <div className="w-16 h-16 bg-[#FFFFFF33] backdrop-blur-sm">
-                 <div className='flex items-center justify-center w-full rounded-full  shadow-[0px_8px_10px_-6px_#0000001A,0px_20px_25px_-5px_#0000001A,0px_0px_0px_1px_#FFFFFF4D'>
+                 <div className='flex items-center justify-center w-16 h-16 rounded-full  shadow-[0px_8px_10px_-6px_#0000001A,0px_20px_25px_-5px_#0000001A,0px_0px_0px_1px_#FFFFFF4D'>
                   <FaBoxOpen  className='w-[37.5px] h-7.5 text-white'/>
                  </div>
                </div>
