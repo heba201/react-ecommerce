@@ -57,8 +57,8 @@ export default function ProductCard({variant}: { variant: string }) {
              <span className={`font-medium text-[12px] leading-[16px] tracking-normal align-middle text-[#6A7282] ${variant === 'products' ? '' : 'whitespace-nowrap'}`}>4.2 (10)</span>
            </div>
            <div className="flex items-center xl:justify-between md:gap-2 justify-between">
-                <div className="flex items-center xl:gap-2 md:gap-1">
-                     <span className={`font-bold md:text-[18px] xl:text-lg leading-7 tracking-normal align-middle text-[#16A34A] ${variant === 'products' ? '' : 'whitespace-nowrap'}`}>349 EGP</span>
+                <div className={`flex  ${variant === 'products' ? 'xl:flex-row md:flex-col' : ''} items-center xl:gap-2 md:gap-1`}>
+                    <span className={`font-bold md:text-[18px] xl:text-lg leading-7 tracking-normal align-middle text-[#16A34A] ${variant === 'products' ? '' : 'whitespace-nowrap'}`}>349 EGP</span>
                     <span className="font-medium text-[14px] leading-[20px] tracking-normal line-through align-middle top-[5.5px] left-[79.06px] text-[#6A7282] whitespace-nowrap">499 EGP</span>
                    
                 </div>
