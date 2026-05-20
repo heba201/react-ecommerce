@@ -62,7 +62,7 @@ export default async function Products() {
       </div>
 
       {/* products */}
-      <div className="container mx-auto pl-4 pr-4 pt-8 pb-8">
+      <div className="container pl-4 pr-4 pt-8 pb-8">
         <div className='text-[14px] font-medium leading-5 text-[#6A7282] mb-6'>
         Showing 40 products
         </div>
