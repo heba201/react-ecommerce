@@ -29,34 +29,6 @@ export default async function ProductDetails() {
   return (
      <>
     <div className='min-h-screen'>
-      <Breadcrumb className='flex items-center px-208 pt-[28px] bg-blue-500'>
-      <BreadcrumbList className=''>
-        <BreadcrumbItem className='flex items-center'>
-          <BreadcrumbLink asChild>
-            <Link href="/" className='text-lg font-semibold flex items-center'>
-               <FaHome />
-               Home
-            </Link>
-          </BreadcrumbLink>
-          <MdChevronRight />
-        </BreadcrumbItem>
-        
-
-        <BreadcrumbItem className='flex items-center'>
-          <BreadcrumbLink asChild>
-            <Link href="/" className='text-lg font-semibold flex items-center'>
-               <FaHome />
-               Home
-            </Link>
-          </BreadcrumbLink>
-          <MdChevronRight />
-        </BreadcrumbItem>
-
-
-      </BreadcrumbList>
-    </Breadcrumb>
-       
-
        <Breadcrumb className='px-48'>
              <BreadcrumbList>
                <BreadcrumbItem>
