@@ -125,7 +125,7 @@ export default async function ProductDetails() {
                             <button id="decrease-qty" className='w-[52px] h-12 opacity-50 pt-[15px] pr-4 pb-[17px] pl-4 flex items-center justify-center'>
                               <CiSquareMinus className='w-5 h-4 text-[#4A5565]'  />
                             </button>
-                            <input id="quantity" className='w-16 h-7'/>
+                            <input id="quantity" className='w-16 h-7 text-center'/>
                             <button className='w-[52px] h-12 pt-[15px] pr-4 pb-[17px] pl-4 flex items-center justify-center'>
                               <FaPlus className='w-5 h-4 text-[#4A5565]'/>
                             </button>
