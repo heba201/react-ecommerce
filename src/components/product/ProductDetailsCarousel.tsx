@@ -8,7 +8,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-
+import woman_shawl from "@/assets/home/woman_shawl.png";
+import Image from 'next/image';
 export default function ProductDetailsCarousel() {
          const [selectedImage, setSelectedImage] = useState(0); 
    const images = [
@@ -49,52 +50,44 @@ export default function ProductDetailsCarousel() {
   }, [selectedImage]);
   
   return (
-    <div className="w-full max-w-[500px] space-y-4">
+    <div className="product-images p-4 w-[26%]">
       {/* Main Carousel */}
-      <Carousel className="w-full">
+       
+      <Carousel className="shadow-[0px_1px_2px_-1px_#0000001A,0px_1px_3px_0px_#0000001A] bg-white rounded-xl">
         <CarouselContent
           className="transition-transform duration-300"
           style={{
             transform: `translateX(-${selectedImage * 100}%)`,
           }}
         >
-          {images.map((image, index) => (
-            <CarouselItem key={index}>
+            <CarouselItem >
               <div className="overflow-hidden rounded-xl bg-white">
-                <img
-                  src={image}
-                  alt={`Product ${index + 1}`}
+                <Image
+                  src={woman_shawl}
+                  alt='woman_shawl'
                   className="aspect-square w-full object-cover"
                 />
               </div>
             </CarouselItem>
-          ))}
         </CarouselContent>
 
-        <CarouselPrevious
-          className="left-4"
-          onClick={handlePrevious}
-        />
-
-        <CarouselNext
-          className="right-4"
-          onClick={handleNext}
-        />
       </Carousel>
-
+ 
       {/* Thumbnails */}
+      <div>
       <div
         ref={thumbnailsRef}
-        className="flex gap-3 overflow-x-auto scroll-smooth scrollbar-hide"
+        className="flex scroll-smooth scrollbar-hide  top-[5px] left-[-62px] gap-0.5"
       >
         {images.map((image, index) => (
+            <div className="border-t-4 border-t-black">
           <button
             key={index}
             onClick={() => setSelectedImage(index)}
-            className={`w-20 h-20 shrink-0 overflow-hidden rounded-xl border-2 transition-all duration-300 ${
+            className={`w-20 h-20 shrink-0 overflow-hidden border-2 transition-all duration-300 ${
               selectedImage === index
-                ? "border-black scale-105"
-                : "border-gray-200"
+                ? "border border-[rgb(51,122,118)]"
+                : ""
             }`}
           >
             <img
@@ -103,8 +96,10 @@ export default function ProductDetailsCarousel() {
               className="w-full h-full object-cover"
             />
           </button>
+          </div>
         ))}
       </div>
+    </div>
     </div>
   )
 }
