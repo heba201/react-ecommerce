@@ -26,11 +26,12 @@ import woman_shawl from "@/assets/home/woman_shawl.png";
 import { FaStar } from "react-icons/fa6";
 import half_star from "@/assets/home/half_star.png";
 import { CiSquareMinus } from "react-icons/ci";
-import { FaPlus } from "react-icons/fa";
+import { FaPlus , FaShieldAlt } from "react-icons/fa";
 import { IoCart } from "react-icons/io5";
-import { FaBolt } from "react-icons/fa6";
+import { FaBolt , FaTruckFast } from "react-icons/fa6";
 import { CiHeart } from "react-icons/ci";
 import { IoShareSocialSharp } from "react-icons/io5";
+import { IoIosRefresh } from "react-icons/io";
 
 export default async function ProductDetails() {
       
@@ -79,7 +80,7 @@ export default async function ProductDetails() {
                      </div>
                   </div>
                 </div>
-                <div className="product-info w-[74%]">
+                <div className="product-info w-[74%] pb-[24px]">
                    <div className="bg-white shadow-[0px_1px_2px_-1px_#0000001A,0px_1px_3px_0px_#0000001A] pt-6 px-6">
                       <div className="flex items-center gap-2">
                          <a className='w-[122px] h-7 rounded-full py-[6px] px-3 bg-[#F0FDF4] text-[12px] font-medium leading-4 text-[#15803D]'>
@@ -168,6 +169,43 @@ export default async function ProductDetails() {
                       <button className="flex items-center justify-center w-14 h-[52px] rounded-xl px-4 pt-[15px] pb-[17px] border border-t-2 border-t-[#E5E7EB]">
                           <IoShareSocialSharp className="w-5 h-4 text-[#364153]"/>
                       </button>
+                     </div>
+
+                     <div className="border-t border-t-[#F3F4F6] pt-[24px] mt-24px">
+                        <div className="grid grid-cols-3 gap-[16px]">
+                           
+                           <div className='col-span-1 flex items-center gap-[12px]'>
+                              <div className='flex items-center justify-center w-[40px] h-[40px] bg-[#DCFCE7] rounded-full'>
+                                <FaTruckFast className="w-5 h-4 text-[#364153] text-[#16A34A]"/>
+                              </div>
+                              <div>
+                              <h4 className="font-medium text-sm leading-5 align-middle text-[#101828]">Free Delivery</h4>
+                              <p className="font-medium text-xs leading-4 align-middle text-[#6A7282]">Orders over $50</p>
+                              </div>
+                            </div>
+
+                             <div className='col-span-1 flex items-center gap-[12px]'>
+                              <div className='flex items-center justify-center w-[40px] h-[40px] bg-[#DCFCE7] rounded-full'>
+                                <IoIosRefresh className="w-5 h-4 text-[#364153] text-[#16A34A]"/>
+                              </div>
+                              <div>
+                              <h4 className="font-medium text-sm leading-5 align-middle text-[#101828]">30 Days Return</h4>
+                              <p className="font-medium text-xs leading-4 align-middle text-[#6A7282]">Money back</p>
+                              </div>
+                            </div>
+
+
+                             <div className='col-span-1 flex items-center gap-[12px]'>
+                              <div className='flex items-center justify-center w-[40px] h-[40px] bg-[#DCFCE7] rounded-full'>
+                                <FaShieldAlt className="w-5 h-4 text-[#364153] text-[#16A34A]"/>
+                              </div>
+                              <div>
+                              <h4 className="font-medium text-sm leading-5 align-middle text-[#101828]">Secure Payment</h4>
+                              <p className="font-medium text-xs leading-4 align-middle text-[#6A7282]">100% Protected</p>
+                              </div>
+                            </div>
+
+                        </div>
                      </div>
                    </div>
                 </div>
