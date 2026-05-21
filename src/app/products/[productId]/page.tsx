@@ -32,6 +32,7 @@ import { FaBolt , FaTruckFast } from "react-icons/fa6";
 import { CiHeart } from "react-icons/ci";
 import { IoShareSocialSharp } from "react-icons/io5";
 import { IoIosRefresh } from "react-icons/io";
+import { FiMinus } from "react-icons/fi";
 
 export default async function ProductDetails() {
       
@@ -127,10 +128,10 @@ export default async function ProductDetails() {
                         </label>
                         <div className="flex items-center gap-4 mt-2">
                           <div className="flex items-center border-t-2 border-t-[#E5E7EB] w-[172px] h-[52px] rounded-lg border">
-                            <button id="decrease-qty" className='w-[52px] h-12 opacity-50 pt-[15px] pr-4 pb-[17px] pl-4 flex items-center justify-center'>
-                              <CiSquareMinus className='w-5 h-4 text-[#4A5565]'  />
+                            <button id="decrease-qty"  className='w-[52px] h-12 opacity-50 pt-[15px] pr-4 pb-[17px] pl-4 flex items-center justify-center'>
+                              <FiMinus className='w-5 h-4 text-[#4A5565]'  />
                             </button>
-                            <input id="quantity" className='w-16 h-7 text-center'/>
+                            <input type="number" id="quantity" className='w-16 h-7 text-center'/>
                             <button className='w-[52px] h-12 pt-[15px] pr-4 pb-[17px] pl-4 flex items-center justify-center'>
                               <FaPlus className='w-5 h-4 text-[#4A5565]'/>
                             </button>
