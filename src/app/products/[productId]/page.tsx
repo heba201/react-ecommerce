@@ -108,8 +108,8 @@ export default async function ProductDetails() {
                           <span className='text-[30px] font-bold leading-9 text-[#101828]'>149 EGP</span>
                      </div>
 
-                     <div className="flex items-center gap-[6px] mt-6">
-                     <span className='flex items-center justify-center  bg-[#F0FDF4] w-[90px] h-8 rounded-full py-[6px] px-3 text-[14px] font-medium leading-5 text-[#008236]'>
+                     <div className="flex items-center mt-6">
+                     <span className='flex items-center justify-center  gap-[6px] bg-[#F0FDF4] w-[90px] h-8 rounded-full py-[6px] px-3 text-[14px] font-medium leading-5 text-[#008236]'>
                       <span className='w-2 h-2 rounded-full bg-[#00C950]'></span>
                       In Stock
                      </span>
