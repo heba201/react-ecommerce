@@ -82,7 +82,7 @@ export default function ProductDetailsCarousel() {
           <button
             key={index}
             onClick={() => setSelectedImage(index)}
-            className={`w-20 h-20 shrink-0 overflow-hidden border-2 transition-all duration-300 ${
+            className={`cursor-pointer w-20 h-20 shrink-0 overflow-hidden border-2 transition-all duration-300 ${
               selectedImage === index
                 ? "border border-[rgb(51,122,118)]"
                 : ""
