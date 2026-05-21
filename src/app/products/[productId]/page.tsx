@@ -186,7 +186,7 @@ export default async function ProductDetails() {
 
                              <div className='col-span-1 flex items-center gap-[12px]'>
                               <div className='flex items-center justify-center w-[40px] h-[40px] bg-[#DCFCE7] rounded-full'>
-                                <IoIosRefresh className="w-5 h-4 text-[#16A34A]"/>
+                                <IoIosRefresh className="w-5 h-4  scale-x-[-1] text-[#16A34A]"/>
                               </div>
                               <div>
                               <h4 className="font-medium text-sm leading-5 align-middle text-[#101828]">30 Days Return</h4>
