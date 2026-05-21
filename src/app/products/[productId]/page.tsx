@@ -27,6 +27,8 @@ import { FaStar } from "react-icons/fa6";
 import half_star from "@/assets/home/half_star.png";
 import { CiSquareMinus } from "react-icons/ci";
 import { FaPlus } from "react-icons/fa";
+import { IoCart } from "react-icons/io5";
+import { FaBolt } from "react-icons/fa6";
 
 export default async function ProductDetails() {
       
@@ -144,7 +146,18 @@ export default async function ProductDetails() {
                           <span className='font-bold text-base leading-5 align-middle text-[#16A34A]'>149.00 EGP</span>
                           </div>
                      </div>
+                    
+                     <div>
+                      <div className="flex items-center gap-[12px] mt-6">
+                       <button className="flex items-center w-[518px] h-[52px] rounded-xl px-6 py-[14px] gap-[8px] bg-[#16A34A] shadow-[0px_4px_6px_-4px_#16A34A40,0px_10px_15px_-3px_#16A34A40] font-medium text-base leading-6 text-center align-middle text-white">
+                         <IoCart className="w-5 h-4 text-white"/> Add to Cart
+                       </button>
 
+                       <button className="flex items-center  gap-[8px] w-[518px] h-[52px] rounded-xl px-6 py-[14px] bg-[#101828]  font-medium text-base leading-6 text-center align-middle">
+                         <FaBolt className="w-5 h-4 text-white"/> Buy Now
+                       </button>
+                      </div>
+                     </div>
                    </div>
                 </div>
               </div>
