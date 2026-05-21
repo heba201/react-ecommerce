@@ -48,7 +48,7 @@ export default function ProductDetailsCarousel() {
   }, [selectedImage]);
   
   return (
-    <div className="product-images flex items-center w-[26%] bg-blue-500">
+    <div className="product-images  w-[26%] bg-blue-500">
       {/* Main Carousel */}
        
       <Carousel className="shadow-[0px_1px_2px_-1px_#0000001A,0px_1px_3px_0px_#0000001A] bg-white rounded-xl">
@@ -91,7 +91,7 @@ export default function ProductDetailsCarousel() {
             <img
               src={image}
               alt={`Thumbnail ${index + 1}`}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover overflow-hidden"
             />
           </button>
           </div>
