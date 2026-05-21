@@ -29,6 +29,8 @@ import { CiSquareMinus } from "react-icons/ci";
 import { FaPlus } from "react-icons/fa";
 import { IoCart } from "react-icons/io5";
 import { FaBolt } from "react-icons/fa6";
+import { CiHeart } from "react-icons/ci";
+import { IoShareSocialSharp } from "react-icons/io5";
 
 export default async function ProductDetails() {
       
@@ -149,14 +151,23 @@ export default async function ProductDetails() {
                     
                      <div>
                       <div className="flex items-center gap-[12px] mt-6">
-                       <button className="flex items-center w-[518px] h-[52px] rounded-xl px-6 py-[14px] gap-[8px] bg-[#16A34A] shadow-[0px_4px_6px_-4px_#16A34A40,0px_10px_15px_-3px_#16A34A40] font-medium text-base leading-6 text-center align-middle text-white">
+                       <button className="flex items-center justify-center  w-1/2 h-[52px] rounded-xl px-6 py-[14px] bg-[#16A34A] shadow-[0px_4px_6px_-4px_#16A34A40,0px_10px_15px_-3px_#16A34A40] font-medium text-base leading-6 text-center align-middle text-white">
                          <IoCart className="w-5 h-4 text-white"/> Add to Cart
                        </button>
 
-                       <button className="flex items-center  gap-[8px] w-[518px] h-[52px] rounded-xl px-6 py-[14px] bg-[#101828]  font-medium text-base leading-6 text-center align-middle">
+                       <button className="flex items-center   justify-center w-1/2 h-[52px] rounded-xl px-6 py-[14px] bg-[#101828]  font-medium text-base leading-6 text-center align-middle">
                          <FaBolt className="w-5 h-4 text-white"/> Buy Now
                        </button>
                       </div>
+                     </div>
+
+                     <div className="flex items-center gap-[12px] mt-6">
+                      <button className="flex-1 h-[52px] rounded-xl gap-2 px-4 py-3 border border-t-2 border-t-[#E5E7EB] font-medium text-base leading-6 text-center align-middle text-[#364153]">
+                        <CiHeart className="w-5 h-4 text-[#364153]"/>Add to Wishlist
+                      </button>
+                      <button className="flex items-center justify-center w-14 h-[52px] rounded-xl px-4 pt-[15px] pb-[17px] border border-t-2 border-t-[#E5E7EB]">
+                          <IoShareSocialSharp className="w-5 h-4 text-[#364153]"/>
+                      </button>
                      </div>
                    </div>
                 </div>
