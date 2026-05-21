@@ -171,12 +171,12 @@ export default async function ProductDetails() {
                       </button>
                      </div>
 
-                     <div className="border-t border-t-[#F3F4F6] pt-[24px] mt-24px">
+                     <div className="border-t border-t-[#F3F4F6] pt-[24px] mt-6">
                         <div className="grid grid-cols-3 gap-[16px]">
                            
                            <div className='col-span-1 flex items-center gap-[12px]'>
                               <div className='flex items-center justify-center w-[40px] h-[40px] bg-[#DCFCE7] rounded-full'>
-                                <FaTruckFast className="w-5 h-4 text-[#364153] text-[#16A34A]"/>
+                                <FaTruckFast className="w-5 h-4 text-[#16A34A]"/>
                               </div>
                               <div>
                               <h4 className="font-medium text-sm leading-5 align-middle text-[#101828]">Free Delivery</h4>
@@ -186,7 +186,7 @@ export default async function ProductDetails() {
 
                              <div className='col-span-1 flex items-center gap-[12px]'>
                               <div className='flex items-center justify-center w-[40px] h-[40px] bg-[#DCFCE7] rounded-full'>
-                                <IoIosRefresh className="w-5 h-4 text-[#364153] text-[#16A34A]"/>
+                                <IoIosRefresh className="w-5 h-4 text-[#16A34A]"/>
                               </div>
                               <div>
                               <h4 className="font-medium text-sm leading-5 align-middle text-[#101828]">30 Days Return</h4>
@@ -197,7 +197,7 @@ export default async function ProductDetails() {
 
                              <div className='col-span-1 flex items-center gap-[12px]'>
                               <div className='flex items-center justify-center w-[40px] h-[40px] bg-[#DCFCE7] rounded-full'>
-                                <FaShieldAlt className="w-5 h-4 text-[#364153] text-[#16A34A]"/>
+                                <FaShieldAlt className="w-5 h-4 text-[#16A34A]"/>
                               </div>
                               <div>
                               <h4 className="font-medium text-sm leading-5 align-middle text-[#101828]">Secure Payment</h4>
