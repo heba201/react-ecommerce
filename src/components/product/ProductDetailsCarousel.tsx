@@ -59,13 +59,13 @@ export default function ProductDetailsCarousel() {
           }}
         >
             <CarouselItem >
-              <div className="overflow-hidden rounded-xl bg-white">
+              
                 <Image
                   src={woman_shawl}
                   alt='woman_shawl'
-                  className="aspect-square w-full object-cover"
+                  className="aspect-square w-[344px] h-[469.08px] max-h-[1120px] object-cover"
                 />
-              </div>
+               
             </CarouselItem>
         </CarouselContent>
 
