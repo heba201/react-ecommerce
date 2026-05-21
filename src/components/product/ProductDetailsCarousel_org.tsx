@@ -21,22 +21,19 @@ export default function ProductDetailsCarousel() {
   ];
   
   return (
-    <div className="w-full max-w-[500px] space-y-4">
-      {/* Main Image */}
+     <div className="w-full max-w-[376px] space-y-4">
       <Carousel className="w-full">
         <CarouselContent
+          style={{ transform: `translateX(-${selectedImage * 100}%)` }}
           className="transition-transform duration-300"
-          style={{
-            transform: `translateX(-${selectedImage * 100}%)`,
-          }}
         >
           {images.map((image, index) => (
             <CarouselItem key={index}>
-              <div className="overflow-hidden rounded-xl bg-white">
+              <div className="overflow-hidden rounded-xl">
                 <img
                   src={image}
                   alt={`Product ${index + 1}`}
-                  className="w-full aspect-square object-cover"
+                  className="aspect-square w-full object-cover"
                 />
               </div>
             </CarouselItem>
@@ -63,12 +60,12 @@ export default function ProductDetailsCarousel() {
       </Carousel>
 
       {/* Thumbnails */}
-      <div className="flex gap-3 overflow-x-auto">
+      <div className="flex gap-2 overflow-x-hidden scrollbar-hide">
         {images.map((image, index) => (
           <button
             key={index}
             onClick={() => setSelectedImage(index)}
-            className={`w-20 h-20 shrink-0 overflow-hidden rounded-xl border-2 transition ${
+            className={`w-16 h-16 shrink-0 overflow-hidden rounded-xl border transition ${
               selectedImage === index
                 ? "border-black"
                 : "border-gray-200"
