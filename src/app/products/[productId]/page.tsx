@@ -65,7 +65,7 @@ export default async function ProductDetails() {
 
               <div className="px-52 flex items-center mt-[40.5px] gap-8">
                 <div className="product-images p-4 w-[26%]">
-                  <div className='shadow-[0px_1px_2px_-1px_#0000001A,0px_1px_3px_0px_#0000001A] bg-white'>
+                  <div className='shadow-[0px_1px_2px_-1px_#0000001A,0px_1px_3px_0px_#0000001A] bg-white rounded-xl'>
                      <div className="gallary-content">
                       <Image  src={woman_shawl} alt='woman_shawl'/>
                       
@@ -81,7 +81,7 @@ export default async function ProductDetails() {
                   </div>
                 </div>
                 <div className="product-info w-[74%] ">
-                   <div className="bg-white shadow-[0px_1px_2px_-1px_#0000001A,0px_1px_3px_0px_#0000001A] pt-6 px-6 pb-[24px]">
+                   <div className="bg-white shadow-[0px_1px_2px_-1px_#0000001A,0px_1px_3px_0px_#0000001A] pt-6 px-6 pb-[24px] rounded-xl">
                       <div className="flex items-center gap-2">
                          <a className='w-[122px] h-7 rounded-full py-[6px] px-3 bg-[#F0FDF4] text-[12px] font-medium leading-4 text-[#15803D]'>
                           Women's Fashion
