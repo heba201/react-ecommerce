@@ -59,7 +59,7 @@ export default function ProductDetailsCarousel() {
       </Carousel>
 
       {/* Thumbnails */}
-      <div className="flex gap-2 overflow-x-auto scrollbar-hide">
+      <div className="flex gap-2 overflow-x-hidden scrollbar-hide">
         {images.map((image, index) => (
           <button
             key={index}
