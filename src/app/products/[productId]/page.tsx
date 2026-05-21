@@ -155,14 +155,14 @@ export default async function ProductDetails() {
                          <IoCart className="w-5 h-4 text-white"/> Add to Cart
                        </button>
 
-                       <button className="flex items-center   justify-center w-1/2 h-[52px] rounded-xl px-6 py-[14px] bg-[#101828]  font-medium text-base leading-6 text-center align-middle">
+                       <button className="flex items-center   justify-center w-1/2 h-[52px] rounded-xl px-6 py-[14px] bg-[#101828]  font-medium text-base leading-6 text-center align-middle text-white">
                          <FaBolt className="w-5 h-4 text-white"/> Buy Now
                        </button>
                       </div>
                      </div>
 
                      <div className="flex items-center gap-[12px] mt-6">
-                      <button className="flex-1 h-[52px] rounded-xl gap-2 px-4 py-3 border border-t-2 border-t-[#E5E7EB] font-medium text-base leading-6 text-center align-middle text-[#364153]">
+                      <button className="flex items-center justify-center flex-1  h-[52px] rounded-xl gap-2 px-4 py-3 border border-t-2 border-t-[#E5E7EB] font-medium text-base leading-6 text-center align-middle text-[#364153]">
                         <CiHeart className="w-5 h-4 text-[#364153]"/>Add to Wishlist
                       </button>
                       <button className="flex items-center justify-center w-14 h-[52px] rounded-xl px-4 pt-[15px] pb-[17px] border border-t-2 border-t-[#E5E7EB]">
