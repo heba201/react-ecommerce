@@ -13,12 +13,10 @@ import Image from 'next/image';
 export default function ProductDetailsCarousel() {
          const [selectedImage, setSelectedImage] = useState(0); 
    const images = [
-    "https://nextuipro.nyc3.cdn.digitaloceanspaces.com/components-images/shoes/product-view/1.jpeg",
-    "https://nextuipro.nyc3.cdn.digitaloceanspaces.com/components-images/shoes/product-view/2.jpeg",
-    "https://nextuipro.nyc3.cdn.digitaloceanspaces.com/components-images/shoes/product-view/3.jpeg",
-    "https://nextuipro.nyc3.cdn.digitaloceanspaces.com/components-images/shoes/product-view/4.jpeg",
-    "https://nextuipro.nyc3.cdn.digitaloceanspaces.com/components-images/shoes/product-view/5.jpeg",
-    "https://nextuipro.nyc3.cdn.digitaloceanspaces.com/components-images/shoes/product-view/6.jpeg",
+    "https://ecommerce.routemisr.com/Route-Academy-products/1680403156555-3.jpeg",
+    "https://ecommerce.routemisr.com/Route-Academy-products/1680403156555-2.jpeg",
+    "https://ecommerce.routemisr.com/Route-Academy-products/1680403156554-1.jpeg",
+    "https://ecommerce.routemisr.com/Route-Academy-products/1680403156556-4.jpeg",
   ];
   
   const thumbnailsRef = useRef<HTMLDivElement | null>(null);
