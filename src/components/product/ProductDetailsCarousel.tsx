@@ -78,7 +78,7 @@ export default function ProductDetailsCarousel() {
         className="flex scroll-smooth scrollbar-hide  top-[5px] left-[-62px] gap-0.5"
       >
         {images.map((image, index) => (
-            <div className="border-t-4 border-t-black">
+            <div className="border-t-4 border-t-black w-[100px] h-[133.45px] border">
           <button
             key={index}
             onClick={() => setSelectedImage(index)}
