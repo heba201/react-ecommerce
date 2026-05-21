@@ -137,6 +137,14 @@ export default async function ProductDetails() {
                         </div>
                        </div>
 
+
+                     <div className='bg-[#F9FAFB] p-4 mt-6'>
+                          <div className='flex items-center justify-between'>
+                            <span className='font-medium text-[16px] leading-6 align-middle text-[#4A5565]'>Total Price:</span>
+                          <span className='font-bold text-base leading-5 align-middle text-[#16A34A]'>149.00 EGP</span>
+                          </div>
+                     </div>
+
                    </div>
                 </div>
               </div>
