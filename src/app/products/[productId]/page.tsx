@@ -28,12 +28,13 @@ import half_star from "@/assets/home/half_star.png";
 import { CiSquareMinus } from "react-icons/ci";
 import { FaPlus , FaShieldAlt } from "react-icons/fa";
 import { IoCart } from "react-icons/io5";
-import { FaBolt , FaTruckFast } from "react-icons/fa6";
+import { FaBolt , FaTruckFast , FaTruck } from "react-icons/fa6";
 import { CiHeart } from "react-icons/ci";
 import { IoShareSocialSharp } from "react-icons/io5";
 import { IoIosRefresh } from "react-icons/io";
 import { FiMinus } from "react-icons/fi";
 import ProductDetailsCarousel from '@/components/product/ProductDetailsCarousel'
+import box from "@/assets/product_detials/box.png";
 
 export default async function ProductDetails() {
 
@@ -198,6 +199,28 @@ export default async function ProductDetails() {
                      </div>
                    </div>
                 </div>
+              </div>
+            
+              <div className='bg-white px-52 pb-6 gap-6 rounded-lg shadow-[0px_1px_2px_-1px_rgba(0,0,0,0.1),0px_1px_3px_0px_rgba(0,0,0,0.1)]'>
+               <div className='border-b border-b-[#E5E7EB]'>
+                   <div className="flex items-center">
+                    <button className='flex items-center gap-[8px] border-b-2 border-b-[#16A34A]  bg-[#F0FDF480] font-medium text-[16px] leading-none text-center align-middle text-[#16A34A]'>
+                     <Image src={box} alt='box' className='w-[17.5px] h-[14px] bg-[#16A34A]' />
+                    Product Details
+                    </button>
+
+                    <button className='flex items-center gap-[8px] bg-[#F0FDF480] font-medium text-[16px] leading-none text-center align-middle text-[#4A5565]'>
+                     <FaStar className='w-[17.5px] h-[14px] bg-[#16A34A]' />
+                     Reviews (18)
+                    </button>
+
+                    <button className='flex items-center gap-[8px] bg-[#F0FDF480] font-medium text-[16px] leading-none text-center align-middle text-[#4A5565]'>
+                     <FaTruck  className='w-[17.5px] h-[14px] text-[#4A5565]' />
+                      Shipping & Returns
+                    </button>
+
+                   </div>
+               </div>
               </div>
       </div>
      </>
