@@ -14,7 +14,7 @@ export default function ProductsSwipper() {
       navigation
       pagination={{ clickable: true }}
       spaceBetween={16}
-      slidesPerView={3}
+      slidesPerView={5}
 >
   {Array.from({ length: 10 }).map((_, index) => (
     <SwiperSlide key={index}>
