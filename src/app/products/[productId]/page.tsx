@@ -48,7 +48,7 @@ export default async function ProductDetails() {
   return (
      <>
     <div className='min-h-screen'>
-       <Breadcrumb className='px-52 pt-[15.5px]'>
+       <Breadcrumb className='xl:px-52 md:px-4 pt-[15.5px]'>
              <BreadcrumbList>
                <BreadcrumbItem>
                  <BreadcrumbLink asChild>
@@ -312,9 +312,10 @@ export default async function ProductDetails() {
               </div>
               <div className="container mt-[72px] relative left-[208px] right-[208px] pb-4 pt-4 w-[75%]">
               <ProductsSwipper />
-              </div>
+              </div>  
             </div>
             <FeaturesBar />
+            
      </>
   )
 }
