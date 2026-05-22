@@ -37,6 +37,7 @@ import ProductDetailsCarousel from '@/components/product/ProductDetailsCarousel'
 import box from "@/assets/product_detials/box.png";
 import { FaCheck } from "react-icons/fa6";
 import ProductCard from '@/components/product/ProductCard'
+import ProductsSwipper from '@/components/product/ProductsSwipper'
 
 
 
@@ -322,25 +323,24 @@ export default async function ProductDetails() {
                     </button>
                     </div>
                      <button className="w-10 h-10 rounded-full bg-[#F3F4F6] flex items-center justify-center">
-                    
                       <MdChevronRight  className='w-[20px] h-[16px] text-[#4A5565]' />
                     </button>
                   </div>
                  </div>
                  <div className="swiper mt-6">
                 <div className="swiper-wrapper">
-                  <div className="swiper-slide">
+                  {/* <div className="swiper-slide">
                     <div className="swiper-slide">
                       {Array.from({ length: 10 }).map((_, index) => (
                       <ProductCard variant='product_details' />
                       ))}
                     </div>
-                  </div>
+                  </div> */}
+                  <ProductsSwipper />
                 </div>
-
-                 </div>
+                </div>
               </div>
-      </div>
+            </div>
      </>
   )
 }
