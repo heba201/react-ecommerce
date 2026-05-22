@@ -75,7 +75,7 @@ export default function ProductDetailsCarousel() {
       <div>
       <div
         ref={thumbnailsRef}
-        className="flex scroll-smooth scrollbar-hide h-[133.45px] top-[5px] gap-0.5"
+        className="flex items-center gap-[2px] scroll-smooth scrollbar-hide h-[133.45px] top-[5px] gap-0.5"
       >
         {images.map((image, index) => (
             <div className="border-t-4 border-t-black  h-full border">
