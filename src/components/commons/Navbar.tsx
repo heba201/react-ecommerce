@@ -51,7 +51,7 @@ export default function Navbar() {
   return (
    <>
      <Topbar/>
-    <header className=' bg-white sticky z-100 h-[72px] py-[20px] top-0  md:shadow-[0_1px_2px_-1px_rgba(0,0,0,0.1),0_1px_3px_0_rgba(0,0,0,0.1)]  xl:shadow-[0px_1px_2px_-1px_#0000001A,0px_1px_3px_0px_#0000001A]'>
+    <header className='bg-white sticky z-100 h-[72px] py-[20px] top-0  md:shadow-[0_1px_2px_-1px_rgba(0,0,0,0.1),0_1px_3px_0_rgba(0,0,0,0.1)]  xl:shadow-[0px_1px_2px_-1px_#0000001A,0px_1px_3px_0px_#0000001A]'>
 
 <div className="h-18 px-6 xl:px-52 xl:pr-52 md:px-1 bg-white  md:w-full xl:w-full">
 
