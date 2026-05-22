@@ -36,6 +36,7 @@ import { FiMinus } from "react-icons/fi";
 import ProductDetailsCarousel from '@/components/product/ProductDetailsCarousel'
 import box from "@/assets/product_detials/box.png";
 import { FaCheck } from "react-icons/fa6";
+import ProductCard from '@/components/product/ProductCard'
 
 
 
@@ -327,6 +328,13 @@ export default async function ProductDetails() {
                   </div>
                  </div>
                  <div className="swiper mt-6">
+                <div className="swiper-wrapper">
+                  <div className="swiper-slide">
+                    <div className="swiper-slide">
+                      <ProductCard variant='product_details' />
+                    </div>
+                  </div>
+                </div>
 
                  </div>
               </div>
