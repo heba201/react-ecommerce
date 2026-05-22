@@ -10,7 +10,11 @@ export default function ProductsSwipper() {
   return (
     // <></>
    <Swiper
- 
+  modules={[Navigation, Pagination]}
+      navigation
+      pagination={{ clickable: true }}
+      spaceBetween={16}
+      slidesPerView={3}
 >
   {Array.from({ length: 10 }).map((_, index) => (
     <SwiperSlide key={index}>
