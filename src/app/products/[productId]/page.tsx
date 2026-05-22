@@ -65,7 +65,7 @@ export default async function ProductDetails() {
              </BreadcrumbList>
            </Breadcrumb>
 
-              <div className="px-52 flex items-center mt-[40.5px] gap-8 bg-red-500">
+              <div className="px-52 flex items-center mt-[40.5px] gap-8">
                  
                  {/* <div className="product-images p-4 w-[26%]">
                   <div className='shadow-[0px_1px_2px_-1px_#0000001A,0px_1px_3px_0px_#0000001A] bg-white rounded-xl'>
