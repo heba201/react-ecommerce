@@ -36,7 +36,17 @@ export default function ProductsSwipper() {
     //   pagination={{ clickable: true }}
       onSwiper={(swiper) => (swiperRef.current = swiper)}
       spaceBetween={16}
-      slidesPerView={5}
+       breakpoints={{
+    0: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 4,
+    },
+    1280: {
+      slidesPerView: 5,
+    },
+  }}
         >
         {Array.from({ length: 10 }).map((_, index) => (
             <SwiperSlide key={index}>
