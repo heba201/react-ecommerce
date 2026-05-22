@@ -71,7 +71,7 @@ export default async function ProductDetails() {
                  
                 <ProductDetailsCarousel/>
 
-                <div className="product-info w-[74%] ">
+                <div className="product-info w-3/4 ">
                    <div className="bg-white shadow-[0px_1px_2px_-1px_#0000001A,0px_1px_3px_0px_#0000001A] pt-6 px-6 pb-[24px] rounded-xl">
                       <div className="flex items-center gap-2">
                          <a className='w-[122px] h-7 rounded-full py-[6px] px-3 bg-[#F0FDF4] text-[12px] font-medium leading-4 text-[#15803D]'>
