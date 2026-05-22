@@ -308,7 +308,7 @@ export default async function ProductDetails() {
                  </div>
                </div>
               </div>
-              <div className="container mt-[72px] relative left-[208px] right-[208px] mx-auto p-4">
+              <div className="container mt-[72px] relative left-[208px] right-[208px] p-4">
                 
                  <div className="flex items-center justify-between">
                   <div className="flex items-center gap-[12px]">
