@@ -228,7 +228,7 @@ export default async function ProductDetails() {
                   <p className='font-medium text-[16px] leading-[26px] align-middle text-[#4A5565]'>Material Polyester Blend Colour Name Multicolour Department Women</p>
                  </div>
                  <div className="grid grid-cols-2 gap-[24px] mt-[24px]">
-                   <div className='col-span-1  bg-[#F9FAFB]'>
+                   <div className='col-span-1  bg-[#F9FAFB] p-4'>
                    <h4 className='font-medium text-[16px] leading-none align-middle text-[#101828]'>
                     Product Information
                    </h4>
