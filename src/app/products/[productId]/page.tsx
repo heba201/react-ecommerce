@@ -35,6 +35,7 @@ import { IoIosRefresh } from "react-icons/io";
 import { FiMinus } from "react-icons/fi";
 import ProductDetailsCarousel from '@/components/product/ProductDetailsCarousel'
 import box from "@/assets/product_detials/box.png";
+import { FaCheck } from "react-icons/fa6";
 
 export default async function ProductDetails() {
 
@@ -263,6 +264,22 @@ export default async function ProductDetails() {
 
                    </ul>
                    </div>
+
+                   <div className='col-span-1  bg-[#F9FAFB] p-4'>
+                   <h4 className='font-medium text-[16px] leading-none align-middle text-[#101828]'>
+                    Key Features
+                   </h4>
+                   <ul className='space-y-2 list-none mt-[12px]'>
+                    <li>
+                      <div className="flex items-center font-medium text-[14px] leading-[20px] align-middle text-[#4A5565]">
+                       <FaCheck  className='w-[17.5px] h-[14px] text-[#16A34A] pr-[8px]'/>
+                       Premium Quality Product
+                      </div>
+
+                    </li>
+                   </ul>
+                   </div>
+
                  </div>
                </div>
               </div>
