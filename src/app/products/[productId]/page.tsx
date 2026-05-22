@@ -194,8 +194,8 @@ export default async function ProductDetails() {
                                 <FaShieldAlt className="w-5 h-4 text-[#16A34A]"/>
                               </div>
                               <div>
-                              <h4 className="font-medium text-sm leading-5 align-middle text-[#101828]">Secure Payment</h4>
-                              <p className="font-medium text-xs leading-4 align-middle text-[#6A7282]">100% Protected</p>
+                              <h4 className="font-medium text-sm leading-5 align-middle text-[#101828] whitespace-nowrap">Secure Payment</h4>
+                              <p className="font-medium text-xs leading-4 align-middle text-[#6A7282] whitespace-nowrap">100% Protected</p>
                               </div>
                             </div>
 
