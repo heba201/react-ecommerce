@@ -38,6 +38,7 @@ import box from "@/assets/product_detials/box.png";
 import { FaCheck } from "react-icons/fa6";
 import ProductCard from '@/components/product/ProductCard'
 import ProductsSwipper from '@/components/product/ProductsSwipper'
+import FeaturesBar from '@/components/featuresBar/FeaturesBar'
 
 
 
@@ -313,6 +314,7 @@ export default async function ProductDetails() {
               <ProductsSwipper />
               </div>
             </div>
+            <FeaturesBar />
      </>
   )
 }
