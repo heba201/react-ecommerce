@@ -201,7 +201,7 @@ export default async function ProductDetails() {
                 </div>
               </div>
             
-              <div className='mt-[56px] bg-white px-52 pb-6 gap-6 rounded-lg shadow-[0px_1px_2px_-1px_rgba(0,0,0,0.1),0px_1px_3px_0px_rgba(0,0,0,0.1)]'>
+              <div className='p-[24px] mt-[56px] bg-white px-52 pb-6 gap-6 rounded-lg shadow-[0px_1px_2px_-1px_rgba(0,0,0,0.1),0px_1px_3px_0px_rgba(0,0,0,0.1)]'>
                <div className='border-b border-b-[#E5E7EB]'>
                    <div className="flex items-center">
                     <button className='flex items-center gap-[8px] cursor-pointer px-6 py-4  border-b-2 border-b-[#16A34A]  bg-[#F0FDF480] font-medium text-[16px] leading-none text-center align-middle text-[#16A34A]'>
@@ -220,6 +220,26 @@ export default async function ProductDetails() {
                     </button>
 
                    </div>
+               </div>
+               
+               <div className='space-y-6'>
+                 <div>
+                  <h3 className='font-semibold text-[18px] leading-[28px] text-[#101828]'>About this Product</h3>
+                  <p className='font-medium text-[16px] leading-[26px] align-middle text-[#4A5565]'>Material Polyester Blend Colour Name Multicolour Department Women</p>
+                 </div>
+                 <div className="grid grid-cols-2 gap-[24px] mt-[24px]">
+                   <div className='col-span-1  bg-[#F9FAFB]'>
+                   <h4 className='font-medium text-[16px] leading-none align-middle text-[#101828]'>
+                    Product Information
+                   </h4>
+                   <ul className='space-y-2'>
+                    <div className="flex items-center justify-between">
+                     <span className='font-medium text-sm leading-5 align-middle text-[#6A7282]'>Category</span>
+                     <span className='font-medium text-[14px] leading-[20px] align-middle text-[#101828]'>Women's Fashion</span>
+                    </div>
+                   </ul>
+                   </div>
+                 </div>
                </div>
               </div>
       </div>
