@@ -63,7 +63,7 @@ export default function ProductDetailsCarousel() {
                 <Image
                   src={woman_shawl}
                   alt='woman_shawl'
-                  className="aspect-square w-[344px] h-[469.08px] max-h-[1120px] object-cover"
+                  className="aspect-square object-cover"
                 />
                
             </CarouselItem>
@@ -78,7 +78,7 @@ export default function ProductDetailsCarousel() {
         className="flex scroll-smooth scrollbar-hide h-[133.45px] top-[5px] gap-0.5"
       >
         {images.map((image, index) => (
-            <div className="border-t-4 border-t-black w-[100px] h-[133.45px] border">
+            <div className="border-t-4 border-t-black  h-full border">
           <button
             key={index}
             onClick={() => setSelectedImage(index)}
