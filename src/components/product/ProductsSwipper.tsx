@@ -12,7 +12,7 @@ export default function ProductsSwipper() {
     const swiperRef = useRef<any>(null);
   return (
      <>
-     {/* <div className="flex items-center justify-between">
+     <div className="flex items-center justify-between">
                   <div className="flex items-center gap-[12px]">
                     <div className='w-[6px] h-[32px] rounded-full bg-gradient-to-b from-[#00BC7D] to-[#007A55]'></div>
                       <h2 className='font-bold text-[20px] leading-[24px] align-middle text-[#1E2939]'>You May Also <span className='text-[#16A34A]'>Like</span></h2>
@@ -55,7 +55,7 @@ export default function ProductsSwipper() {
         ))}
         </Swiper>
         </div>
-        </div> */}
+        </div>
         </>
   )
 }
