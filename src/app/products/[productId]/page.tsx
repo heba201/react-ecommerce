@@ -232,7 +232,7 @@ export default async function ProductDetails() {
                    <h4 className='font-medium text-[16px] leading-none align-middle text-[#101828]'>
                     Product Information
                    </h4>
-                   <ul className='space-y-2'>
+                   <ul className='space-y-2 list-none mt-[12px]'>
                     <li>
                        <div className="flex items-center justify-between">
                      <span className='font-medium text-sm leading-5 align-middle text-[#6A7282]'>Category</span>
