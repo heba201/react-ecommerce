@@ -21,18 +21,6 @@ export default function ProductDetailsCarousel() {
   
   const thumbnailsRef = useRef<HTMLDivElement | null>(null);
 
-  const handlePrevious = () => {
-    setSelectedImage((prev) =>
-      prev === 0 ? images.length - 1 : prev - 1
-    );
-  };
-
-  const handleNext = () => {
-    setSelectedImage((prev) =>
-      prev === images.length - 1 ? 0 : prev + 1
-    );
-  };
-
   // Auto scroll thumbnails
   useEffect(() => {
     if (!thumbnailsRef.current) return;
