@@ -310,8 +310,7 @@ export default async function ProductDetails() {
                </div>
               </div>
               <div className="container mt-[72px] relative left-[208px] right-[208px] pb-4 pt-4 w-[75%]">
-                
-                   <ProductsSwipper />
+              <ProductsSwipper />
               </div>
             </div>
      </>
