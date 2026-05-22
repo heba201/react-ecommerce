@@ -54,8 +54,8 @@ export default function ProductsSwipper() {
             </SwiperSlide>
         ))}
         </Swiper>
-                </div>
-                </div>
-                </>
+        </div>
+        </div>
+        </>
   )
 }
