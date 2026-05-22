@@ -58,6 +58,7 @@ export default function ProductDetailsCarousel() {
             transform: `translateX(-${selectedImage * 100}%)`,
           }}
         >
+             {images.map((image, index) => (
             <CarouselItem >
               
                 <Image
@@ -67,6 +68,7 @@ export default function ProductDetailsCarousel() {
                 />
                
             </CarouselItem>
+             ))}
         </CarouselContent>
 
       </Carousel>
