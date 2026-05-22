@@ -51,7 +51,7 @@ export default function ProductDetailsCarousel() {
     <div className="product-images h-[776px] p-4 w-[26%] bg-blue-500 ">
       {/* Main Carousel */}
        
-      <Carousel className="shadow-[0px_1px_2px_-1px_#0000001A,0px_1px_3px_0px_#0000001A] bg-white rounded-xl w-full">
+      <Carousel className="shadow-[0px_1px_2px_-1px_#0000001A,0px_1px_3px_0px_#0000001A] bg-white rounded-xl w-full p-4">
         <CarouselContent
           className="transition-transform duration-300"
           style={{
