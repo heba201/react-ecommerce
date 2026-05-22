@@ -48,10 +48,10 @@ export default function ProductDetailsCarousel() {
   }, [selectedImage]);
   
   return (
-    <div className="product-images h-[776px] p-4 w-[26%] bg-blue-500 shadow-[0px_1px_2px_-1px_#0000001A,0px_1px_3px_0px_#0000001A] rounded-xl">
+    <div className="product-images h-[776px] w-[26%] p-4  shadow-[0px_1px_2px_-1px_#0000001A,0px_1px_3px_0px_#0000001A] rounded-xl">
       {/* Main Carousel */}
        
-      <Carousel className=" bg-white  w-full p-4">
+      <Carousel className=" bg-white  w-full ">
         <CarouselContent
           className="transition-transform duration-300"
           style={{
