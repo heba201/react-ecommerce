@@ -72,7 +72,7 @@ export default function ProductDetailsCarousel() {
       </Carousel>
  
       {/* Thumbnails */}
-      <div>
+      <div className='overflow-hidden'>
       <div
         ref={thumbnailsRef}
         className="flex items-center scroll-smooth scrollbar-hide w-[344px] h-[133.45px] mt-[5px] gap-0.5 overflow-hidden"
