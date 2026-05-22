@@ -331,7 +331,9 @@ export default async function ProductDetails() {
                 <div className="swiper-wrapper">
                   <div className="swiper-slide">
                     <div className="swiper-slide">
+                      {Array.from({ length: 10 }).map((_, index) => (
                       <ProductCard variant='product_details' />
+                      ))}
                     </div>
                   </div>
                 </div>
