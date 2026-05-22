@@ -168,7 +168,7 @@ export default async function ProductDetails() {
                      <div className="border-t border-t-[#F3F4F6] pt-[24px] mt-6">
                         <div className="grid grid-cols-3 gap-[16px]">
                            
-                           <div className='col-span-1 flex items-center gap-[12px]'>
+                           <div className='col-span-1 flex items-center xl:gap-[12px] md:gap-[16px]'>
                               <div className='flex items-center justify-center w-[40px] h-[40px] bg-[#DCFCE7] rounded-full'>
                                 <FaTruckFast className="w-5 h-4 text-[#16A34A]"/>
                               </div>
@@ -178,7 +178,7 @@ export default async function ProductDetails() {
                               </div>
                             </div>
 
-                             <div className='col-span-1 flex items-center gap-[12px]'>
+                             <div className='col-span-1 flex items-center xl:gap-[12px] md:gap-[16px]'>
                               <div className='flex items-center justify-center w-[40px] h-[40px] bg-[#DCFCE7] rounded-full'>
                                 <IoIosRefresh className="w-5 h-4  scale-x-[-1] text-[#16A34A]"/>
                               </div>
@@ -189,7 +189,7 @@ export default async function ProductDetails() {
                             </div>
 
 
-                             <div className='col-span-1 flex items-center gap-[12px]'>
+                             <div className='col-span-1 flex items-center xl:gap-[12px] md:gap-[16px]'>
                               <div className='flex items-center justify-center w-[40px] h-[40px] bg-[#DCFCE7] rounded-full'>
                                 <FaShieldAlt className="w-5 h-4 text-[#16A34A]"/>
                               </div>
