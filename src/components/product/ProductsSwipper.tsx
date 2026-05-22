@@ -19,11 +19,11 @@ export default function ProductsSwipper() {
                   </div>
                   <div className="flex items-center">
                     <div className="pr-[8px]">
-                    <button onClick={() => swiperRef.current?.slidePrev()} className="w-10 h-10 rounded-full bg-[#F3F4F6] flex items-center justify-center cursor-pointer">
+                    <button onClick={() => swiperRef.current?.slidePrev()} className="w-10 h-10 rounded-full bg-[#F3F4F6] flex items-center justify-center cursor-pointer hover:bg-[#83d09f] transition">
                       <MdChevronLeft className='w-[20px] h-[16px] text-[#4A5565]' />
                     </button>
                     </div>
-                     <button  onClick={() => swiperRef.current?.slideNext()} className="w-10 h-10 rounded-full bg-[#F3F4F6] flex items-center justify-center cursor-pointer">
+                     <button  onClick={() => swiperRef.current?.slideNext()} className="w-10 h-10 rounded-full bg-[#F3F4F6] flex items-center justify-center cursor-pointer hover:bg-[#83d09f] transition">
                       <MdChevronRight  className='w-[20px] h-[16px] text-[#4A5565]' />
                     </button>
                   </div>
