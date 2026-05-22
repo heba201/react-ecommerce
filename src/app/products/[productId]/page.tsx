@@ -73,7 +73,7 @@ export default async function ProductDetails() {
              </BreadcrumbList>
            </Breadcrumb>
 
-              <div className="px-52 flex items-start  mt-[40.5px] gap-8">
+              <div className="xl:px-52 md:px-4 flex items-start  mt-[40.5px] gap-8">
                  
                 <ProductDetailsCarousel/>
 
