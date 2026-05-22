@@ -304,6 +304,9 @@ export default async function ProductDetails() {
                  </div>
                </div>
               </div>
+              <div className="container mt-[72px] ml-[192px]">
+                 text
+              </div>
       </div>
      </>
   )
