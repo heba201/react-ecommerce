@@ -240,6 +240,27 @@ export default async function ProductDetails() {
                     </div>
                     </li>
                     
+                    <li>
+                       <div className="flex items-center justify-between">
+                     <span className='font-medium text-sm leading-5 align-middle text-[#6A7282]'>Subcategory</span>
+                     <span className='font-medium text-[14px] leading-[20px] align-middle text-[#101828]'>Women's Clothing</span>
+                    </div>
+                    </li>
+
+                    <li>
+                       <div className="flex items-center justify-between">
+                     <span className='font-medium text-sm leading-5 align-middle text-[#6A7282]'>Brand</span>
+                     <span className='font-medium text-[14px] leading-[20px] align-middle text-[#101828]'>DeFacto</span>
+                    </div>
+                    </li>
+
+                    <li>
+                       <div className="flex items-center justify-between">
+                     <span className='font-medium text-sm leading-5 align-middle text-[#6A7282]'>Items Sold</span>
+                     <span className='font-medium text-[14px] leading-[20px] align-middle text-[#101828]'>4.565875507206704e+305+ sold</span>
+                    </div>
+                    </li>
+
                    </ul>
                    </div>
                  </div>
