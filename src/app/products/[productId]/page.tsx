@@ -66,7 +66,8 @@ export default async function ProductDetails() {
            </Breadcrumb>
 
               <div className="px-52 flex items-center mt-[40.5px] gap-8 bg-red-500">
-                {/* <div className="product-images p-4 w-[26%]">
+                 
+                 {/* <div className="product-images p-4 w-[26%]">
                   <div className='shadow-[0px_1px_2px_-1px_#0000001A,0px_1px_3px_0px_#0000001A] bg-white rounded-xl'>
                      <div className="gallary-content">
                       <Image  src={woman_shawl} alt='woman_shawl'/>
@@ -81,7 +82,7 @@ export default async function ProductDetails() {
 
                      </div>
                   </div>
-                </div> */}
+                 </div>  */}
 
                      <ProductDetailsCarousel/>
 
