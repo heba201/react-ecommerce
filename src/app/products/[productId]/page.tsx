@@ -183,8 +183,8 @@ export default async function ProductDetails() {
                                 <IoIosRefresh className="w-5 h-4  scale-x-[-1] text-[#16A34A]"/>
                               </div>
                               <div>
-                              <h4 className="font-medium text-sm leading-5 align-middle text-[#101828]">30 Days Return</h4>
-                              <p className="font-medium text-xs leading-4 align-middle text-[#6A7282]">Money back</p>
+                              <h4 className="font-medium text-sm leading-5 align-middle text-[#101828] whitespace-nowrap">30 Days Return</h4>
+                              <p className="font-medium text-xs leading-4 align-middle text-[#6A7282] whitespace-nowrap">Money back</p>
                               </div>
                             </div>
 
