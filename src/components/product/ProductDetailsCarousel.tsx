@@ -63,7 +63,7 @@ export default function ProductDetailsCarousel() {
                 <Image
                   src={woman_shawl}
                   alt='woman_shawl'
-                  className="aspect-square object-cover"
+                  className="w-full h-[469.1px] object-cover"
                 />
                
             </CarouselItem>
