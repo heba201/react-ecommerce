@@ -20,7 +20,7 @@ import {
   CarouselItem,
   
 } from "@/components/ui/carousel"
-import { MdChevronRight } from "react-icons/md";
+import { MdChevronRight , MdChevronLeft } from "react-icons/md";
 import { FaHome } from "react-icons/fa";
 import woman_shawl from "@/assets/home/woman_shawl.png";
 import { FaStar } from "react-icons/fa6";
@@ -36,6 +36,9 @@ import { FiMinus } from "react-icons/fi";
 import ProductDetailsCarousel from '@/components/product/ProductDetailsCarousel'
 import box from "@/assets/product_detials/box.png";
 import { FaCheck } from "react-icons/fa6";
+
+
+
 
 export default async function ProductDetails() {
 
@@ -304,8 +307,28 @@ export default async function ProductDetails() {
                  </div>
                </div>
               </div>
-              <div className="container mt-[72px] relative left-[192px] right-[192px]">
-                 text
+              <div className="container mt-[72px] relative left-[192px] right-[192px] p-4">
+                
+                 <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-[12px]">
+                    <div className='w-[6px] h-[32px] rounded-full bg-gradient-to-b from-[#00BC7D] to-[#007A55]'></div>
+                      <h2 className='font-bold text-[20px] leading-[24px] align-middle text-[#1E2939]'>You May Also <span className='text-[#16A34A]'>Like</span></h2>
+                  </div>
+                  <div className="flex items-center">
+                    <div className="pr-[8px]">
+                    <button className="w-10 h-10 rounded-full bg-[#F3F4F6] flex items-center justify-center">
+                      <MdChevronLeft className='w-[20px] h-[16px] text-[#4A5565]' />
+                    </button>
+                    </div>
+                     <button className="w-10 h-10 rounded-full bg-[#F3F4F6] flex items-center justify-center">
+                    
+                      <MdChevronRight  className='w-[20px] h-[16px] text-[#4A5565]' />
+                    </button>
+                  </div>
+                 </div>
+                 <div className="swiper mt-6">
+
+                 </div>
               </div>
       </div>
      </>
