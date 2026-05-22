@@ -62,8 +62,8 @@ export default function ProductDetailsCarousel() {
             <CarouselItem >
               
                 <Image
-                  src={woman_shawl}
-                  alt='woman_shawl'
+                  src={image}
+                  alt='product-image'
                   className="w-full h-[469.1px] object-cover"
                 />
                
