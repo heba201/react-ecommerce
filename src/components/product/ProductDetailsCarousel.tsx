@@ -71,9 +71,8 @@ export default function ProductDetailsCarousel() {
              ))}
         </CarouselContent>
 
-      </Carousel>
- 
-      {/* Thumbnails */}
+
+{/* Thumbnails */}
       <div className='overflow-hidden'>
       <div
         ref={thumbnailsRef}
@@ -100,6 +99,10 @@ export default function ProductDetailsCarousel() {
         ))}
       </div>
     </div>
+    
+      </Carousel>
+ 
+      
     </div>
   )
 }
