@@ -275,8 +275,29 @@ export default async function ProductDetails() {
                        <FaCheck  className='w-[17.5px] h-[14px] text-[#16A34A] pr-[8px]'/>
                        Premium Quality Product
                       </div>
-
                     </li>
+
+                    <li>
+                      <div className="flex items-center font-medium text-[14px] leading-[20px] align-middle text-[#4A5565]">
+                       <FaCheck  className='w-[17.5px] h-[14px] text-[#16A34A] pr-[8px]'/>
+                       100% Authentic Guarantee
+                      </div>
+                    </li>
+
+                    <li>
+                      <div className="flex items-center font-medium text-[14px] leading-[20px] align-middle text-[#4A5565]">
+                       <FaCheck  className='w-[17.5px] h-[14px] text-[#16A34A] pr-[8px]'/>
+                       Fast & Secure Packaging
+                      </div>
+                    </li>
+
+                      <li>
+                      <div className="flex items-center font-medium text-[14px] leading-[20px] align-middle text-[#4A5565]">
+                       <FaCheck  className='w-[17.5px] h-[14px] text-[#16A34A] pr-[8px]'/>
+                      Quality Tested
+                      </div>
+                    </li>
+
                    </ul>
                    </div>
 
