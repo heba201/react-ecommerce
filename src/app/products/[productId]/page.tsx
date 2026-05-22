@@ -311,27 +311,7 @@ export default async function ProductDetails() {
               </div>
               <div className="container mt-[72px] relative left-[208px] right-[208px] pb-4 pt-4 w-[75%]">
                 
-                 <div className="flex items-center justify-between ">
-                  <div className="flex items-center gap-[12px]">
-                    <div className='w-[6px] h-[32px] rounded-full bg-gradient-to-b from-[#00BC7D] to-[#007A55]'></div>
-                      <h2 className='font-bold text-[20px] leading-[24px] align-middle text-[#1E2939]'>You May Also <span className='text-[#16A34A]'>Like</span></h2>
-                  </div>
-                  <div className="flex items-center">
-                    <div className="pr-[8px]">
-                    <button className="w-10 h-10 rounded-full bg-[#F3F4F6] flex items-center justify-center">
-                      <MdChevronLeft className='w-[20px] h-[16px] text-[#4A5565]' />
-                    </button>
-                    </div>
-                     <button className="w-10 h-10 rounded-full bg-[#F3F4F6] flex items-center justify-center">
-                      <MdChevronRight  className='w-[20px] h-[16px] text-[#4A5565]' />
-                    </button>
-                  </div>
-                 </div>
-                 <div className="swiper mt-6">
-                <div className="swiper-wrapper">
-                  <ProductsSwipper />
-                </div>
-                </div>
+                   <ProductsSwipper />
               </div>
             </div>
      </>
