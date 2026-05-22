@@ -201,7 +201,7 @@ export default async function ProductDetails() {
                 </div>
               </div>
             
-              <div className='bg-white px-52 pb-6 gap-6 rounded-lg shadow-[0px_1px_2px_-1px_rgba(0,0,0,0.1),0px_1px_3px_0px_rgba(0,0,0,0.1)]'>
+              <div className='mt-[56px] bg-white px-52 pb-6 gap-6 rounded-lg shadow-[0px_1px_2px_-1px_rgba(0,0,0,0.1),0px_1px_3px_0px_rgba(0,0,0,0.1)]'>
                <div className='border-b border-b-[#E5E7EB]'>
                    <div className="flex items-center">
                     <button className='flex items-center gap-[8px] border-b-2 border-b-[#16A34A]  bg-[#F0FDF480] font-medium text-[16px] leading-none text-center align-middle text-[#16A34A]'>
