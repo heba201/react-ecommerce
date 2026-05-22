@@ -40,14 +40,11 @@ import ProductCard from '@/components/product/ProductCard'
 import ProductsSwipper from '@/components/product/ProductsSwipper'
 import FeaturesBar from '@/components/featuresBar/FeaturesBar'
 
-
-
-
 export default async function ProductDetails() {
 
   return (
      <>
-    <div className='min-h-screen'>
+    {/* <div className='min-h-screen'>
        <Breadcrumb className='xl:px-52 md:px-4 pt-[15.5px]'>
              <BreadcrumbList>
                <BreadcrumbItem>
@@ -314,7 +311,7 @@ export default async function ProductDetails() {
               <ProductsSwipper />
               </div>  
             </div>
-            <FeaturesBar />
+            <FeaturesBar /> */}
             
      </>
   )
