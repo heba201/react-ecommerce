@@ -31,9 +31,9 @@ export default function ProductsSwipper() {
                  <div className="swiper mt-6">
                 <div className="swiper-wrapper">
                  <Swiper
-        modules={[Navigation, Pagination]}
-       navigation
-       pagination={{ clickable: true }}
+       // modules={[Navigation, Pagination]}
+      // navigation
+      // pagination={{ clickable: true }}
       onSwiper={(swiper) => (swiperRef.current = swiper)}
       spaceBetween={16}
        breakpoints={{
