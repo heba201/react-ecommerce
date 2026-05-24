@@ -33,7 +33,7 @@ export default function Cart() {
             </nav>
             <div className="flex  items-center gap-3">
                <div>
-                <h1 className="flex  items-center font-bold text-[30px] leading-9 align-middle text-[#101828]">
+                <h1 className="flex  items-center gap-3 font-bold text-[30px] leading-9 align-middle text-[#101828]">
                   <span className="flex  items-center justify-center bg-linear-to-r from-[#16A34A] to-[#15803D] w-12 h-12 rounded-xl">
                     <IoCart className='w-[37.5px] h-7.5 text-white' />
                   </span>

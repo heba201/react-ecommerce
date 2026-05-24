@@ -27,8 +27,8 @@ export default function checkout() {
   return (
     <>
     <div>
-        <div className='pt-8 pb-8 bg-linear-to-b from-[#F9FAFB] to-[#FFFFFF]'>
-          <div className="container mr-48 ml-48 px-4 ">
+        <div className='pt-8 pb-8 bg-linear-to-b from-[#F9FAFB] to-[#FFFFFF] px-48'>
+          <div className="container px-4 ">
             <div className="mb-8">
               <nav className="flex items-center gap-2 mb-6">
               <a className="font-medium text-[14px] leading-5 align-middle text-[#6A7282]">Home</a>
