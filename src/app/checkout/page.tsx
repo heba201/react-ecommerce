@@ -329,8 +329,9 @@ export default function checkout() {
             </div>
           </div>
         </div>
+        <FeaturesBar variant=""/>
     </div>
-    <FeaturesBar variant=""/>
+    
     </>
   )
 }
