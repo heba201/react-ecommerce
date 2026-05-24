@@ -295,7 +295,7 @@ export default function checkout() {
                         <Image src={closed_box} alt='closed_box' className="w-5 h-4"/>
                         Place Order
                       </div>
-                    //here 
+                   
                     <div className="flex items-center left-5 py-3 gap-4 border-t border-t-[#F3F4F6]">
                       <div className="flex items-center gap-1.5">
                         <FaShieldAlt className="w-3.75 h-3 text-[#00C950]" />
