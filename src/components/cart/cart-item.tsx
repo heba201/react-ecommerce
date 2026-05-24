@@ -45,8 +45,8 @@ export default function CartItem() {
          </div>
         </div>
           <div className="mt-auto flex items-center justify-between"> 
-            <div className="flex items-center w-30.5 h-10.5 rounded-xl p-1 border bg-[#F9FAFB] border-t border-t-[#E5E7EB]">
-                <div className="flex items-center justify-between w-8 h-8 rounded-lg text-white shadow-[0_1px_2px_-1px_rgba(0,0,0,0.1),0_1px_3px_0_rgba(0,0,0,0.1)]">
+            <div className="flex items-center justify-between w-30.5 h-10.5 rounded-xl p-1 border bg-[#F9FAFB] border-t border-t-[#E5E7EB]">
+                <div className="flex items-center justify-center  w-8 h-8 rounded-lg text-white shadow-[0_1px_2px_-1px_rgba(0,0,0,0.1),0_1px_3px_0_rgba(0,0,0,0.1)]">
                 <FiMinus className='w-3.75 h-3 text-[#6A7282]' />
                </div>
                 <span className='font-bold text-[16px] leading-6 text-center align-middle text-[#101828]'>2</span>

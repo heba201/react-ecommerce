@@ -46,11 +46,13 @@ export default function Cart() {
 
         <div className="grid grid-cols-3 gap-8">
         <div className='col-span-2 '>
+         
           <div className="space-y-4">
+          {Array.from({ length: 4 }).map((_, i) => (
             <div className='bg-white rounded-2xl border border-[#F3F4F6]  mb-4 p-5.25 shadow-[0_1px_2px_-1px_rgba(0,0,0,0.1),0_1px_3px_0_rgba(0,0,0,0.1)]'>
             <CartItem />
             </div>
-            
+             ))}
             <div className="mt-6 flex items-center  justify-between pt-6   border  border-t-[#E5E7EB]">
              <a className="flex items-center gap-2 text-[#16A34A] font-medium text-[14px] leading-5 align-middle">
               <span className='font-medium text-[14px] leading-5 align-middle text-[#16A34A]'>←</span>
@@ -62,10 +64,12 @@ export default function Cart() {
              </button>
             </div>
           </div>
+          
         </div>
+          
          <div className='col-span-1'>
            <div className='rounded-2xl border shadow-[0_1px_2px_-1px_rgba(0,0,0,0.1),0_1px_3px_0_rgba(0,0,0,0.1)] bg-white border-t border-t-[#F3F4F6]'>
-            <div className='gap-1 px-6 py-4 bg-[linear-gradient(90deg,#16A34A_0%,#15803D_100%)]'>
+            <div className='gap-1 px-6 py-4 bg-[linear-gradient(90deg,#16A34A_0%,#15803D_100%)] rounded-tl-lg rounded-tr-lg'>
               <h2 className='flex items-center text-white font-bold text-[18px] leading-7 align-middle'>
                 <Image src={lock}  alt='lock' className='w-[22.5px] h-4.5'/>
                 Order Summary
@@ -76,11 +80,12 @@ export default function Cart() {
               <div className='flex items-center gap-3 w-107.5 h-19  p-4 rounded-xl bg-[linear-gradient(90deg,#F0FDF4_0%,#F3F4F6_100%)]'>
                 <div className='flex items-center justify-center w-10 h-10 bg-[#DCFCE7] rounded-full'>
                    <FaTruck className='w-5 h-4 text-[#00A63E]' />
+                  </div>
                    <div>
-                    <p className='font-semibold text-[16px] leading-4 align-middle text-[#008236]'>Free Shipping!</p>
+                  <p className='font-semibold text-[16px] leading-4 align-middle text-[#008236]'>Free Shipping!</p>
                   <p className='font-medium text-[14px] leading-5 align-middle text-[#00A63E]'>You qualify for free delivery</p>
                    </div>
-                </div>
+                
               </div>
              
             <div className='space-y-3 mb-5'>
