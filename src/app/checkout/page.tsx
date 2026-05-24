@@ -21,6 +21,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { FaPlus } from "react-icons/fa";
 import lock from "@/assets/cart/lock.png";
 import { IoIosInformationCircle } from "react-icons/io";
+import FeaturesBar from '@/components/featuresBar/FeaturesBar';
 
 export default function checkout() {
   return (
@@ -329,6 +330,7 @@ export default function checkout() {
           </div>
         </div>
     </div>
+    <FeaturesBar variant=""/>
     </>
   )
 }
