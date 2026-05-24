@@ -20,14 +20,14 @@ import { FaShieldAlt } from "react-icons/fa";
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaPlus } from "react-icons/fa";
 import lock from "@/assets/cart/lock.png";
-
+import { IoIosInformationCircle } from "react-icons/io";
 
 export default function checkout() {
   return (
     <>
     <div>
-        <div className='pt-8 pb-8'>
-          <div className="container mx-auto px-4 bg-linear-to-b from-[#F9FAFB] to-[#FFFFFF]">
+        <div className='pt-8 pb-8 bg-linear-to-b from-[#F9FAFB] to-[#FFFFFF]'>
+          <div className="container mx-auto px-4 ">
             <div className="mb-8">
               <nav className="flex items-center gap-2 mb-6">
               <a className="font-medium text-[14px] leading-5 align-middle text-[#6A7282]">Home</a>
@@ -43,14 +43,14 @@ export default function checkout() {
               <div className="flex items-center justify-between">
                 <div>
                     <h1 className="flex items-center  gap-3 mb-2  font-bold text-[30px] leading-9 align-middle text-[#101828]">
-                        <span className="w-12 h-12 rounded-[12px] bg-linear-to-br from-[#16A34A] to-[#15803D] shadow-[0px_4px_6px_-4px_#16A34A33,0px_10px_15px_-3px_#16A34A33]">
-                            <Image src={paper_note} alt='paper_note' className="w-[37.5px] h-7.5"/>
+                        <span className="flex items-center justify-center w-12 h-12 rounded-[12px] bg-linear-to-br from-[#16A34A] to-[#15803D] shadow-[0px_4px_6px_-4px_#16A34A33,0px_10px_15px_-3px_#16A34A33]">
+                            <Image src={paper_note} alt='paper_note' className="w-[22.5px] h-7.5"/>
                         </span>
                         Complete Your Order
                     </h1>
                     <p className="font-medium text-[16px] leading-6 align-middle text-[#6A7282]">Review your items and complete your purchase</p>
                 </div>
-                <a className="flex items-center gap-2 font-medium text-[16px] leading-6 align-middle">
+                <a className="flex items-center gap-2 font-medium text-[16px] leading-6 align-middle text-[#16A34A]">
                     <GoArrowLeft className='w-5 h-4 text-[#16A34A]' />
                     Back to Cart
 
@@ -62,7 +62,7 @@ export default function checkout() {
                 <div className="col-span-2">
                     <div className="space-y-6">
                         <div className="rounded-[16px] bg-white border border-t border-t-[#F3F4F6] shadow-[0px_1px_2px_-1px_#0000001A,0px_1px_3px_0px_#0000001A]">
-                          <div className="px-6 py-4 gap-1">
+                          <div className="px-6 py-4 gap-1 bg-linear-to-r from-[#16A34A] to-[#15803D]">
                              <h2 className="flex items-center gap-2 font-bold text-[18px] leading-7 align-middle text-white">
                                <TiHomeOutline className="w-[22.5px] h-4.5 text-white"/>
                                Shipping Address
@@ -81,15 +81,15 @@ export default function checkout() {
                               <div className="space-y-3">
                                <p className="font-medium text-[14px] leading-5 align-middle text-[#4A5565]">Select a saved address or enter a new one below</p>
                               <div className="w-full rounded-[12px] border-2 p-4 border-t-2 border-t-[#E5E7EB]">
-                                <div className="flex items-center">
-                                    <div className="w-10 h-10 rounded-lg bg-[#F3F4F6]">
+                                <div className="flex items-center gap-7.5">
+                                    <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-[#F3F4F6]">
                                       <FaLocationDot className="w-5 h-4 text-[#6A7282]"/>
                                     </div>
                                     <div className="flex-1">
                                     <p className="font-semibold text-[16px] leading-6 align-middle text-[#101828]">Sadat City</p>
                                     <p className="font-medium text-[14px] leading-5 align-middle text-[#4A5565]">Sadat City</p>
                                     <div className="flex items-center gap-4">
-                                    <span className="flex items-center gap-1 font-medium text-[12px] leading-4 align-middle">
+                                    <span className="flex items-center  gap-1 font-medium text-[12px] leading-4 align-middle">
                                      <FaPhoneAlt className='w-[12.5px] h-2.5 text-[#6A7282]' />
                                      01097514862
                                     </span>
@@ -102,7 +102,7 @@ export default function checkout() {
                                 </div> 
                               </div>
                              
-                                <div className="w-full flex items-center gap-3 rounded-[12px] border-2 border-dashed p-4 border-t-2 border-t-[#22C55E] bg-[#F0FDF4]">
+                                <div className="w-full flex items-center gap-3 rounded-[12px] border-2 border-dashed p-4  border-[#22C55E] bg-[#F0FDF4]">
                                    <div className='flex items-center justify-center w-10 h-10 rounded-lg bg-[#22C55E]'>
                                     <FaPlus className="w-5 h-4 text-white" />
                                    </div>
@@ -113,7 +113,16 @@ export default function checkout() {
                                 </div>
                               </div>
                           </div>
-                           
+                          
+                           <div className="flex items-center gap-3 rounded-[12px] border p-4 border-t border-t-[#DCFCE7] bg-[#F0FDF4]">
+                            <div className="flex items-center justify-center w-8 h-8 rounded-full">
+                             <IoIosInformationCircle className="w-[17.5px] h-3.5 text-[#155DFC]" />
+                            </div>
+                            <div>
+                             <p className="font-medium text-[14px] leading-5 align-middle text-[#193CB8]">Delivery Information</p>
+                             <p className="font-medium text-[12px] leading-4 align-middle text-[#155DFC]">Please ensure your address is accurate for smooth delivery</p>
+                            </div>
+                           </div>
                           <div>
                             <label className='block font-semibold text-[14px] leading-5 align-middle'>City <span className='text-red-500'>*</span></label>
                           <div className="relative">
@@ -127,9 +136,8 @@ export default function checkout() {
                           <label className='block font-semibold text-[14px] leading-5 align-middle'>Street Address <span className='text-red-500'>*</span></label>
                             <div className="relative">
                                 <textarea className='w-full pt-3.5 pr-4 pb-15.5 pl-14 rounded-[12px] border-t-2 border-t-[#E5E7EB] border-2 font-medium text-[16px] leading-6 align-middle' placeholder='Street name, building number, floor, apartment...'>
-
                                 </textarea>
-                                <div className="absolute top-4 left-4 bottom-14 w-8 h-8 rounded-lg bg-[#F3F4F6]">
+                                <div className="flex items-center justify-center absolute top-4 left-4 bottom-14 w-8 h-8 rounded-lg bg-[#F3F4F6]">
                                   <FaLocationDot className="w-[17.5px] h-3.5 text-[#6A7282]" />
                                 </div>
                             </div>
@@ -138,7 +146,7 @@ export default function checkout() {
                         <label className='block font-semibold text-[14px] leading-5 align-middle'>Phone Number <span className='text-red-500'>*</span></label>
                           <div className="relative">
                             <input placeholder='01xxxxxxxxx' className="w-full pt-3.75 pr-4 pb-4 pl-14 rounded-[12px] border-2 border-t-2 border-t-[#E5E7EB]" />
-                          <div className="absolute left-4 top-3 bottom-3 w-8 h-8 rounded-lg bg-[#F3F4F6]">
+                          <div className="flex items-center justify-center absolute left-4 top-3 bottom-3 w-8 h-8 rounded-lg bg-[#F3F4F6]">
                            <FaPhoneAlt className='w-[17.5px] h-3.5 text-[#6A7282]' />
                           </div>
                           <div className="absolute right-[15.08px] top-5 bottom-5 font-medium text-[12px] leading-4 align-middle text-[#99A1AF]">
