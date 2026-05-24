@@ -279,7 +279,7 @@ export default function checkout() {
                         Place Order
                       </div>
                    
-                    <div className="mt-4 flex items-center justify-between xl:left-5 py-3  border-t border-t-[#F3F4F6]">
+                    <div className="mt-4 flex items-center xl:justify-between md:gap-2 xl:left-5 py-3  border-t border-t-[#F3F4F6]">
                       <div className="flex items-center gap-1.5">
                         <FaShieldAlt className="w-3.75 h-3 text-[#00C950]" />
                         <span className="font-medium text-[12px] leading-4 align-middle text-[#6A7282]">Secure</span>
