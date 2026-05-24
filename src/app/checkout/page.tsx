@@ -206,8 +206,11 @@ export default function checkout() {
                             <div className="flex items-center justify-center w-10 h-10 rounded-full bg-[#DCFCE7]">
                              <FaShieldAlt className="w-5 h-4 text-[#00A63E]" />
                             </div>
+                            <div>
                             <p className="font-medium text-[14px] leading-5 align-middle text-[#016630]">Secure & Encrypted</p>
                             <p className="font-medium text-[12px] leading-4 align-middle text-[#00A63E]">Your payment info is protected with 256-bit SSL encryption</p>
+                            </div>
+                           
                          </div>
                         </div>
                         </div>
