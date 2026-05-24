@@ -298,7 +298,7 @@ export default function Home() {
 </section>
     </div>
 
-  <FeaturesBar/>
+  <FeaturesBar variant=""/>
 
 
     </>

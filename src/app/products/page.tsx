@@ -74,7 +74,7 @@ export default async function Products() {
         </div>
       </div>
      </div>
-    <FeaturesBar/>
+    <FeaturesBar variant=''/>
     </>
   )
 }
