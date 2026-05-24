@@ -70,7 +70,7 @@ export default async function ProductDetails() {
              </BreadcrumbList>
            </Breadcrumb>
 
-              <div className="xl:px-52 md:px-4 flex flex-col xl:flex-row xl:items-start md:items-start mt-[40.5px] xl:gap-8 md:gap-[32px] px-4">
+              <div className="xl:px-52 md:px-4 flex flex-col xl:flex-row md:flex-row xl:items-start md:items-start mt-[40.5px] xl:gap-8 md:gap-[32px] px-4">
                  
                 <ProductDetailsCarousel/>
 
@@ -166,9 +166,9 @@ export default async function ProductDetails() {
                      </div>
 
                      <div className="border-t border-t-[#F3F4F6] pt-[24px] mt-6">
-                        <div className="grid grid-cols-3 gap-[16px]">
+                        <div className="grid xl:grid-cols-3 md:grid-cols-3 grid-cols-1  gap-[16px]">
                            
-                           <div className='col-span-1 flex items-center xl:gap-[12px] md:gap-[10px] '>
+                           <div className='col-span-1 flex items-center xl:gap-[12px] md:gap-[10px]'>
                               <div className='flex items-center justify-center w-[40px] h-[40px] bg-[#DCFCE7] rounded-full'>
                                 <FaTruckFast className="w-5 h-4 text-[#16A34A]"/>
                               </div>
@@ -205,7 +205,7 @@ export default async function ProductDetails() {
                 </div>
               </div>
             
-              <div className='mt-[56px] xl:pl-[24px] xl:pr-[24px] pl-4 pr-4 xl:w-[75%] md:w-[96%] relative xl:left-52 xl:right-52  left-4  right-4 pb-6 gap-6  bg-white rounded-lg shadow-[0px_1px_2px_-1px_#0000001A,0px_1px_3px_0px_#0000001A]'>
+              <div className='mt-[56px] xl:pl-[24px] xl:pr-[24px] pl-4 pr-4 xl:w-[75%] md:w-[96%] w-[100%] relative xl:left-52 xl:right-52  left-4  right-4 pb-6 gap-6  bg-white rounded-lg shadow-[0px_1px_2px_-1px_#0000001A,0px_1px_3px_0px_#0000001A]'>
                <div className='border-b border-b-[#E5E7EB] xl:-mx-[24px] md:-mx-4'>
                    <div className="flex items-center">
                     <button className='flex items-center gap-[8px] cursor-pointer px-6 py-4  border-b-2 border-b-[#16A34A]  bg-[#F0FDF480] font-medium text-[16px] leading-none text-center align-middle text-[#16A34A]'>
@@ -218,7 +218,7 @@ export default async function ProductDetails() {
                      Reviews (18)
                     </button>
 
-                    <button className='flex items-center gap-[8px]  cursor-pointer px-6 py-4  font-medium text-[16px] leading-none text-center align-middle text-[#4A5565]'>
+                    <button className='hidden xl:flex md:flex items-center gap-[8px]  cursor-pointer px-6 py-4  font-medium text-[16px] leading-none text-center align-middle text-[#4A5565]'>
                      <FaTruck  className='w-[17.5px] h-[14px] text-[#4A5565]' />
                       Shipping & Returns
                     </button>
@@ -231,7 +231,7 @@ export default async function ProductDetails() {
                   <h3 className='font-semibold text-[18px] leading-[28px] text-[#101828]'>About this Product</h3>
                   <p className='font-medium text-[16px] leading-[26px] align-middle text-[#4A5565]'>Material Polyester Blend Colour Name Multicolour Department Women</p>
                  </div>
-                 <div className="grid grid-cols-2 gap-[24px] mt-[24px]">
+                 <div className="grid xl:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-[24px] mt-[24px]">
                    <div className='col-span-1  bg-[#F9FAFB] p-4'>
                    <h4 className='font-medium text-[16px] leading-none align-middle text-[#101828]'>
                     Product Information
@@ -307,11 +307,11 @@ export default async function ProductDetails() {
                  </div>
                </div>
               </div>
-              <div className="container mt-[72px] mb-[40px] relative xl:left-[208px] md:left-4 md:right-4 xl:right-[208px] pb-4 pt-4 xl:w-[75%]  md:w-[96%]">
+              <div className="container mt-[72px] mb-[40px] relative xl:left-[208px] md:left-4 md:right-4 left-4 right-4 xl:right-[208px] pb-4 pt-4 xl:w-[75%]  md:w-[96%] w-[100%]">
               <ProductsSwipper />
               </div>  
             </div>
-            <FeaturesBar /> 
+            <FeaturesBar variant="product_details" /> 
             
      </>
   )

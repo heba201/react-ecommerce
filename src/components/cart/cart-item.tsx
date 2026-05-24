@@ -7,92 +7,78 @@ import { toast } from 'sonner';
 import { tr } from 'zod/locales';
 import { Spinner } from '../ui/spinner';
 import { CartContext } from '@/provider/cart-provider';
+import woman_shawl from "@/assets/home/woman_shawl.png";
+import { FaCheck } from "react-icons/fa6";
+import { FiMinus } from "react-icons/fi";
+import { FaPlus } from "react-icons/fa";
+import { IoMdTrash } from "react-icons/io";
 
-export default function CartItem({product,setProducts}:{product : cartProductI,setProducts:(products:cartProductI[])=>void}) {
-    const {getCartData} = useContext(CartContext);
-    const[isLoading,setIsLoading] = useState(false);
-    const[isLoadingUpdateInc,setIsLoadingUpdateInc] = useState(false);
-    const[isLoadingUpdateDec,setIsLoadingUpdateDec] = useState(false);
-    const[productCounter,setProductCounter] = useState(0);
-
-useEffect(()=>{
-  setProductCounter(product.count);
-},[product])
-
-console.log(product.count);
-    async function removeProduct(productId : string){
-        try {
-        setIsLoading(true);
-        const response = await removeProductFromCart(productId);   
-        toast.success(response.message);
-        setProducts(response.data.products);
-        getCartData();
-        } catch (error) {
-           toast.error((error as Error).message) 
-        }finally{
-             setIsLoading(false);
-             setIsLoadingUpdateInc(false);
-             setIsLoadingUpdateDec(false);
-        }
-       
-    }
-    async function updateCart(productId : string ,count:number){
-        try {
-          console.log(productCounter);
-          if(count > productCounter){
-            setIsLoadingUpdateInc(true);
-          }else{
-           setIsLoadingUpdateDec(true);
-          }
-           const response =   await updateProductFromCart(productId,count);   
-            toast.success(response.message);
-            setProducts(response.data.products);
-            getCartData();
-        } catch (error) {
-             toast.error((error as Error).message)
-              console.log(error)  
-        }finally{
-     setIsLoadingUpdateInc(false);
-     setIsLoadingUpdateDec(false);
-    } 
-    }
- 
+export default function CartItem() {
   return (
     <>
-    <div className="flex justify-between items-center mt-6 pt-6">
-                <div className="flex  items-center">
-                  <Image  src={product.product.imageCover} sizes='200'  height={70}   width={70} className="object-cover rounded" alt="product-img"/>
-                  <div className="flex flex-col ml-3">
-                    <span className="md:text-md font-medium">{product.product.title}</span>
-                    <p className='text-gray-500 text-sm mb-4'>{product.product.brand.name} {product.product.category.name}</p>
-                    <span className="text-xs font-light text-gray-400">#41551</span>
-                  </div>
+    <div className='bg-white rounded-2xl border border-t border-t-[#F3F4F6]  mb-4 p-5.25'>
+      <div className='shadow-[0_1px_2px_-1px_rgba(0,0,0,0.1),0_1px_3px_0_rgba(0,0,0,0.1)]'>
+        <div className="flex items-center gap-6">
+         <a className='relative'>
+          <div className='w-32 h-32 p-3 rounded-xl border bg-[linear-gradient(135deg,#F9FAFB_0%,#FFFFFF_50%,#F3F4F6_100%)] border-t border-t-[#F3F4F6]'>
+            <Image src={woman_shawl} alt='woman_shawl' />
+          </div>
+          <div className='absolute top-[149.25] left-[65.14px] flex items-center gap-1 justify-center  w-16.75 h-4.75 px-2 py-0.5 gap-1 rounded-full bg-[#00C950] font-semibold text-[10px] leading-3.75 align-middle text-white'>
+         <FaCheck className='w-2.5 h-2 text-white'/>
+         In Stock
+          </div>
+         </a>
+
+         <div className="flex-1">
+          <div className='mb-3'>
+           <div className='mb-3 font-semibold text-[18px] leading-[29.25px] align-middle text-[#101828]'>
+           Woman Shawl
+           <div className="flex  items-center gap-2">
+            <span className='w-29.5 h-6 px-2.5 py-1 rounded-full bg-[linear-gradient(90deg,#F0FDF4_0%,#F3F4F6_100%)] text-[#15803D] font-medium text-[12px] leading-4 align-middle'>Women's Fashion</span>
+            <span className='font-medium text-[12px] leading-4 align-middle text-[#99A1AF]'>.</span>
+            <span className='font-medium text-[12px] leading-4 align-middle text-[#6A7282]'>SKU: 5CA0AD</span>
+           </div>
+          </div>
+          </div>
+        <div className='mb-1'>
+         <div className="flex gap-2">
+             <span className='font-bold text-[18px] leading-7 align-middle text-[#16A34A]'>149 EGP</span>
+              <span className='font-medium text-[12px] leading-4 align-middle text-[#99A1AF] mt-2'>per unit</span>
+         </div>
+        </div>
+          <div className="mt-auto flex items-center justify-between">
+            <div className="flex items-center w-30.5 h-10.5 p-1 rounded-xl  border bg-[#F9FAFB] border-t border-t-[#E5E7EB]">
+                <div className="flex items-center justify-center w-8 h-8 rounded-lg text-white shadow-[0_1px_2px_-1px_rgba(0,0,0,0.1),0_1px_3px_0_rgba(0,0,0,0.1)]">
+                <FiMinus className='w-3.75 h-3 text-[#6A7282]' />
+                <span className='font-bold text-[16px] leading-6 text-center align-middle text-[#101828]'>2</span>
+                <span className='w-8 h-8 rounded-lg flex items-center justify-center bg-[#16A34A] shadow-[0_1px_2px_-1px_rgba(22,163,74,0.3),0_1px_3px_0_rgba(22,163,74,0.3)]'>
+                  <FaPlus className='w-3.75 h-3 text-white'/>
+                </span>
                 </div>
-                <div className="flex justify-center items-center">
-                  <div className="pr-8 flex ">
-                    <button className="font-semibold cursor-pointer" onClick={()=>updateCart(product.product._id,productCounter-1)} disabled={isLoadingUpdateDec}>{isLoadingUpdateDec ? <Spinner/>: "-"}</button>
-                    <input type="text" className="focus:outline-none bg-gray-100 border h-6 w-8 rounded text-sm px-2 mx-2" value={productCounter} />
-                    <button className="font-semibold cursor-pointer"  onClick={()=>updateCart(product.product._id,productCounter+1)} disabled={isLoadingUpdateInc}>{isLoadingUpdateInc ? <Spinner/>: "+"}</button>
-                  </div>
-                  <div className="pr-8">
-                    <div className='font-bold text-black text-lg  flex flex-col items-end'>
-                      {/* <span className="text-xs font-medium">{product.price} /Item EGP</span> */}
-                      <p className='text-gray-500 text-sm'> {product.price} /Item EGP </p>
-                      <p className='lg'> Total {product.price * productCounter}  EGP </p>
-                    </div>
-                    
-                
-                    <button disabled={isLoading}  onClick={()=>removeProduct(product.product._id)} className='text-red-500 text-sm hover:underline border cursor-pointer border-red-500 rounded-md px-4 py-2 ml-3 disabled:cursor-not-allowed disabled:bg-gray-400'>
-                       {isLoading ? <Spinner/> : 'Remove'}
-                        
-                        </button>
-                  </div>
-                  <div>
-                    <i className="fa fa-close text-xs font-medium" />
-                  </div>
-                </div>
+            </div>
+
+            <div className="flex items-center gap-4">
+              <div className="text-right">
+                <p className='font-medium text-[12px] leading-4 text-right align-middle text-[#99A1AF]'>Total</p>
+                <p  className=''>
+                <span className='font-medium text-[14px] leading-5 text-right align-middle text-[#99A1AF]'>
+                  EGP
+                </span>
+                <span className='font-bold text-[20px] leading-7 text-right align-middle text-[#101828]'>
+                  298 
+                </span>
+                </p>
               </div>
-               <div className="flex justify-between items-center mt-6 pt-6 border-t"></div>
+
+              <button className='flex items-center justify-center  w-10 h-10 rounded-xl border bg-[#FEF2F2] border-t border-t-[#FFC9C9]'>
+                <IoMdTrash className='w-[17.5px] h-3.5 text-[#FB2C36]' />
+              </button>
+            </div>
+          </div>
+         </div>
+        </div>
+      </div>
+    </div>
     </>
   )
 }

@@ -10,130 +10,132 @@ import { Trash2 } from 'lucide-react';
 import { finalizeLayoutVaryPath } from 'next/dist/client/components/segment-cache/vary-path';
 import Link from 'next/link';
 import React, { useContext, useEffect, useState } from 'react'
+import { IoCart } from "react-icons/io5";
+import { IoMdTrash } from "react-icons/io";
+import Image from 'next/image'
+import lock from "@/assets/cart/lock.png";
+import mark from "@/assets/cart/mark.png";
+import { FaTruck  } from "react-icons/fa6";
+import { FaShieldAlt } from "react-icons/fa";
+import { BiSolidLockAlt } from "react-icons/bi";
+import FeaturesBar from '@/components/featuresBar/FeaturesBar';
 
 export default function Cart() {
-  const {getCartData,totalCartPrice,noOfCartItems} = useContext(CartContext);
-  const[products,setProducts] = useState<cartProductI[]>([]);
-  const[isLoading,setIsLoading] = useState(false);
-  const[isLoadingClear,setIsLoadingClear] = useState(false);
-
-  async function getAllProductCart(){
-    try {
-      setIsLoading(true);
-      const response : cartI = await getCart();
-       setProducts(response.data.products);
-    } catch (error) {
-      console.log(error);
-    }finally{
-      setIsLoading(false);
-      
-    }
-  }
-  async function clearOurCart(){
-    try {
-      setIsLoadingClear(true);
-      const response = await clearCart();
-          setProducts(response.data.products);
-          getCartData();
-    } catch (error) {
-      console.log(error);
-    }finally{
-       setIsLoadingClear(false);
-    }
-  }
-  useEffect(()=>{
-getAllProductCart();
-  },[])
-  if(isLoading){
-    return <>
-     <div className='flex h-screen items-center justify-center flex-col gap-4'>
- <div className="nav-logo">
-         <div  className='text-3xl font-bold flex items-center gap-2'>
-         <Avatar className='rounded-lg text-white bg-black flex items-center justify-center'>
- S
-  
-</Avatar>
-         ShopMart
-         </div>
-        </div>
-
-<Spinner  className='size-8'/>
-<p>Loading Cart ...</p>
-    </div>
-    </>
-  }
-
-
-  if(products.length == 0){
-    return <>
-     <div className='flex h-screen items-center justify-center flex-col gap-4'>
- <div className="nav-logo">
-         <div  className='text-3xl font-bold flex items-center gap-2'>
-         <Link href="/products" className='inline-flex h-16 min-w-56 items-center justify-center rounded-2xl border-2 border-black bg-black px-10 text-lg text-white hover:text-black hover:bg-white'>
-         Go Shopping
-         </Link>  
-         </div>
-        </div>
-<p>Your Cart is empty</p>
-    </div>
-    </>
-  }
-
   return (
     <>
-    <div className="h-scree">
-  <div className="py-12">
-    <div className="max-w-md mx-auto bg-gray-100 shadow-lg rounded-lg  md:max-w-5xl">
-       <div className="flex justify-end mt-3 pb-2 pr-5 pt-3">
-  <button onClick={()=>clearOurCart()} className="flex cursor-pointer items-center gap-2 text-red-500 hover:underline border border-red-500 rounded-md px-4 py-4">
-   <Trash2 className='w-4 h-4'/>
-   { isLoadingClear ? <Spinner/> : <span>Clear Cart</span>}
-    
-  </button>
-  
-  </div>
-  
-      <div className="md:flex ">
-        <div className="w-full p-4 px-5 py-5">
-          <div className="md:grid md:grid-cols-3 gap-2 ">
-            <div className="col-span-2 p-5">
-              <h1 className="text-xl font-medium ">Shopping Cart</h1>
-              <p>{noOfCartItems} item in your cart</p>
-              {products && products.map((product)=>  <CartItem key={product._id} product={product} setProducts={setProducts}/>)}
-              
-               
-               
-              
+    <div className='bg-[#F9FAFB] pt-8 pb-20.5'>
+      <div className="container mx-auto">
+       <div className='mb-8'>
+            <nav className="flex items-center gap-2 mb-4">
+              <a className='font-medium text-[14px] leading-5 text-[#6A7282]'>Home</a>
+              <span className='font-medium text-[14px] leading-5 align-middle text-[#6A7282]'>/</span>
+              <span className='font-medium text-[14px] leading-5 align-middle text-[#101828]'>Shopping Cart</span>
+            </nav>
+            <div className="flex  items-center gap-3">
+               <div>
+                <h1 className="flex  items-center font-bold text-[30px] leading-9 align-middle text-[#101828]">
+                  <span className="flex  items-center justify-center bg-linear-to-r from-[#16A34A] to-[#15803D] w-12 h-12 rounded-xl">
+                    <IoCart className='w-[37.5px] h-7.5 text-white' />
+                  </span>
+                  Shopping Cart
+                </h1>
+                <p className='font-medium text-[16px] leading-4 align-middle'><span className='text-[#5A6370]'>You have</span> <span className='font-semibold text-[16px] leading-4 align-middle text-[#16A34A]'>4 items</span><span className='text-[#5A6370]'>in your cart</span> </p>
+               </div>
             </div>
-             <div className="p-5 bg-gray-800 rounded overflow-visible">
-               
-             
-              <div className="overflow-visible flex justify-between items-center mt-2">
-               
-                <div className="flex justify-center items-end">
-                  <span className="text-sm font-medium text-gray-400 mr-1">Subtotal: {noOfCartItems}  Items</span>
-                   <span className="text-lg font-bold text-white">{totalCartPrice} EGP</span>
+       </div>
+
+        <div className="grid grid-cols-3">
+        <div className='col-span-2 '>
+          <div className="space-y-4">
+            <CartItem />
+            <div className="mt-6 flex items-center  justify-between pt-6   border  border-t-[#E5E7EB]">
+             <a className="flex items-center gap-2 text-[#16A34A] font-medium text-[14px] leading-5 align-middle">
+              <span className='font-medium text-[14px] leading-5 align-middle text-[#16A34A]'>←</span>
+              Continue Shopping
+             </a>
+             <button className='flex items-center gap-2'>
+               <IoMdTrash className='w-3.75 h-3 text-[#99A1AF]' />
+               <span className='font-medium text-[14px] leading-5 text-center align-middle text-[#99A1AF]'>Clear all items</span>
+             </button>
+            </div>
+          </div>
+        </div>
+         <div className='col-span-1'>
+           <div className='rounded-2xl border shadow-[0_1px_2px_-1px_rgba(0,0,0,0.1),0_1px_3px_0_rgba(0,0,0,0.1)] bg-white border-t border-t-[#F3F4F6]'>
+            <div className='gap-1 px-6 py-4 bg-[linear-gradient(90deg,#16A34A_0%,#15803D_100%)]'>
+              <h2 className='flex items-center text-white font-bold text-[18px] leading-7 align-middle'>
+                <Image src={lock}  alt='lock' className='w-[22.5px] h-4.5'/>
+                Order Summary
+              </h2>
+              <p className='font-medium text-[14px] leading-5 align-middle text-[#DCFCE7]'>4 items in your cart</p>
+            </div>
+             <div className='p-6'>
+              <div className='flex items-center gap-3 w-107.5 h-19  p-4 rounded-xl bg-[linear-gradient(90deg,#F0FDF4_0%,#F3F4F6_100%)]'>
+                <div className='flex items-center justify-center w-10 h-10 bg-[#DCFCE7] rounded-full'>
+                   <FaTruck className='w-5 h-4 text-[#00A63E]' />
+                   <div>
+                    <p className='font-semibold text-[16px] leading-4 align-middle text-[#008236]'>Free Shipping!</p>
+                  <p className='font-medium text-[14px] leading-5 align-middle text-[#00A63E]'>You qualify for free delivery</p>
+                   </div>
                 </div>
               </div>
-                <div className="focus:outline-none w-full h-6 bg-gray-800 text-white placeholder-gray-300 text-sm border-b border-gray-600 py-4"></div>
              
-              <div className="overflow-visible flex justify-between items-center mt-2">
-              <div className="flex justify-center items-end">
-                <span className="text-sm font-medium text-gray-400 mr-1">Total:</span>
-                   <span className="text-lg font-bold text-white">{totalCartPrice} EGP</span>
+            <div className='space-y-3 mb-5'>
+            <div className='flex items-center justify-between'>
+               <span className='font-medium text-[16px] leading-4 align-middle text-[#4A5565]'>Subtotal</span>
+               <span className='font-medium text-[16px] leading-4 align-middle text-[#101828]'>1,994 EGP</span>
+            </div>
+
+             <div className='flex items-center justify-between'>
+               <span className='font-medium text-[16px] leading-4 align-middle text-[#4A5565]'>Shipping</span>
+               <span className='font-medium text-[16px] leading-4 align-middle text-[#00A63E]'>FREE</span>
+            </div>
+             
+             <div className='w-full h-full pt-3 border-dashed border-[3px_2px] border-t border-t-[#E5E7EB]'>
+                  <div className='flex items-center justify-between'>
+                    <div className='flex items-center text-right'>
+                      <span className='font-medium text-[14px] leading-5 text-right align-middle text-[#6A7282 mt-[9.5px]'>EGP</span>
+                      <span className='font-bold text-[16px] leading-4 text-right align-middle text-[#101828'>1,994</span>
+                    </div>
+                    <span className='font-semibold text-[16px] leading-4 align-middle text-[#101828]'>Total</span>
+                  </div>
+             </div>
+            </div>
+            <button className='mb-5 flex items-center justify-center w-full h-full py-3 gap-2 rounded-xl border border-dashed border-t border-t-[#D1D5DC]'>
+               <Image src={mark}  alt='mark' className='w-5 h-4'/>
+               <span className='font-medium text-[14px] leading-5 text-center align-middle text-[#4A5565]'>
+                Apply Promo Code
+               </span>
+            </button>
+
+             <a className='mb-5 flex items-center justify-center gap-3 w-full h-full px-6 py-4 rounded-xl bg-linear-to-r from-[#16A34A] to-[#15803D] shadow-[0_4px_6px_-4px_rgba(22,163,74,0.2),0_10px_15px_-3px_rgba(22,163,74,0.2)]'>
+               <BiSolidLockAlt className='w-5 h-4 text-white' />
+               <span className='font-semibold text-[16px] leading-4 align-middle text-white'>Secure Checkout</span>
+             </a>
+              <div className="flex items-center justify-center w-full h-full py-2 gap-4">
+                <div className="flex items-center gap-[6.75px]">
+                  <FaShieldAlt className='w-3.75 h-3 text-[#00C950]' />
+                  <span className="font-medium text-[12px] leading-4 align-middle text-[#6A7282]">Secure Payment</span>
+                </div>
+                <div className='w-px h-4 bg-[#E5E7EB'></div>
+                <div className="flex items-center gap-[6.75px]">
+                  <FaTruck className='w-3.75 h-3 text-[#2B7FFF]' />
+                  <span className="font-medium text-[12px] leading-4 align-middle text-[#6A7282]">Fast Delivery</span>
+                </div>
+
               </div>
-              </div>
-                <div className="w-full h-6 bg-gray-800 text-white placeholder-gray-300 text-sm border-b border-gray-600 py-4"></div>
-              <div className="pt-2 mb-3"></div>
-              <CartCheckout/>
-              <Link href="/products" className="h-12 w-full block  bg-blue-500 rounded focus:outline-none text-white hover:bg-blue-600 p-4 mt-3 text-center">Continue Shopping</Link>
-            </div>  
-          </div>
+             </div>
+
+             <a  className="w-full py-2 flex items-center justify-center text-[#16A34A] font-medium text-[14px] leading-5 text-center align-middle">
+                   ← Continue Shopping
+             </a>
+           </div>
+
+         </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
-</>
+     <FeaturesBar variant='' /> 
+     </>
   )
 }
