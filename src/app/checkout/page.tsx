@@ -227,9 +227,11 @@ export default function checkout() {
 
                  <div className='p-5'>
                     <div className='space-y-3 overflow-auto'>
+                     
+                        {Array.from({ length: 4 }).map((_, index) => (
                         <div className="flex items-center justify-between rounded-[12px] p-3 bg-[#F9FAFB]">
                         <div className="w-14 h-14 rounded-lg border p-1 border-t border-t-[#F3F4F6]">
-                         <Image  src={jacket} alt='jacket' />
+                         <Image  src={jacket} alt='jacket' className="w-full h-full object-cover" />
                         </div>
                         <div className="flex-1">
                         <p className="font-medium text-[14px] leading-5 align-middle text-[#101828]">Woman Standart Fit Knitted Cardigan</p>
@@ -237,39 +239,8 @@ export default function checkout() {
                         </div>
                         <p className='font-bold text-[14px] leading-5 align-middle text-[#101828]'>499</p>
                         </div>
-
-                        <div className="flex items-center justify-between rounded-[12px] p-3 bg-[#F9FAFB]">
-                        <div className="w-14 h-14 rounded-lg border p-1 border-t border-t-[#F3F4F6]">
-                         <Image  src={jacket} alt='jacket' />
-                        </div>
-                        <div className="flex-1">
-                        <p className="font-medium text-[14px] leading-5 align-middle text-[#101828]">Woman Standart Fit Knitted Cardigan</p>
-                        <p className="font-medium text-[12px] leading-4 align-middle text-[#6A7282]">1 × 499 EGP</p>
-                        </div>
-                        <p className='font-bold text-[14px] leading-5 align-middle text-[#101828]'>499</p>
-                        </div>
-
-                        <div className="flex items-center justify-between rounded-[12px] p-3 bg-[#F9FAFB]">
-                        <div className="w-14 h-14 rounded-lg border p-1 border-t border-t-[#F3F4F6]">
-                         <Image  src={jacket} alt='jacket' />
-                        </div>
-                        <div className="flex-1">
-                        <p className="font-medium text-[14px] leading-5 align-middle text-[#101828]">Woman Standart Fit Knitted Cardigan</p>
-                        <p className="font-medium text-[12px] leading-4 align-middle text-[#6A7282]">1 × 499 EGP</p>
-                        </div>
-                        <p className='font-bold text-[14px] leading-5 align-middle text-[#101828]'>499</p>
-                        </div>
-
-                        <div className="flex items-center justify-between rounded-[12px] p-3 bg-[#F9FAFB]">
-                        <div className="w-14 h-14 rounded-lg border p-1 border-t border-t-[#F3F4F6]">
-                         <Image  src={jacket} alt='jacket' />
-                        </div>
-                        <div className="flex-1">
-                        <p className="font-medium text-[14px] leading-5 align-middle text-[#101828]">Woman Standart Fit Knitted Cardigan</p>
-                        <p className="font-medium text-[12px] leading-4 align-middle text-[#6A7282]">1 × 499 EGP</p>
-                        </div>
-                        <p className='font-bold text-[14px] leading-5 align-middle text-[#101828]'>499</p>
-                        </div>
+                         ))}
+                         
                     </div>
                       
                       <hr className="mt-5 w-full h-px left-5 border-t border-t-[#F3F4F6]"/>
@@ -300,12 +271,12 @@ export default function checkout() {
                       </div>
                       </div>
                      
-                      <div className="mt-5.75 w-full flex items-center justify-center gap-2 left-5 py-4  rounded-[12px] bg-linear-to-r from-[#16A34A] to-[#15803D font-bold text-[16px] leading-6 text-center align-middle text-white">
+                      <div className="mt-5.75 w-full flex items-center justify-center gap-2 left-5 py-4  rounded-[12px]  bg-linear-to-r from-[#16A34A] to-[#15803D] font-bold text-[16px] leading-6 text-center align-middle text-white">
                         <Image src={closed_box} alt='closed_box' className="w-5 h-4"/>
                         Place Order
                       </div>
                    
-                    <div className="mt-16 flex items-center justify-center left-5 py-3 gap-4 border-t border-t-[#F3F4F6]">
+                    <div className="flex items-center justify-center left-5 py-3 gap-4 border-t border-t-[#F3F4F6]">
                       <div className="flex items-center gap-1.5">
                         <FaShieldAlt className="w-3.75 h-3 text-[#00C950]" />
                         <span className="font-medium text-[12px] leading-4 align-middle text-[#6A7282]">Secure</span>
