@@ -99,7 +99,7 @@ getAllProductCart();
             <div className="col-span-2 p-5">
               <h1 className="text-xl font-medium ">Shopping Cart</h1>
               <p>{noOfCartItems} item in your cart</p>
-              {products && products.map((product)=>  <CartItem key={product._id} product={product} setProducts={setProducts}/>)}
+              {/* {products && products.map((product)=>  <CartItem key={product._id} product={product} setProducts={setProducts}/>)} */}
               
                
                
