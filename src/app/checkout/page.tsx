@@ -63,7 +63,7 @@ export default function checkout() {
                 <div className="col-span-2">
                     <div className="space-y-6">
                         <div className="rounded-[16px] bg-white border border-t border-t-[#F3F4F6] shadow-[0px_1px_2px_-1px_#0000001A,0px_1px_3px_0px_#0000001A]">
-                          <div className="px-6 py-4 gap-1 bg-linear-to-r from-[#16A34A] to-[#15803D] rounded-l-full rounded-r-full">
+                          <div className="px-6 py-4 gap-1 bg-linear-to-r from-[#16A34A] to-[#15803D] rounded-tl-lg rounded-tr-lg">
                              <h2 className="flex items-center gap-2 font-bold text-[18px] leading-7 align-middle text-white">
                                <TiHomeOutline className="w-[22.5px] h-4.5 text-white"/>
                                Shipping Address
@@ -160,7 +160,7 @@ export default function checkout() {
                         </div>
                         
                         <div className="w-full rounded-[16px] bg-white border border-t border-t-[#F3F4F6] shadow-[0px_1px_2px_-1px_#0000001A,0px_1px_3px_0px_#0000001A]">
-                        <div className="w-full px-6 py-4 gap-1 bg-linear-to-r from-[#16A34A] to-[#15803D] rounded-l-full rounded-r-full">
+                        <div className="w-full px-6 py-4 gap-1 bg-linear-to-r from-[#16A34A] to-[#15803D] rounded-tl-lg rounded-tr-lg">
                         <h2 className='flex items-center gap-2 font-bold text-[18px] leading-7 align-middle text-white'>
                          <Image src={visa} alt='visa' />
                          Payment Method
@@ -217,7 +217,7 @@ export default function checkout() {
 
                 <div className="col-span-1">
                 <div className="rounded-[16px] border border-t border-t-[#F3F4F6] shadow-[0px_1px_2px_-1px_#0000001A,0px_1px_3px_0px_#0000001A] bg-white">
-                 <div className="px-6 py-4 gap-1 bg-linear-to-r from-[#16A34A] to-[#15803D] rounded-l-full rounded-r-full">
+                 <div className="px-6 py-4 gap-1 bg-linear-to-r from-[#16A34A] to-[#15803D] rounded-tl-lg rounded-tr-lg">
                  <h2 className="flex items-center gap-2 font-bold text-[18px] leading-7 align-middle text-white">
                   <Image src={lock} alt='lock'/>
                   Order Summary
