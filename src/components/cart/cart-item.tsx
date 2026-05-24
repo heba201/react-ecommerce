@@ -17,7 +17,7 @@ export default function CartItem() {
   return (
     <>
         <div className="flex items-center gap-6">
-         <a className='relative'>
+         <a className=''>
           <div className='w-32 h-32 p-3 rounded-xl border bg-[linear-gradient(135deg,#F9FAFB_0%,#FFFFFF_50%,#F3F4F6_100%)] border-t border-t-[#F3F4F6]'>
             <Image src={woman_shawl} alt='woman_shawl' />
           </div>
