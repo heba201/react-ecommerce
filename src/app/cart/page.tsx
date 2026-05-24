@@ -39,7 +39,7 @@ export default function Cart() {
                   </span>
                   Shopping Cart
                 </h1>
-                <p className='font-medium text-[16px] leading-4 align-middle'><span className='text-[#5A6370]'>You have</span> <span className='font-semibold text-[16px] leading-4 align-middle text-[#16A34A]'>4 items</span><span className='text-[#5A6370]'>in your cart</span> </p>
+                <p className='mt-2 font-medium text-[16px] leading-4 align-middle'><span className='text-[#5A6370]'>You have</span> <span className='font-semibold text-[16px] leading-4 align-middle text-[#16A34A]'>4 items</span><span className='text-[#5A6370]'>in your cart</span> </p>
                </div>
             </div>
        </div>
@@ -47,7 +47,10 @@ export default function Cart() {
         <div className="grid grid-cols-3">
         <div className='col-span-2 '>
           <div className="space-y-4">
+            <div className='bg-white rounded-2xl border border-[#F3F4F6]  mb-4 p-5.25 shadow-[0_1px_2px_-1px_rgba(0,0,0,0.1),0_1px_3px_0_rgba(0,0,0,0.1)]'>
             <CartItem />
+            </div>
+            
             <div className="mt-6 flex items-center  justify-between pt-6   border  border-t-[#E5E7EB]">
              <a className="flex items-center gap-2 text-[#16A34A] font-medium text-[14px] leading-5 align-middle">
               <span className='font-medium text-[14px] leading-5 align-middle text-[#16A34A]'>←</span>

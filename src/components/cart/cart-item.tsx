@@ -16,14 +16,12 @@ import { IoMdTrash } from "react-icons/io";
 export default function CartItem() {
   return (
     <>
-    <div className='bg-white rounded-2xl border border-t border-t-[#F3F4F6]  mb-4 p-5.25'>
-      <div className='shadow-[0_1px_2px_-1px_rgba(0,0,0,0.1),0_1px_3px_0_rgba(0,0,0,0.1)]'>
         <div className="flex items-center gap-6">
          <a className='relative'>
           <div className='w-32 h-32 p-3 rounded-xl border bg-[linear-gradient(135deg,#F9FAFB_0%,#FFFFFF_50%,#F3F4F6_100%)] border-t border-t-[#F3F4F6]'>
             <Image src={woman_shawl} alt='woman_shawl' />
           </div>
-          <div className='absolute top-[149.25] left-[65.14px] flex items-center gap-1 justify-center  w-16.75 h-4.75 px-2 py-0.5 gap-1 rounded-full bg-[#00C950] font-semibold text-[10px] leading-3.75 align-middle text-white'>
+          <div className='absolute top-[149.25] left-[65.14px] right-[4.14px]    flex items-center gap-1 justify-center  w-16.75 h-4.75 px-2 py-0.5  rounded-full bg-[#00C950] font-semibold text-[10px] leading-3.75 align-middle text-white'>
          <FaCheck className='w-2.5 h-2 text-white'/>
          In Stock
           </div>
@@ -46,15 +44,15 @@ export default function CartItem() {
               <span className='font-medium text-[12px] leading-4 align-middle text-[#99A1AF] mt-2'>per unit</span>
          </div>
         </div>
-          <div className="mt-auto flex items-center justify-between">
-            <div className="flex items-center w-30.5 h-10.5 p-1 rounded-xl  border bg-[#F9FAFB] border-t border-t-[#E5E7EB]">
+          <div className="mt-auto flex items-center justify-between"> 
+            <div className="flex items-center w-30.5 h-10.5 rounded-xl p-1 border bg-[#F9FAFB] border-t border-t-[#E5E7EB]">
                 <div className="flex items-center justify-center w-8 h-8 rounded-lg text-white shadow-[0_1px_2px_-1px_rgba(0,0,0,0.1),0_1px_3px_0_rgba(0,0,0,0.1)]">
                 <FiMinus className='w-3.75 h-3 text-[#6A7282]' />
+               </div>
                 <span className='font-bold text-[16px] leading-6 text-center align-middle text-[#101828]'>2</span>
                 <span className='w-8 h-8 rounded-lg flex items-center justify-center bg-[#16A34A] shadow-[0_1px_2px_-1px_rgba(22,163,74,0.3),0_1px_3px_0_rgba(22,163,74,0.3)]'>
                   <FaPlus className='w-3.75 h-3 text-white'/>
                 </span>
-                </div>
             </div>
 
             <div className="flex items-center gap-4">
@@ -77,8 +75,8 @@ export default function CartItem() {
           </div>
          </div>
         </div>
-      </div>
-    </div>
+       
+    
     </>
   )
 }
