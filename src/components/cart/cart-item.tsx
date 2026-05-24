@@ -21,7 +21,7 @@ export default function CartItem() {
           <div className='w-32 h-32 p-3 rounded-xl border bg-[linear-gradient(135deg,#F9FAFB_0%,#FFFFFF_50%,#F3F4F6_100%)] border-t border-t-[#F3F4F6]'>
             <Image src={woman_shawl} alt='woman_shawl' />
           </div>
-          <div className='absolute top-[169.25] left-[85.14px] bottom-[15.38px]   flex items-center gap-1 justify-center  w-16.75 h-4.75 px-2 py-0.5  rounded-full bg-[#00C950] font-semibold text-[10px] leading-3.75 align-middle text-white'>
+          <div className='absolute left-[85.14px] bottom-[15.38px]   flex items-center gap-1 justify-center  w-16.75 h-4.75 px-2 py-0.5  rounded-full bg-[#00C950] font-semibold text-[10px] leading-3.75 align-middle text-white'>
          <FaCheck className='w-2.5 h-2 text-white'/>
          In Stock
           </div>
