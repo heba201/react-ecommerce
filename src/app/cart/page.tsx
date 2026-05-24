@@ -23,8 +23,8 @@ import FeaturesBar from '@/components/featuresBar/FeaturesBar';
 export default function Cart() {
   return (
     <>
-    <div className='bg-[#F9FAFB] pt-8 pb-20.5'>
-      <div className="container mx-auto">
+    <div className='bg-[#F9FAFB] pt-8 pb-20.5 px-48'>
+      <div className="container">
        <div className='mb-8'>
             <nav className="flex items-center gap-2 mb-4">
               <a className='font-medium text-[14px] leading-5 text-[#6A7282]'>Home</a>

@@ -59,11 +59,11 @@ export default function CartItem() {
               <div className="text-right">
                 <p className='font-medium text-[12px] leading-4 text-right align-middle text-[#99A1AF]'>Total</p>
                 <p  className=''>
+                <span className='font-bold text-[20px] leading-7 text-right align-middle text-[#101828]'>
+                298 
+                </span>
                 <span className='font-medium text-[14px] leading-5 text-right align-middle text-[#99A1AF]'>
                   EGP
-                </span>
-                <span className='font-bold text-[20px] leading-7 text-right align-middle text-[#101828]'>
-                  298 
                 </span>
                 </p>
               </div>
