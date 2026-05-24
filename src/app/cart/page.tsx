@@ -77,7 +77,7 @@ export default function Cart() {
               <p className='mt-1 font-medium text-[14px] leading-5 align-middle text-[#DCFCE7]'>4 items in your cart</p>
             </div>
              <div className='p-6'>
-              <div className='flex items-center gap-3  p-4 rounded-xl bg-[linear-gradient(90deg,#F0FDF4_0%,#F3F4F6_100%)]'>
+              <div className='mb-5 flex items-center gap-3  p-4 rounded-xl bg-[linear-gradient(90deg,#F0FDF4_0%,#F3F4F6_100%)]'>
                 <div className='flex items-center justify-center w-10 h-10 bg-[#DCFCE7] rounded-full'>
                    <FaTruck className='w-5 h-4 text-[#00A63E]' />
                   </div>
