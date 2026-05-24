@@ -58,11 +58,11 @@ export default function checkout() {
               </div>
             </div>
 
-            <div className="grid grid-cols-3">
+            <div className="grid grid-cols-3 gap-8">
                 <div className="col-span-2">
                     <div className="space-y-6">
                         <div className="rounded-[16px] bg-white border border-t border-t-[#F3F4F6] shadow-[0px_1px_2px_-1px_#0000001A,0px_1px_3px_0px_#0000001A]">
-                          <div className="px-6 py-4 gap-1 bg-linear-to-r from-[#16A34A] to-[#15803D]">
+                          <div className="px-6 py-4 gap-1 bg-linear-to-r from-[#16A34A] to-[#15803D] rounded-l-full rounded-r-full">
                              <h2 className="flex items-center gap-2 font-bold text-[18px] leading-7 align-middle text-white">
                                <TiHomeOutline className="w-[22.5px] h-4.5 text-white"/>
                                Shipping Address
@@ -114,8 +114,8 @@ export default function checkout() {
                               </div>
                           </div>
                           
-                           <div className="flex items-center gap-3 rounded-[12px] border p-4 border-t border-t-[#DCFCE7] bg-[#F0FDF4]">
-                            <div className="flex items-center justify-center w-8 h-8 rounded-full">
+                           <div className="mt-5 flex items-center gap-3 rounded-[12px] border p-4 border-t border-t-[#DCFCE7] bg-[#F0FDF4]">
+                            <div className="flex items-center justify-center w-8 h-8 bg-[#DCFCE7] rounded-full">
                              <IoIosInformationCircle className="w-[17.5px] h-3.5 text-[#155DFC]" />
                             </div>
                             <div>
@@ -123,7 +123,7 @@ export default function checkout() {
                              <p className="font-medium text-[12px] leading-4 align-middle text-[#155DFC]">Please ensure your address is accurate for smooth delivery</p>
                             </div>
                            </div>
-                          <div>
+                          <div className="mt-5">
                             <label className='block font-semibold text-[14px] leading-5 align-middle'>City <span className='text-red-500'>*</span></label>
                           <div className="relative">
                             <input placeholder='e.g. Cairo, Alexandria, Giza' className="w-full pt-3.75 pr-4 pb-4 pl-14 rounded-[12px] border-2 border-t-2 border-t-[#E5E7EB] font-medium text-[16px] leading-none align-middle" />
@@ -132,7 +132,7 @@ export default function checkout() {
                          </div>
                           </div>
                           </div>
-                          <div>
+                          <div className="mt-5">
                           <label className='block font-semibold text-[14px] leading-5 align-middle'>Street Address <span className='text-red-500'>*</span></label>
                             <div className="relative">
                                 <textarea className='w-full pt-3.5 pr-4 pb-15.5 pl-14 rounded-[12px] border-t-2 border-t-[#E5E7EB] border-2 font-medium text-[16px] leading-6 align-middle' placeholder='Street name, building number, floor, apartment...'>
@@ -142,7 +142,7 @@ export default function checkout() {
                                 </div>
                             </div>
                           </div>
-                          <div>
+                          <div className="mt-5">
                         <label className='block font-semibold text-[14px] leading-5 align-middle'>Phone Number <span className='text-red-500'>*</span></label>
                           <div className="relative">
                             <input placeholder='01xxxxxxxxx' className="w-full pt-3.75 pr-4 pb-4 pl-14 rounded-[12px] border-2 border-t-2 border-t-[#E5E7EB]" />
@@ -158,8 +158,8 @@ export default function checkout() {
 
                         </div>
                         
-                        <div className="w-full rounded-[16px] border border-t border-t-[#F3F4F6] shadow-[0px_1px_2px_-1px_#0000001A,0px_1px_3px_0px_#0000001A]">
-                        <div className="w-full px-6 py-4 gap-1 bg-linear-to-r from-[#16A34A] to-[#15803D]">
+                        <div className="w-full rounded-[16px] bg-white border border-t border-t-[#F3F4F6] shadow-[0px_1px_2px_-1px_#0000001A,0px_1px_3px_0px_#0000001A]">
+                        <div className="w-full px-6 py-4 gap-1 bg-linear-to-r from-[#16A34A] to-[#15803D] rounded-l-full rounded-r-full">
                         <h2 className='flex items-center gap-2 font-bold text-[18px] leading-7 align-middle text-white'>
                          <Image src={visa} alt='visa' />
                          Payment Method
@@ -167,8 +167,8 @@ export default function checkout() {
                         <p className="font-medium text-[14px] leading-5 align-middle text-[#DCFCE7]">Choose how you'd like to pay</p>
                         </div>
                         
-                        <div className="pb-6">
-                         <div className='flex items-center justify-between w-full gap-4 rounded-[12px] border-2 p-5 bg-linear-to-r from-[#F0FDF4] to-[#F3F4F6] border-t-2 border-t-[#22C55E] shadow-[0px_1px_2px_-1px_#0000001A,0px_1px_3px_0px_#0000001A]'>
+                        <div className="p-6">
+                         <div className='mb-4 flex items-center justify-between w-full gap-4 rounded-[12px] border-2 p-5 bg-linear-to-r from-[#F0FDF4] to-[#F3F4F6] border-t-2 border-t-[#22C55E] shadow-[0px_1px_2px_-1px_#0000001A,0px_1px_3px_0px_#0000001A]'>
                           <div className="flex items-center justify-center w-14 h-14 rounded-[12px] bg-linear-to-br from-[#22C55E] to-[#16A34A]">
                          <Image src={cash} alt='cash'/>
                          </div>
@@ -183,7 +183,7 @@ export default function checkout() {
                            </div>
                          </div>
                          
-                         <div className="flex items-center justify-between w-full gap-4 rounded-[12px] border-2 p-5 border-t-2 border-t-[#E5E7EB]">
+                         <div className="mb-4 flex items-center justify-between w-full gap-4 rounded-[12px] border-2 p-5 border-t-2 border-t-[#E5E7EB]">
                           <div className="flex items-center justify-center w-14 h-14 rounded-[12px] bg-[#F3F4F6]">
                             <Image src={visa_card} alt='visa_card' />
                           </div>
@@ -216,7 +216,7 @@ export default function checkout() {
 
                 <div className="col-span-1">
                 <div className="rounded-[16px] border border-t border-t-[#F3F4F6] shadow-[0px_1px_2px_-1px_#0000001A,0px_1px_3px_0px_#0000001A] bg-white">
-                 <div className="px-6 py-4 gap-1 bg-linear-to-r from-[#16A34A] to-[#15803D]">
+                 <div className="px-6 py-4 gap-1 bg-linear-to-r from-[#16A34A] to-[#15803D] rounded-l-full rounded-r-full">
                  <h2 className="flex items-center gap-2 font-bold text-[18px] leading-7 align-middle text-white">
                   <Image src={lock} alt='lock'/>
                   Order Summary
@@ -271,9 +271,9 @@ export default function checkout() {
                         </div>
                     </div>
                       
-                      <hr className="w-full h-px left-5 border-t border-t-[#F3F4F6]"/>
+                      <hr className="mt-5 w-full h-px left-5 border-t border-t-[#F3F4F6]"/>
                     
-                      <div className="space-y-3">
+                      <div className="mt-4 space-y-3">
                     
                        <div className="flex items-center justify-between">
                         <span className="font-medium text-[16px] leading-6 align-middle text-[#4A5565]">Subtotal</span>
@@ -299,12 +299,12 @@ export default function checkout() {
                       </div>
                       </div>
                      
-                      <div className="w-full flex items-center justify-center gap-2 left-5 py-4  rounded-[12px] bg-linear-to-r from-[#16A34A] to-[#15803D font-bold text-[16px] leading-6 text-center align-middle text-white">
+                      <div className="mt-5.75 w-full flex items-center justify-center gap-2 left-5 py-4  rounded-[12px] bg-linear-to-r from-[#16A34A] to-[#15803D font-bold text-[16px] leading-6 text-center align-middle text-white">
                         <Image src={closed_box} alt='closed_box' className="w-5 h-4"/>
                         Place Order
                       </div>
                    
-                    <div className="flex items-center left-5 py-3 gap-4 border-t border-t-[#F3F4F6]">
+                    <div className="mt-16 flex items-center justify-center left-5 py-3 gap-4 border-t border-t-[#F3F4F6]">
                       <div className="flex items-center gap-1.5">
                         <FaShieldAlt className="w-3.75 h-3 text-[#00C950]" />
                         <span className="font-medium text-[12px] leading-4 align-middle text-[#6A7282]">Secure</span>
