@@ -231,7 +231,7 @@ export default function checkout() {
                         {Array.from({ length: 4 }).map((_, index) => (
                         <div className="flex items-center justify-between rounded-[12px] p-3 bg-[#F9FAFB]">
                         <div className="w-14 h-14 rounded-lg border p-1 border-t border-t-[#F3F4F6]">
-                         <Image  src={jacket} alt='jacket' className="w-full h-full object-cover" />
+                         <Image  src={jacket} alt='jacket' className="w-full h-full" />
                         </div>
                         <div className="flex-1">
                         <p className="font-medium text-[14px] leading-5 align-middle text-[#101828]">Woman Standart Fit Knitted Cardigan</p>
@@ -276,7 +276,7 @@ export default function checkout() {
                         Place Order
                       </div>
                    
-                    <div className="flex items-center justify-center left-5 py-3 gap-4 border-t border-t-[#F3F4F6]">
+                    <div className="mt-4 flex items-center justify-center left-5 py-3 gap-4 border-t border-t-[#F3F4F6]">
                       <div className="flex items-center gap-1.5">
                         <FaShieldAlt className="w-3.75 h-3 text-[#00C950]" />
                         <span className="font-medium text-[12px] leading-4 align-middle text-[#6A7282]">Secure</span>
@@ -289,7 +289,7 @@ export default function checkout() {
                        <div className="w-px h-4 bg-[#E5E7EB]"></div>
 
                        <div className="flex items-center gap-1.5"> 
-                        <Image src={orange_box} alt='orange_box' className="w-5 h-4" />
+                        <Image src={orange_box} alt='orange_box'   />
                         <span className="font-medium text-[12px] leading-4 align-middle text-[#6A7282]">Easy Returns</span>
                       </div>
 
