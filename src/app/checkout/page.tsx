@@ -169,7 +169,7 @@ export default function checkout() {
                         </div>
                         
                         <div className="p-6">
-                         <div className='mb-4 flex items-center justify-between w-full gap-4 rounded-[12px] border-2 p-5 bg-linear-to-r from-[#F0FDF4] to-[#F3F4F6] border-t-2 border-t-[#22C55E] shadow-[0px_1px_2px_-1px_#0000001A,0px_1px_3px_0px_#0000001A]'>
+                         <div className='mb-4 flex items-center justify-between w-full gap-4 rounded-[12px] p-5 bg-linear-to-r from-[#F0FDF4] to-[#F3F4F6] border-2 border-[#22C55E] shadow-[0px_1px_2px_-1px_#0000001A,0px_1px_3px_0px_#0000001A]'>
                           <div className="flex items-center justify-center w-14 h-14 rounded-[12px] bg-linear-to-br from-[#22C55E] to-[#16A34A]">
                          <Image src={cash} alt='cash'/>
                          </div>
@@ -202,8 +202,8 @@ export default function checkout() {
                           <div className="w-7 h-7 rounded-full border-2 bg-[#E5E7EB]"></div>
                          </div>
                           
-                         <div className="flex items-center gap-3  w-full  rounded-[12px] border p-4 bg-linear-to-r from-[#F0FDF4] to-[#F3F4F6] border-t border-t-[#DCFCE7]">
-                            <div className="w-10 h-10 rounded-full bg-[#DCFCE7]">
+                         <div className="flex items-center gap-3  w-full  rounded-[12px]  p-4 bg-linear-to-r from-[#F0FDF4] to-[#F3F4F6] border border-[#DCFCE7]">
+                            <div className="flex items-center justify-center w-10 h-10 rounded-full bg-[#DCFCE7]">
                              <FaShieldAlt className="w-5 h-4 text-[#00A63E]" />
                             </div>
                             <p className="font-medium text-[14px] leading-5 align-middle text-[#016630]">Secure & Encrypted</p>
