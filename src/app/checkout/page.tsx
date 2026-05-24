@@ -237,7 +237,7 @@ export default function checkout() {
                          <Image  src={jacket} alt='jacket' className="w-full h-full" />
                         </div>
                         <div className="flex-1">
-                        <p className="font-medium text-[14px] leading-5 align-middle text-[#101828]">Woman Standart Fit Knitted Cardigan</p>
+                        <p className="font-medium text-[14px] leading-5 align-middle text-[#101828]">Woman Standart ...</p>
                         <p className="font-medium text-[12px] leading-4 align-middle text-[#6A7282]">1 × 499 EGP</p>
                         </div>
                         <p className='font-bold text-[14px] leading-5 align-middle text-[#101828]'>499</p>
@@ -279,7 +279,7 @@ export default function checkout() {
                         Place Order
                       </div>
                    
-                    <div className="mt-4 flex items-center xl:justify-between md:gap-2 xl:left-5 py-3  border-t border-t-[#F3F4F6]">
+                    <div className="mt-4 flex items-center justify-center md:gap-1 xl:left-5 py-3  border-t border-t-[#F3F4F6]">
                       <div className="flex items-center gap-1.5">
                         <FaShieldAlt className="w-3.75 h-3 text-[#00C950]" />
                         <span className="font-medium text-[12px] leading-4 align-middle text-[#6A7282]">Secure</span>
