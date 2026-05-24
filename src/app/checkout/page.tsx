@@ -272,11 +272,11 @@ export default function checkout() {
                       </div>
                      
                       <div className="mt-5.75 w-full flex items-center justify-center gap-2 left-5 py-4  rounded-[12px]  bg-linear-to-r from-[#16A34A] to-[#15803D] font-bold text-[16px] leading-6 text-center align-middle text-white">
-                        <Image src={closed_box} alt='closed_box' className="w-5 h-4"/>
+                        <Image src={closed_box} alt='closed_box' />
                         Place Order
                       </div>
                    
-                    <div className="mt-4 flex items-center justify-center left-5 py-3 gap-4 border-t border-t-[#F3F4F6]">
+                    <div className="mt-4 flex items-center justify-center xl:left-5 py-3 xl:gap-4 border-t border-t-[#F3F4F6]">
                       <div className="flex items-center gap-1.5">
                         <FaShieldAlt className="w-3.75 h-3 text-[#00C950]" />
                         <span className="font-medium text-[12px] leading-4 align-middle text-[#6A7282]">Secure</span>
