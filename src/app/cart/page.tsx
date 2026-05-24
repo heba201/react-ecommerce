@@ -24,7 +24,7 @@ export default function Cart() {
   return (
     <>
     <div className='bg-[#F9FAFB] pt-8 pb-20.5 px-48'>
-      <div className="container">
+      <div className="container px-4">
        <div className='mb-8'>
             <nav className="flex items-center gap-2 mb-4">
               <a className='font-medium text-[14px] leading-5 text-[#6A7282]'>Home</a>
@@ -70,14 +70,14 @@ export default function Cart() {
          <div className='col-span-1'>
            <div className='rounded-2xl border shadow-[0_1px_2px_-1px_rgba(0,0,0,0.1),0_1px_3px_0_rgba(0,0,0,0.1)] bg-white border-t border-t-[#F3F4F6]'>
             <div className='gap-1 px-6 py-4 bg-[linear-gradient(90deg,#16A34A_0%,#15803D_100%)] rounded-tl-lg rounded-tr-lg'>
-              <h2 className='flex items-center text-white font-bold text-[18px] leading-7 align-middle'>
-                <Image src={lock}  alt='lock' className='w-[22.5px] h-4.5'/>
+              <h2 className='flex items-center gap-2 text-white font-bold text-[18px] leading-7 align-middle'>
+                <Image src={lock}  alt='lock'/>
                 Order Summary
               </h2>
-              <p className='font-medium text-[14px] leading-5 align-middle text-[#DCFCE7]'>4 items in your cart</p>
+              <p className='mt-1 font-medium text-[14px] leading-5 align-middle text-[#DCFCE7]'>4 items in your cart</p>
             </div>
              <div className='p-6'>
-              <div className='flex items-center gap-3 w-107.5 h-19  p-4 rounded-xl bg-[linear-gradient(90deg,#F0FDF4_0%,#F3F4F6_100%)]'>
+              <div className='flex items-center gap-3  p-4 rounded-xl bg-[linear-gradient(90deg,#F0FDF4_0%,#F3F4F6_100%)]'>
                 <div className='flex items-center justify-center w-10 h-10 bg-[#DCFCE7] rounded-full'>
                    <FaTruck className='w-5 h-4 text-[#00A63E]' />
                   </div>
@@ -103,8 +103,9 @@ export default function Cart() {
                   <div className='flex items-center justify-between'>
                      <span className='font-semibold text-[16px] leading-4 align-middle text-[#101828]'>Total</span>
                     <div className='flex items-center text-right'>
-                      <span className='font-medium text-[14px] leading-5 text-right align-middle text-[#6A7282 mt-[9.5px]'>EGP</span>
-                      <span className='font-bold text-[16px] leading-4 text-right align-middle text-[#101828'>1,994</span>
+                       <span className='font-bold text-[16px] leading-4 text-right align-middle text-[#101828'>1,994</span>
+                      <span className='font-medium text-[14px] leading-5 text-right align-middle text-[#6A7282] mt-[9.5px]'>EGP</span>
+                     
                     </div>
                    
                   </div>
