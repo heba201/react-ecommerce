@@ -99,13 +99,14 @@ export default function Cart() {
                <span className='font-medium text-[16px] leading-4 align-middle text-[#00A63E]'>FREE</span>
             </div>
              
-             <div className='w-full h-full pt-3 border-dashed border-[3px_2px] border-t border-t-[#E5E7EB]'>
+             <div className='w-full h-full pt-3 border-t border-[#E5E7EB]   border-dashed'>
                   <div className='flex items-center justify-between'>
+                     <span className='font-semibold text-[16px] leading-4 align-middle text-[#101828]'>Total</span>
                     <div className='flex items-center text-right'>
                       <span className='font-medium text-[14px] leading-5 text-right align-middle text-[#6A7282 mt-[9.5px]'>EGP</span>
                       <span className='font-bold text-[16px] leading-4 text-right align-middle text-[#101828'>1,994</span>
                     </div>
-                    <span className='font-semibold text-[16px] leading-4 align-middle text-[#101828]'>Total</span>
+                   
                   </div>
              </div>
             </div>
