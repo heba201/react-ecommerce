@@ -44,7 +44,7 @@ export default function Cart() {
             </div>
        </div>
 
-        <div className="grid grid-cols-3">
+        <div className="grid grid-cols-3 gap-8">
         <div className='col-span-2 '>
           <div className="space-y-4">
             <div className='bg-white rounded-2xl border border-[#F3F4F6]  mb-4 p-5.25 shadow-[0_1px_2px_-1px_rgba(0,0,0,0.1),0_1px_3px_0_rgba(0,0,0,0.1)]'>
