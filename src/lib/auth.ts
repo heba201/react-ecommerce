@@ -6,5 +6,5 @@ export async function getUserToken(){
     // __Secure-next-auth.session-token on production
  const decodedToken =  (await cookies()).get("__Secure-next-auth.session-token")?.value
  const token = await(decode({token:decodedToken , secret : process.env.AUTH_SECRET ! })) 
- return token?.token;
+ return token?.token as string;
 }
