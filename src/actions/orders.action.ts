@@ -7,7 +7,7 @@ export async function getUserOrders(){
   id: string;
 };
     const token = await getUserToken();
-    if(!token){
+    if(!token?.token){
         throw new Error("Unauthenticated User")
     }
 
