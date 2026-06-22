@@ -161,7 +161,7 @@ export default  function Profile(){
          </div>
          <div className="flex items-center justify-between">
             <span className="font-medium text-[14px] leading-[20px] tracking-[0] align-middle text-[#6A7282]">Role</span>
-        <span className="rounded-[8px] py-[4px] px-[12px] bg-[#DCFCE7] text-[#15803D]  font-medium text-[14px] leading-[20px] tracking-[0] align-middle capitalize">{session?.user?.role ?? ''}</span>
+        <span className="rounded-[8px] py-[4px] px-[12px] bg-[#DCFCE7] text-[#15803D]  font-medium text-[14px] leading-[20px] tracking-[0] align-middle capitalize">{session?.user ? (session.user as any).role : ''}</span>
          </div>
         </div>
         </div>
