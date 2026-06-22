@@ -11,7 +11,7 @@ export async function getUserOrders(){
         throw new Error("Unauthenticated User")
     }
 
-    const decoded = jwtDecode<TokenType>(token);
+    const decoded = jwtDecode<TokenType>(token.token);
     const response = await fetch(`https://ecommerce.routemisr.com/api/v1/orders/user/${decoded?.id}`,{
     method:'GET',
     headers:{
