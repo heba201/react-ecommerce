@@ -19,12 +19,78 @@ import { FaTruck  } from "react-icons/fa6";
 import { FaShieldAlt } from "react-icons/fa";
 import { BiSolidLockAlt } from "react-icons/bi";
 import FeaturesBar from '@/components/featuresBar/FeaturesBar';
+import { FaBoxOpen , FaArrowRight  } from "react-icons/fa";
 
 export default function Cart() {
+    const {getCartData,totalCartPrice,noOfCartItems} = useContext(CartContext);
+    const[products,setProducts] = useState<cartProductI[]>([]);
+    const[isLoading,setIsLoading] = useState(false);
+    const[isLoadingClear,setIsLoadingClear] = useState(false);
+    const [subtotal,setSubtotal] = useState(0);
+    async function getAllProductCart(){
+      try {
+        setIsLoading(true);
+        const response : cartI = await getCart();
+        setProducts(response.data.products);  
+      } catch (error) {
+        console.log(error);
+      }finally{
+        setIsLoading(false);
+      }
+    }
+    async function clearOurCart(){
+      try {
+        setIsLoadingClear(true);
+        const response = await clearCart();
+            setProducts(response.data.products);
+            getCartData();
+      } catch (error) {
+        console.log(error);
+      }finally{
+         setIsLoadingClear(false);
+      }
+    }
+ 
+    useEffect(()=>{
+    getAllProductCart();
+    },[]);
+
+  if(!isLoading && products.length === 0){
+    return  <div className="min-h-[60vh] flex items-center justify-center px-4">
+      <div className="max-w-md text-center">
+
+        <div className="relative mb-8">
+          <div className="w-32 h-32 rounded-full bg-gray-100 flex items-center justify-center mx-auto">
+            <FaBoxOpen className="text-5xl text-gray-300" />
+          </div>
+        </div>
+
+        <h2 className="text-2xl font-bold text-gray-900 mb-3">
+          Your cart is empty
+        </h2>
+
+        <p className="text-gray-500 mb-8 leading-relaxed">
+          Looks like you haven't added anything to your cart yet.
+          <br />
+          Start exploring our products!
+        </p>
+
+        <a
+          href="/products"
+          className="inline-flex items-center gap-2 bg-[#16a34a] text-white py-3.5 px-8 rounded-xl font-semibold hover:bg-green-700 transition-all shadow-lg active:scale-[0.98]"
+        >
+          Start Shopping
+          <FaArrowRight className="text-sm" />
+        </a>
+
+      </div>
+    </div>
+  }
+
   return (
-    <>
-    <div className='bg-[#F9FAFB] pt-8 pb-20.5 px-48'>
-      <div className="container px-4">
+     <>
+    <div className='bg-[#F9FAFB] pt-8 pb-20.5 xl:px-48'>
+      <div className="container xl:px-4 md:px-4 px-4">
        <div className='mb-8'>
             <nav className="flex items-center gap-2 mb-4">
               <a className='font-medium text-[14px] leading-5 text-[#6A7282]'>Home</a>
@@ -39,28 +105,30 @@ export default function Cart() {
                   </span>
                   Shopping Cart
                 </h1>
-                <p className='mt-2 font-medium text-[16px] leading-4 align-middle'><span className='text-[#5A6370]'>You have</span> <span className='font-semibold text-[16px] leading-4 align-middle text-[#16A34A]'>4 items</span><span className='text-[#5A6370]'>in your cart</span> </p>
+                <p className='mt-2 font-medium text-[16px] leading-4 align-middle'><span className='text-[#5A6370]'>You have</span> <span className='font-semibold text-[16px] leading-4 align-middle text-[#16A34A]'>{noOfCartItems} items</span> <span className='text-[#5A6370]'>in your cart</span> </p>
                </div>
             </div>
        </div>
 
-        <div className="grid grid-cols-3 gap-8">
-        <div className='col-span-2 '>
+        <div className="grid xl:grid-cols-3 md:grid-cols-3 grid-cols-1 gap-8">
+        <div className='xl:col-span-2 md:col-span-2 col-span-1'>
          
           <div className="space-y-4">
-          {Array.from({ length: 4 }).map((_, i) => (
-            <div className='relative bg-white rounded-2xl border border-[#F3F4F6]  mb-4 p-5.25 shadow-[0_1px_2px_-1px_rgba(0,0,0,0.1),0_1px_3px_0_rgba(0,0,0,0.1)]'>
-            <CartItem />
+           {products.map((product) => (
+            
+            // relative
+            <div   key={product._id} className=' bg-white rounded-2xl border border-[#F3F4F6]  mb-4 xl:p-5.25 md:p-5.25 p-2 shadow-[0_1px_2px_-1px_rgba(0,0,0,0.1),0_1px_3px_0_rgba(0,0,0,0.1)]'>
+            <CartItem  product={product} setProducts={setProducts}/>
             </div>
              ))}
-            <div className="mt-6 flex items-center  justify-between pt-6   border  border-t-[#E5E7EB]">
-             <a className="flex items-center gap-2 text-[#16A34A] font-medium text-[14px] leading-5 align-middle">
-              <span className='font-medium text-[14px] leading-5 align-middle text-[#16A34A]'>←</span>
+            <div className="mt-6 flex items-center  justify-between pt-6   border-t  border-t-[#E5E7EB]">
+             <Link href='/products' className="cursor-pointer flex items-center gap-2 text-[#16A34A] hover:text-green-700 font-medium text-[14px] leading-5 align-middle">
+              <span className='font-medium text-[14px] leading-5 align-middle'>←</span>
               Continue Shopping
-             </a>
-             <button className='flex items-center gap-2'>
-               <IoMdTrash className='w-3.75 h-3 text-[#99A1AF]' />
-               <span className='font-medium text-[14px] leading-5 text-center align-middle text-[#99A1AF]'>Clear all items</span>
+             </Link>
+             <button onClick={()=>clearOurCart()} className='cursor-pointer flex items-center gap-2 text-[#99A1AF] hover:text-red-500 transition-colors'>
+               <IoMdTrash className='w-3.75 h-3' />
+               <span className='font-medium text-[14px] leading-5 text-center align-middle'>Clear all items</span>
              </button>
             </div>
           </div>
@@ -74,7 +142,7 @@ export default function Cart() {
                 <Image src={lock}  alt='lock'/>
                 Order Summary
               </h2>
-              <p className='mt-1 font-medium text-[14px] leading-5 align-middle text-[#DCFCE7]'>4 items in your cart</p>
+              <p className='mt-1 font-medium text-[14px] leading-5 align-middle text-[#DCFCE7]'>{noOfCartItems} items in your cart</p>
             </div>
              <div className='p-6'>
               <div className='mb-5 flex items-center gap-3  p-4 rounded-xl bg-[linear-gradient(90deg,#F0FDF4_0%,#F3F4F6_100%)]'>
@@ -91,7 +159,7 @@ export default function Cart() {
             <div className='space-y-3 mb-5'>
             <div className='flex items-center justify-between'>
                <span className='font-medium text-[16px] leading-4 align-middle text-[#4A5565]'>Subtotal</span>
-               <span className='font-medium text-[16px] leading-4 align-middle text-[#101828]'>1,994 EGP</span>
+               <span className='font-medium text-[16px] leading-4 align-middle text-[#101828]'>{totalCartPrice} EGP</span>
             </div>
 
              <div className='flex items-center justify-between'>
@@ -99,11 +167,11 @@ export default function Cart() {
                <span className='font-medium text-[16px] leading-4 align-middle text-[#00A63E]'>FREE</span>
             </div>
              
-             <div className='w-full h-full pt-3 border-t border-[#E5E7EB]   border-dashed'>
+             <div className='pt-3 border-t border-[#E5E7EB]   border-dashed'>
                   <div className='flex items-center justify-between'>
                      <span className='font-semibold text-[16px] leading-4 align-middle text-[#101828]'>Total</span>
                     <div className='flex items-center text-right'>
-                       <span className='font-bold text-[16px] leading-4 text-right align-middle text-[#101828'>1,994</span>
+                       <span className='font-bold text-[16px] leading-4 text-right align-middle text-[#101828'>{totalCartPrice}</span>
                       <span className='font-medium text-[14px] leading-5 text-right align-middle text-[#6A7282] mt-[9.5px]'>EGP</span>
                      
                     </div>
@@ -111,34 +179,34 @@ export default function Cart() {
                   </div>
              </div>
             </div>
-            <button className='mb-5 flex items-center justify-center w-full h-full py-3 gap-2 rounded-xl border border-dashed border-t border-t-[#D1D5DC]'>
-               <Image src={mark}  alt='mark' className='w-5 h-4'/>
+            <button className='mb-5 flex items-center justify-center w-full py-3 gap-2 rounded-xl border border-dashed border-t border-t-[#D1D5DC]'>
+               <Image src={mark}  alt='mark' />
                <span className='font-medium text-[14px] leading-5 text-center align-middle text-[#4A5565]'>
                 Apply Promo Code
                </span>
             </button>
 
-             <a className='mb-5 flex items-center justify-center gap-3 w-full h-full px-6 py-4 rounded-xl bg-linear-to-r from-[#16A34A] to-[#15803D] shadow-[0_4px_6px_-4px_rgba(22,163,74,0.2),0_10px_15px_-3px_rgba(22,163,74,0.2)]'>
+             <Link href='/checkout' className='mb-5 flex items-center justify-center gap-3 xl:px-6 md:px-3 py-4 rounded-xl bg-linear-to-r from-[#16A34A] to-[#15803D] hover:shadow-[0_4px_6px_-4px_rgba(22,163,74,0.2),0_10px_15px_-3px_rgba(22,163,74,0.2)] cursor-pointer hover:border-green-400 hover:text-green-600 hover:bg-green-50/50 transition-all'>
                <BiSolidLockAlt className='w-5 h-4 text-white' />
-               <span className='font-semibold text-[16px] leading-4 align-middle text-white'>Secure Checkout</span>
-             </a>
-              <div className="flex items-center justify-center w-full h-full py-2 gap-4">
-                <div className="flex items-center gap-[6.75px]">
+               <span className='font-semibold text-[16px] leading-4 align-middle text-white whitespace-nowrap'>Secure Checkout</span>
+             </Link>
+              <div className="flex items-center justify-center md:gap-1.5 py-2 md:px-3 gap-4">
+                <div className="flex items-center gap-1.5">
                   <FaShieldAlt className='w-3.75 h-3 text-[#00C950]' />
-                  <span className="font-medium text-[12px] leading-4 align-middle text-[#6A7282]">Secure Payment</span>
+                  <span className="font-medium text-[12px] leading-4 align-middle text-[#6A7282] whitespace-nowrap">Secure Payment</span>
                 </div>
                 <div className='w-px h-4 bg-[#E5E7EB'></div>
-                <div className="flex items-center gap-[6.75px]">
+                <div className="flex items-center gap-1.5">
                   <FaTruck className='w-3.75 h-3 text-[#2B7FFF]' />
-                  <span className="font-medium text-[12px] leading-4 align-middle text-[#6A7282]">Fast Delivery</span>
+                  <span className="font-medium text-[12px] leading-4 align-middle text-[#6A7282] whitespace-nowrap">Fast Delivery</span>
                 </div>
 
               </div>
              </div>
 
-             <a  className="w-full py-2 flex items-center justify-center text-[#16A34A] font-medium text-[14px] leading-5 text-center align-middle">
+             <Link href='/products'  className="mb-6 py-2 flex items-center justify-center text-green-600 font-medium text-[14px] leading-5 text-center align-middle hover:text-green-700">
                    ← Continue Shopping
-             </a>
+             </Link>
            </div>
 
          </div>

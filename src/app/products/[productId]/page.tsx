@@ -39,9 +39,22 @@ import { FaCheck } from "react-icons/fa6";
 import ProductCard from '@/components/product/ProductCard'
 import ProductsSwipper from '@/components/product/ProductsSwipper'
 import FeaturesBar from '@/components/featuresBar/FeaturesBar'
+import { getAllProducts, getProduct } from '@/services/product.service'
+import { productI } from '@/types/producttype'
+import TotalPrice from '@/components/product/TotalPrice'
+import AddToCartBtn from '@/components/cart/AddToCartBtn'
+import AddToWishlistBtn from '@/components/wishlist/AddToWishlistBtn'
+import Rating from '@/components/product/Rating'
+import ProductTabs from '@/components/product/ProductTabs'
 
-export default async function ProductDetails() {
-
+export default async function ProductDetails({params}:{params:Promise<{productId:string}>}) {
+  
+  const {productId} = await params ;
+  const productResponse =  await  getProduct(productId);
+  const product : productI =  productResponse.data;
+  const related =  await  getAllProducts(product.category._id);
+  const relatedProducts : productI[] = related.data;
+  
   return (
      <>
     <div className='min-h-screen'>
@@ -72,34 +85,35 @@ export default async function ProductDetails() {
 
               <div className="xl:px-52 md:px-4 flex flex-col xl:flex-row md:flex-row xl:items-start md:items-start mt-[40.5px] xl:gap-8 md:gap-[32px] px-4">
                  
-                <ProductDetailsCarousel/>
+                <ProductDetailsCarousel images={product.images}/>
 
                 <div className="product-info xl:w-3/4 md:[70%] w-[100%]">
                    <div className="bg-white shadow-[0px_1px_2px_-1px_#0000001A,0px_1px_3px_0px_#0000001A] pt-6 px-6 pb-[24px] rounded-xl">
                       <div className="flex items-center gap-2">
                          <a className='w-[122px] h-7 rounded-full py-[6px] px-3 bg-[#F0FDF4] text-[12px] font-medium leading-4 text-[#15803D]'>
-                          Women's Fashion
+                           {product.category.name}
                          </a>
                          <a className='w-[69px] h-7 rounded-full py-[6px] px-3 bg-[#F3F4F6] text-[12px] font-medium leading-4 text-[#364153]'>
-                          DeFacto
+                          {product.brand.name}
                          </a>
                       </div>
                       <h1 className='text-[30px] font-bold leading-9 text-[#101828] mt-4'>
-                        Woman Shawl
+                        {product.title}
                       </h1>
                   <div className="flex items-center gap-3">
-                    <div className="flex items-center gap-0">
-                      <FaStar className='w-5 h-4 text-[#FCC800]' />
-                      <FaStar className='w-5 h-4 text-[#FCC800]' />
-                      <FaStar className='w-5 h-4 text-[#FCC800]' />
-                      <FaStar className='w-5 h-4 text-[#FCC800]' />
-                       <Image src={half_star} alt='half_star' className='w-5 h-4' />
+                    <div className="flex items-center gap-0 text-[#FCC800]">
+                    <Rating  rating={product.ratingsAverage}/> 
                     </div>
-                    <span className='text-[14px] font-medium leading-5 text-[#4A5565]'>4.8 (18 reviews)</span>
+                    <span className='text-[14px] font-medium leading-5 text-[#4A5565]'>{product.ratingsAverage} ({product.ratingsQuantity})</span>
                   </div>
 
-                     <div className="flex items-center mt-4">
-                          <span className='text-[30px] font-bold leading-9 text-[#101828]'>149 EGP</span>
+                     <div className="flex items-center gap-3 mt-4">
+                       <span className='text-[30px] font-bold leading-9 text-[#101828]'>{product.priceAfterDiscount ? `${product.priceAfterDiscount} EGP` : `${product.price} EGP`}</span>
+                       {product.priceAfterDiscount && <>
+                        <span className="text-lg text-gray-400 line-through">{`${product.price} EGP`}</span>
+                       <span className="bg-red-500 text-white text-sm px-3 py-1 rounded-full font-medium">Save {`${Math.round((product.priceAfterDiscount/product.price)*100)}%`}</span>
+                       </>}
+                      
                      </div>
 
                      <div className="flex items-center mt-6">
@@ -111,45 +125,15 @@ export default async function ProductDetails() {
                       
                       <div className='border-t border-[#F3F4F6] pt-5 mt-6'>
                          <p className='text-[16px] font-medium leading-[26px] text-[#4A5565]'>
-                          Material Polyester Blend Colour Name Multicolour Department Women
+                         {product.description}
                          </p>
                       </div>
                        
-                       <div>
-                        <label className='block text-[14px] font-medium leading-5 text-[#364153] mt-6' >
-                          Quantity
-                        </label>
-                        <div className="flex items-center gap-4 mt-2">
-                          <div className="flex items-center border-t-2 border-t-[#E5E7EB] w-[172px] h-[52px] rounded-lg border">
-                            <button id="decrease-qty"  className='w-[52px] h-12 opacity-50 pt-[15px] pr-4 pb-[17px] pl-4 flex items-center justify-center'>
-                              <FiMinus className='w-5 h-4 text-[#4A5565]'  />
-                            </button>
-                            <input type="number" id="quantity" className='w-16 h-7 text-center focus:outline-none'/>
-                            <button className='w-[52px] h-12 pt-[15px] pr-4 pb-[17px] pl-4 flex items-center justify-center'>
-                              <FaPlus className='w-5 h-4 text-[#4A5565]'/>
-                            </button>
-                          
-                          </div>
-                          <span className='text-[14px] font-medium leading-5 text-[#6A7282]'>
-                            220 available
-                          </span>
-                        </div>
-                       </div>
-
-
-                     <div className='bg-[#F9FAFB] p-4 mt-6'>
-                          <div className='flex items-center justify-between'>
-                            <span className='font-medium text-[16px] leading-6 align-middle text-[#4A5565]'>Total Price:</span>
-                          <span className='font-bold text-base leading-5 align-middle text-[#16A34A]'>149.00 EGP</span>
-                          </div>
-                     </div>
+                     <TotalPrice priceAfterDiscount={product.priceAfterDiscount} price={product.price} quantity={product.quantity}  />
                     
                      <div>
                       <div className="flex items-center gap-[12px] mt-6">
-                       <button className="flex items-center justify-center  w-1/2 h-[52px] rounded-xl px-6 py-[14px] bg-[#16A34A] shadow-[0px_4px_6px_-4px_#16A34A40,0px_10px_15px_-3px_#16A34A40] font-medium text-base leading-6 text-center align-middle text-white">
-                         <IoCart className="w-5 h-4 text-white"/> Add to Cart
-                       </button>
-
+                       <AddToCartBtn produtId={product._id} />
                        <button className="flex items-center   justify-center w-1/2 h-[52px] rounded-xl px-6 py-[14px] bg-[#101828]  font-medium text-base leading-6 text-center align-middle text-white">
                          <FaBolt className="w-5 h-4 text-white"/> Buy Now
                        </button>
@@ -157,11 +141,9 @@ export default async function ProductDetails() {
                      </div>
 
                      <div className="flex items-center gap-[12px] mt-6">
-                      <button className="flex items-center justify-center flex-1  h-[52px] rounded-xl gap-2 px-4 py-3 border border-t-2 border-t-[#E5E7EB] font-medium text-base leading-6 text-center align-middle text-[#364153]">
-                        <CiHeart className="w-5 h-4 text-[#364153]"/>Add to Wishlist
-                      </button>
-                      <button className="flex items-center justify-center w-14 h-[52px] rounded-xl px-4 pt-[15px] pb-[17px] border border-t-2 border-t-[#E5E7EB]">
-                          <IoShareSocialSharp className="w-5 h-4 text-[#364153]"/>
+                       <AddToWishlistBtn  productId={productId}/>
+                      <button className="flex items-center justify-center w-14 h-[52px] rounded-xl px-4 pt-[15px] pb-[17px] border border-t-2 border-t-[#E5E7EB] hover:border-green-300 hover:text-green-600 transition text-[#364153]">
+                          <IoShareSocialSharp className="w-5 h-4"/>
                       </button>
                      </div>
 
@@ -205,112 +187,11 @@ export default async function ProductDetails() {
                 </div>
               </div>
             
-              <div className='mt-[56px] xl:pl-[24px] xl:pr-[24px] pl-4 pr-4 xl:w-[75%] md:w-[96%] w-[100%] relative xl:left-52 xl:right-52  left-4  right-4 pb-6 gap-6  bg-white rounded-lg shadow-[0px_1px_2px_-1px_#0000001A,0px_1px_3px_0px_#0000001A]'>
-               <div className='border-b border-b-[#E5E7EB] xl:-mx-[24px] md:-mx-4'>
-                   <div className="flex items-center">
-                    <button className='flex items-center gap-[8px] cursor-pointer px-6 py-4  border-b-2 border-b-[#16A34A]  bg-[#F0FDF480] font-medium text-[16px] leading-none text-center align-middle text-[#16A34A]'>
-                     <Image src={box} alt='box' className='w-[17.5px] h-[14px] bg-[#16A34A]' />
-                    Product Details
-                    </button>
-
-                    <button className='flex items-center gap-[8px] cursor-pointer px-6 py-4  font-medium text-[16px] leading-none text-center align-middle text-[#4A5565]'>
-                     <FaStar className='w-[17.5px] h-[14px]' />
-                     Reviews (18)
-                    </button>
-
-                    <button className='hidden xl:flex md:flex items-center gap-[8px]  cursor-pointer px-6 py-4  font-medium text-[16px] leading-none text-center align-middle text-[#4A5565]'>
-                     <FaTruck  className='w-[17.5px] h-[14px] text-[#4A5565]' />
-                      Shipping & Returns
-                    </button>
-
-                   </div>
-               </div>
-               
-               <div className='space-y-6'>
-                 <div>
-                  <h3 className='font-semibold text-[18px] leading-[28px] text-[#101828]'>About this Product</h3>
-                  <p className='font-medium text-[16px] leading-[26px] align-middle text-[#4A5565]'>Material Polyester Blend Colour Name Multicolour Department Women</p>
-                 </div>
-                 <div className="grid xl:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-[24px] mt-[24px]">
-                   <div className='col-span-1  bg-[#F9FAFB] p-4'>
-                   <h4 className='font-medium text-[16px] leading-none align-middle text-[#101828]'>
-                    Product Information
-                   </h4>
-                   <ul className='space-y-2 list-none mt-[12px]'>
-                    <li>
-                       <div className="flex items-center justify-between">
-                     <span className='font-medium text-sm leading-5 align-middle text-[#6A7282]'>Category</span>
-                     <span className='font-medium text-[14px] leading-[20px] align-middle text-[#101828]'>Women's Fashion</span>
-                    </div>
-                    </li>
-                    
-                    <li>
-                       <div className="flex items-center justify-between">
-                     <span className='font-medium text-sm leading-5 align-middle text-[#6A7282]'>Subcategory</span>
-                     <span className='font-medium text-[14px] leading-[20px] align-middle text-[#101828]'>Women's Clothing</span>
-                    </div>
-                    </li>
-
-                    <li>
-                       <div className="flex items-center justify-between">
-                     <span className='font-medium text-sm leading-5 align-middle text-[#6A7282]'>Brand</span>
-                     <span className='font-medium text-[14px] leading-[20px] align-middle text-[#101828]'>DeFacto</span>
-                    </div>
-                    </li>
-
-                    <li>
-                       <div className="flex items-center justify-between">
-                     <span className='font-medium text-sm leading-5 align-middle text-[#6A7282]'>Items Sold</span>
-                     <span className='font-medium text-[14px] leading-[20px] align-middle text-[#101828]'>4.565875507206704e+305+ sold</span>
-                    </div>
-                    </li>
-
-                   </ul>
-                   </div>
-
-                   <div className='col-span-1  bg-[#F9FAFB] p-4'>
-                   <h4 className='font-medium text-[16px] leading-none align-middle text-[#101828]'>
-                    Key Features
-                   </h4>
-                   <ul className='space-y-2 list-none mt-[12px]'>
-                    <li>
-                      <div className="flex items-center font-medium text-[14px] leading-[20px] align-middle text-[#4A5565]">
-                       <FaCheck  className='w-[17.5px] h-[14px] text-[#16A34A] pr-[8px]'/>
-                       Premium Quality Product
-                      </div>
-                    </li>
-
-                    <li>
-                      <div className="flex items-center font-medium text-[14px] leading-[20px] align-middle text-[#4A5565]">
-                       <FaCheck  className='w-[17.5px] h-[14px] text-[#16A34A] pr-[8px]'/>
-                       100% Authentic Guarantee
-                      </div>
-                    </li>
-
-                    <li>
-                      <div className="flex items-center font-medium text-[14px] leading-[20px] align-middle text-[#4A5565]">
-                       <FaCheck  className='w-[17.5px] h-[14px] text-[#16A34A] pr-[8px]'/>
-                       Fast & Secure Packaging
-                      </div>
-                    </li>
-
-                      <li>
-                      <div className="flex items-center font-medium text-[14px] leading-[20px] align-middle text-[#4A5565]">
-                       <FaCheck  className='w-[17.5px] h-[14px] text-[#16A34A] pr-[8px]'/>
-                      Quality Tested
-                      </div>
-                    </li>
-
-                   </ul>
-                   </div>
-
-                 </div>
-               </div>
-              </div>
+             <ProductTabs product={product} />
               <div className="container mt-[72px] mb-[40px] relative xl:left-[208px] md:left-4 md:right-4 left-4 right-4 xl:right-[208px] pb-4 pt-4 xl:w-[75%]  md:w-[96%] w-[100%]">
-              <ProductsSwipper />
+              <ProductsSwipper relatedProducts={relatedProducts} />
               </div>  
-            </div>
+            </div> 
             <FeaturesBar variant="product_details" /> 
             
      </>

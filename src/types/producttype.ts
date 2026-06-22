@@ -3,12 +3,13 @@ export interface productI{
     category : brandI;
     createdAt:string;
     description:string;
-     id:string;
-     imageCover : string;
-     images : string[];
-      quantity: number;
+    id:string;
+    imageCover : string;
+    images : string[];
+    quantity: number;
     price: number;
     ratingsAverage:number;
+    ratingsQuantity:number;
     slug:string;
     sold:number;
     priceAfterDiscount: number,
@@ -16,6 +17,7 @@ export interface productI{
     title:string;
     updatedAt:string;
      _id:string;
+     reviews:reviewsI[]
 }
 
 interface brandI{
@@ -24,4 +26,11 @@ interface brandI{
     slug : string,
     id: string,
     _id:string,
+}
+
+interface reviewsI{
+    _id:string;
+    rating: number;
+    review: string;
+    product: string;
 }

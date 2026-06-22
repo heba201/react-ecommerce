@@ -10,15 +10,8 @@ import {
 } from "@/components/ui/carousel";
 import woman_shawl from "@/assets/home/woman_shawl.png";
 import Image from 'next/image';
-export default function ProductDetailsCarousel() {
-         const [selectedImage, setSelectedImage] = useState(0); 
-   const images = [
-    "https://ecommerce.routemisr.com/Route-Academy-products/1680403156555-3.jpeg",
-    "https://ecommerce.routemisr.com/Route-Academy-products/1680403156555-2.jpeg",
-    "https://ecommerce.routemisr.com/Route-Academy-products/1680403156554-1.jpeg",
-    "https://ecommerce.routemisr.com/Route-Academy-products/1680403156556-4.jpeg",
-  ];
-  
+export default function ProductDetailsCarousel({ images }: { images: string[] }) {
+  const [selectedImage, setSelectedImage] = useState(0); 
   const thumbnailsRef = useRef<HTMLDivElement | null>(null);
 
   // Auto scroll thumbnails
@@ -46,12 +39,13 @@ export default function ProductDetailsCarousel() {
           }}
         >
              {images.map((image, index) => (
-            <CarouselItem >
+            <CarouselItem  key={index}>
               
                 <Image
-                  src={image}
+                  src={image} 
                   alt='product-image'
                   className="w-full h-[469.1px] object-cover"
+                  width={1000} height={1000}
                 />
                
             </CarouselItem>
@@ -65,7 +59,7 @@ export default function ProductDetailsCarousel() {
         className="flex items-center scroll-smooth scrollbar-hide w-[344px] h-[133.45px] mt-[5px] gap-0.5 overflow-hidden"
       >
         {images.map((image, index) => (
-            <div className="h-full">
+            <div className="h-full" key={`div${index}`}>
           <button
             key={index}
             onClick={() => setSelectedImage(index)}

@@ -8,7 +8,8 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { useRef } from "react";
 import { MdChevronRight , MdChevronLeft } from "react-icons/md";
-export default function ProductsSwipper() {
+import { productI } from '@/types/producttype';
+export default function ProductsSwipper({relatedProducts}:{relatedProducts:productI[]}) {
     const swiperRef = useRef<any>(null);
   return (
      <>
@@ -48,9 +49,9 @@ export default function ProductsSwipper() {
     },
   }}
         >
-        {Array.from({ length: 10 }).map((_, index) => (
-            <SwiperSlide key={index}>
-            <ProductCard variant="product_details" />
+        {relatedProducts.map((product) => (
+            <SwiperSlide key={product._id}>
+            <ProductCard variant="product_details"  product={product}/>
             </SwiperSlide>
         ))}
         </Swiper>

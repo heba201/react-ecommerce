@@ -5,28 +5,23 @@ import type { NextRequest } from 'next/server'
 // This function can be marked `async` if using `await` inside
 export async function proxy(request: NextRequest) {
    
-    const {pathname} = request.nextUrl;
-     console.log(pathname)
+   const {pathname} = request.nextUrl;
+   console.log(pathname)
     // use getToken in route handler , proxy only
  const token =  await  getToken({req:request});
- // return boolean
- //const isAuthPages = pathname === '/login'  || pathname === '/register'  في حالة ان عدد الصفحات قليلة
+ 
  const isAuthPages = ["/login","/register"].includes(pathname);
 //   return NextResponse.redirect(new URL('/home', request.url))
 if(token && isAuthPages){
    return NextResponse.redirect(new URL('/products', request.url)) 
 }
-
 if(!token && !isAuthPages){
    return NextResponse.redirect(new URL('/login', request.url)) 
 }
-
 return NextResponse.next();
 }
- 
 // Alternatively, you can use a default export:
 // export default function proxy(request: NextRequest) { ... }
- 
 export const config = {
-  matcher: ["/login","/register","/cart","/wish-list","/brands"],
+  matcher: ["/login","/register","/cart","/wishlist","/checkout","/allorders","/user/profile","/user/address"],
 }

@@ -26,7 +26,6 @@ export default function Cart() {
       console.log(error);
     }finally{
       setIsLoading(false);
-      
     }
   }
   async function clearOurCart(){
@@ -42,7 +41,7 @@ export default function Cart() {
     }
   }
   useEffect(()=>{
-getAllProductCart();
+  getAllProductCart();
   },[])
   if(isLoading){
     return <>
@@ -50,19 +49,17 @@ getAllProductCart();
  <div className="nav-logo">
          <div  className='text-3xl font-bold flex items-center gap-2'>
          <Avatar className='rounded-lg text-white bg-black flex items-center justify-center'>
- S
-  
-</Avatar>
-         ShopMart
-         </div>
-        </div>
+       S 
+      </Avatar>
+              ShopMart
+              </div>
+              </div>
 
-<Spinner  className='size-8'/>
-<p>Loading Cart ...</p>
-    </div>
-    </>
-  }
-
+      <Spinner  className='size-8'/>
+      <p>Loading Cart ...</p>
+          </div>
+          </>
+        }
 
   if(products.length == 0){
     return <>

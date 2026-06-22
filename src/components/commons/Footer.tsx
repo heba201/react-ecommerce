@@ -1,18 +1,31 @@
-import React from 'react'
+"use client"
+import React, { useEffect, useState } from 'react'
 import { TiSocialFacebook } from "react-icons/ti";
 import { FaTwitter , FaInstagram , FaYoutube ,FaPhoneAlt   } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { FaLocationDot , FaCreditCard } from "react-icons/fa6";
-
-
 import fresh_cart from "@/assets/navbar/fresh_cart.png";
 import Image from 'next/image';
+import { categoryI } from '@/types/category.type';
+import { getCategoriesFiltered } from '@/services/category.service';
 
 export default function Footer() {
+  const[categories,setCategories] =useState<categoryI[]>([]);
+  async function getCategories(){
+    
+          try {
+              const categName =["Electronics","Women's Fashion","Men's Fashion","Beauty & Health"];
+              const response = await getCategoriesFiltered(categName);
+              setCategories(response.data.data) ;  
+             } catch (error) {
+            }     
+            }
+            useEffect(()=>{
+              getCategories();
+            });
+
   return (
    <footer className="w-full bg-[#101828]">
- 
-    
     <div className="grid grid-cols-1 xl:grid-cols-6 md:grid-cols-6  gap-12 pt-[48px] xl:px-[208px] md:px-2 px-[16px]">
       
       <div className='xl:col-span-2 md:col-span-2 col-span-1  xl:mb-[48px] md:mb-[48px]'>
@@ -29,12 +42,12 @@ export default function Footer() {
 
           <div className='space-y-3 mb-[24px]'>
 
-          <div className="flex items-center gap-3">
+          <a href="tel:+18001234567" className="flex items-center gap-3 hover:text-green-400 transition-colors">
             <FaPhoneAlt className='w-[17.5px] h-[14px] text-[#22C55E]' />
             <span className='font-medium text-sm leading-5 align-middle text-[#99A1AF]'>+1 (800) 123-4567</span>
-          </div>
+          </a>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 text-gray-400 hover:text-green-400 transition-colors">
             <MdEmail className='w-[17.5px] h-[14px] text-[#22C55E]' />
             <span className='font-medium text-sm leading-5 align-middle text-[#99A1AF]'>support@freshcart.com</span>
           </div>
@@ -47,19 +60,19 @@ export default function Footer() {
         </div>
 
          <div className="flex items-center  gap-3">
-          <a className='w-10 h-10 rounded-full flex items-center  justify-center bg-[#1E2939]'>
+          <a href="#" className='w-10 h-10 rounded-full flex items-center  justify-center bg-[#1E2939] hover:bg-green-600 hover:text-white transition-colors'>
           <TiSocialFacebook className="w-5 h-4 text-[#99A1AF]"/>
           </a>
 
-          <a className='w-10 h-10 rounded-full flex items-center  justify-center bg-[#1E2939]'>
+          <a href="#" className='w-10 h-10 rounded-full flex items-center  justify-center bg-[#1E2939] hover:bg-green-600 hover:text-white transition-colors'>
           <FaTwitter className="w-5 h-4 text-[#99A1AF]"/>
           </a>
 
-          <a className='w-10 h-10 rounded-full flex items-center  justify-center bg-[#1E2939]'>
+          <a href="#" className='w-10 h-10 rounded-full flex items-center  justify-center bg-[#1E2939] hover:bg-green-600 hover:text-white transition-colors'>
           <FaInstagram className="w-5 h-4 text-[#99A1AF]"/>
           </a>
 
-          <a className='w-10 h-10 rounded-full flex items-center  justify-center bg-[#1E2939]'>
+          <a href="#" className='w-10 h-10 rounded-full flex items-center  justify-center bg-[#1E2939] hover:bg-green-600 hover:text-white transition-colors'>
           <FaYoutube className="w-5 h-4 text-[#99A1AF]"/>
           </a>
         </div>
@@ -70,24 +83,21 @@ export default function Footer() {
           Shop
           <ul className='space-y-3 mt-[20px]'>
            <li className='pt-[3px] pb-[1px] font-medium text-sm leading-5 align-middle text-[#99A1AF]'>
-                All Products
+                
+                <a href="/products" className='text-gray-400 hover:text-green-400 transition-colors text-sm'>All Products</a>
            </li>
            <li className='pt-[3px] pb-[1px] font-medium text-sm leading-5 align-middle text-[#99A1AF]'>
-                Categories
+                <a href="/categories" className='text-gray-400 hover:text-green-400 transition-colors text-sm'>Categories</a>
            </li>
            <li className='pt-[3px] pb-[1px] font-medium text-sm leading-5 align-middle text-[#99A1AF]'>
-               Brands
+                 <a href="/brands" className='text-gray-400 hover:text-green-400 transition-colors text-sm'>Brands</a>
            </li>
-           <li className='pt-[3px] pb-[1px] font-medium text-sm leading-5 align-middle text-[#99A1AF]'>
-               Electronics
+            {categories.map((category) => (
+           <li  key={category._id}    className='pt-[3px] pb-[1px] font-medium text-sm leading-5 align-middle text-[#99A1AF]'>
+               <a  href={`/products?category=${category._id}&&category_name=${category.name}&&category_img=${category.image}`} className='text-gray-400 hover:text-green-400 transition-colors text-sm'>{category.name}</a>
            </li>
-           <li className='pt-[3px] pb-[1px] font-medium text-sm leading-5 align-middle text-[#99A1AF]'>
-               Men's Fashion
-           </li>
-           <li className='pt-[3px] pb-[1px] font-medium text-sm leading-5 align-middle text-[#99A1AF]'>
-              Women's Fashion
-           </li>
-
+             
+             ))}
           </ul>
          </h3>
       </div>
@@ -98,22 +108,22 @@ export default function Footer() {
          Account
           <ul className='space-y-3 mt-[20px]'>
            <li className='pt-[3px] pb-[1px] font-medium text-sm leading-5 align-middle text-[#99A1AF]'>
-                My Account
+            <a className="text-gray-400 hover:text-green-400 transition-colors text-sm" href="/user/profile">My Account</a>    
            </li>
            <li className='pt-[3px] pb-[1px] font-medium text-sm leading-5 align-middle text-[#99A1AF]'>
-                Order History
+               <a className="text-gray-400 hover:text-green-400 transition-colors text-sm" href="/allorders"> Order History</a>
            </li>
            <li className='pt-[3px] pb-[1px] font-medium text-sm leading-5 align-middle text-[#99A1AF]'>
-               Wishlist
+                 <a className="text-gray-400 hover:text-green-400 transition-colors text-sm" href="/wishlist">Wishlist </a>  
            </li>
            <li className='pt-[3px] pb-[1px] font-medium text-sm leading-5 align-middle text-[#99A1AF]'>
-               Shopping Cart
+            <a className="text-gray-400 hover:text-green-400 transition-colors text-sm" href="/cart">Shopping Cart</a>   
            </li>
            <li className='pt-[3px] pb-[1px] font-medium text-sm leading-5 align-middle text-[#99A1AF]'>
-               Sign In
+           <a className="text-gray-400 hover:text-green-400 transition-colors text-sm" href="/login">Sign In</a>    
            </li>
            <li className='pt-[3px] pb-[1px] font-medium text-sm leading-5 align-middle text-[#99A1AF]'>
-              Create Account
+                     <a className="text-gray-400 hover:text-green-400 transition-colors text-sm" href="/register">Create Account</a> 
            </li>
 
           </ul>
@@ -125,40 +135,40 @@ export default function Footer() {
          Support
           <ul className='space-y-3 mt-[20px]'>
            <li className='pt-[3px] pb-[1px] font-medium text-sm leading-5 align-middle text-[#99A1AF]'>
-                Contact Us
+                <a className="text-gray-400 hover:text-green-400 transition-colors text-sm" href="#">Contact Us</a>
            </li>
            <li className='pt-[3px] pb-[1px] font-medium text-sm leading-5 align-middle text-[#99A1AF]'>
-                Help Center
+               <a className="text-gray-400 hover:text-green-400 transition-colors text-sm" href="#">Help Center</a> 
            </li>
            <li className='pt-[3px] pb-[1px] font-medium text-sm leading-5 align-middle text-[#99A1AF]'>
-               Shipping Info
+               <a className="text-gray-400 hover:text-green-400 transition-colors text-sm" href="#">Shipping Info</a> 
            </li>
            <li className='pt-[3px] pb-[1px] font-medium text-sm leading-5 align-middle text-[#99A1AF]'>
-               Returns & Refunds
+                <a className="text-gray-400 hover:text-green-400 transition-colors text-sm" href="#">Returns & Refunds</a> 
            </li>
            <li className='pt-[3px] pb-[1px] font-medium text-sm leading-5 align-middle text-[#99A1AF]'>
-              Track Order
+               <a className="text-gray-400 hover:text-green-400 transition-colors text-sm" href="#">Track Order</a>
            </li>
            <li className='pt-[3px] pb-[1px] font-medium text-sm leading-5 align-middle text-[#99A1AF]'>
-              Create Account
+                <a className="text-gray-400 hover:text-green-400 transition-colors text-sm" href="/register">Create Account</a> 
            </li>
 
           </ul>
          </h3>
       </div>
 
-      <div className='col-span-1'>
+      <div className='col-span-1 pb-6'>
          <h3 className='font-semibold text-lg leading-7 align-middle text-white'>
         Legal
           <ul className='space-y-3 mt-[20px]'>
            <li className='pt-[3px] pb-[1px] font-medium text-sm leading-5 align-middle text-[#99A1AF]'>
-               Privacy Policy
+              <a className="text-gray-400 hover:text-green-400 transition-colors text-sm" href="#"> Privacy Policy</a>
            </li>
            <li className='pt-[3px] pb-[1px] font-medium text-sm leading-5 align-middle text-[#99A1AF]'>
-               Terms of Service
+               <a className="text-gray-400 hover:text-green-400 transition-colors text-sm" href="#">Terms of Service</a>
            </li>
            <li className='pt-[3px] pb-[1px] font-medium text-sm leading-5 align-middle text-[#99A1AF]'>
-               Cookie Policy
+                 <a className="text-gray-400 hover:text-green-400 transition-colors text-sm" href="#">Cookie Policy</a>
            </li>
           </ul>
          </h3>
