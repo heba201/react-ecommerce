@@ -33,6 +33,7 @@ import support from "@/assets/navbar/support.png";
 import heart from "@/assets/navbar/heart.png";
 import cart from "@/assets/navbar/cart.png";
 import contact_book from "@/assets/navbar/contact_book.png";
+import user_img from "@/assets/navbar/user.png";
 import { FaBars ,FaSignOutAlt } from "react-icons/fa";
 import { IoIosClose , IoIosSearch } from "react-icons/io";
 import { CiHeart } from "react-icons/ci";
@@ -45,6 +46,7 @@ import { FaChevronDown } from "react-icons/fa6";
 import { useRouter } from "next/navigation";
 import { FaRegUserCircle } from "react-icons/fa";
 import { RiUserLine } from "react-icons/ri";
+import { FaUserPlus } from "react-icons/fa6";
 import { WishlistContext } from '@/provider/wishlist-provider'
 
 export default function Navbar() {
@@ -56,7 +58,6 @@ export default function Navbar() {
   const [searchVal , setSearchVal] = useState(""); 
   const[openDropDown,setOpenDropDown] =useState(false);
   const router = useRouter();
-
   function handleLogout(){
     signOut({callbackUrl:"/login"})
   }
@@ -167,13 +168,13 @@ export default function Navbar() {
          {noOfWishlistItems > 0 &&  <span className="absolute top-0.5 right-0.5 size-[18px] rounded-full bg-red-500 text-white text-[10px] font-bold flex items-center justify-center ring-2 ring-white">{noOfWishlistItems}</span>}
         </Link>
  
-      <Link href='/cart' className="relative shrink-0 cursor-pointer  hover:bg-gray-100 transition-color xl:pt-2.5 md:pt-2.5 pt-2  pb-[14.5px] md:pr-2.5 md:pl-2.5 rounded-full xl:ml-[-18px]">
+      <Link href='/cart' className="relative shrink-0 cursor-pointer  hover:bg-gray-100 transition-color  p-2 xl:p-2.5 rounded-full">
         <Image
           src={cart}
           alt="cart"
           className="w-[22.24453353881836px] h-[20.625px]"
         />
-        {noOfCartItems > 0 && <span className="absolute top-0.5 right-0.5 size-[18px] rounded-full bg-green-600 text-white text-[10px] font-bold flex items-center justify-center ring-2 ring-white">{noOfCartItems}</span>}
+        {noOfCartItems > 0 &&    <span className="absolute top-0.5 right-0.5 size-[18px] rounded-full bg-green-600 text-white text-[10px] font-bold flex items-center justify-center ring-2 ring-white">  { isLoading ? <Spinner/> : noOfCartItems}</span>}
       </Link>
  
      
@@ -251,12 +252,10 @@ export default function Navbar() {
       </button>
 
         {/* Sidebar */}
+        
+        <div class={`${open ? 'fixed inset-0 bg-black/50 z-50':''}  lg:hidden transition-opacity duration-300 opacity-100`} onClick={() => setOpen(!open)}>
           <div
-            className={`absolute top-[70px] right-0 w-[320px] bg-white z-50   shadow-[0px_25px_50px_-12px_#00000040] transition-all duration-300 overflow-hidden ${
-              open
-                ? "opacity-100 visible translate-y-0"
-                : "opacity-0 invisible -translate-y-2"
-            }`}
+            className={`${!open ? 'hidden' :''} absolute right-0 top-0  w-[320px] bg-white z-50   shadow-[0px_25px_50px_-12px_#00000040] transition-all duration-300 h-[100%] overflow-y-auto`}
           >
 
             {/* Top */}
@@ -305,32 +304,33 @@ export default function Navbar() {
         </div>
 
      <div className='border-t border-[#F3F4F6] p-[16px]'></div>
-      <div className='pt-[16px] pb-[16px]'>
+      <div className='py-[16px] px-[12px]'>
          <a className="flex items-center justify-between">
-               <div className="flex  items-center gap-[12px] pt-[12px] pl-[12px] pb-[16px]">
+               <div className="flex  items-center gap-[12px] pt-[12px]  pb-[16px]">
                 <div className="flex  items-center  justify-center bg-[#FEF2F2] rounded-full w-[36px] h-[36px]">
                  <CiHeart className='w-5 h-4 text-[#FB2C36]' />
                 </div>
-                <span className='font-medium text-base leading-6 text-[#64153]'>Wishlist</span>
+                <span className='font-medium text-base leading-6 text-[#64153]'>Wishlist </span>
                </div>
-               <span className='flex items-center justify-center text-center font-medium text-base leading-6 text-white bg-[#FB2C36] w-[28px] h-[24px] rounded-full px-[10px] py-[4px]'>5</span>
+              {(session  && noOfWishlistItems > 0) && <span className='flex items-center justify-center text-center font-medium text-base leading-6 text-white bg-[#FB2C36] w-[28px] h-[24px] rounded-full px-[10px] py-[4px]'>{noOfWishlistItems}</span> }
           </a>
 
               <a className="flex items-center justify-between">
-               <div className="flex  items-center gap-[12px] pt-[12px] pl-[12px] pb-[16px]">
+               <div className="flex  items-center gap-[12px] pt-[12px]  pb-[16px]">
                 <div className="flex  items-center  justify-center bg-[#F0FDF4] rounded-full w-[36px] h-[36px]">
                  <IoCart className='w-5 h-4 text-[#16A34A]' />
                 </div>
                  <span className='font-medium text-base leading-6 text-[#364153]'>Cart</span>
                </div>
-                <span className='flex items-center justify-center font-medium text-base leading-6 text-white bg-[#16A34A] w-[27px] h-[24px] rounded-full px-[10px] py-[4px]'>3</span>
+              {(session  &&  noOfCartItems > 0) &&  <span className='flex items-center justify-center font-medium text-base leading-6 text-white bg-[#16A34A] w-[27px] h-[24px] rounded-full px-[10px] py-[4px]'>{noOfCartItems}</span> }
           </a>   
      </div>
 
      <div className='border-t border-[#F3F4F6] p-[16px]'></div>
 
-     <div className='pt-[16px] pb-[16px]'>
-         <a className="flex items-center justify-between">
+     <div className=''>
+      {session ? <>
+        <a className="flex items-center justify-between">
                <div className="flex  items-center gap-[12px] pt-[12px] pl-[12px] pb-[16px]">
                 <div className="flex  items-center  justify-center bg-[#F3F4F6] rounded-full w-[36px] h-[36px]">
                  <FiUser className='w-5 h-4 text-[#6A7282]' />
@@ -339,7 +339,7 @@ export default function Navbar() {
                </div>
           </a>
 
-         <button className="flex items-center justify-between">
+         <button className="flex items-center justify-between cursor-pointer" onClick={()=>handleLogout()}>
                <div className="flex  items-center gap-[12px]  pt-[12px] pl-[12px] pb-[16px]">
                 <div className="flex  items-center  justify-center bg-[#FEF2F2] rounded-full  w-[36px] h-[36px]">
                  <FaSignOutAlt className='w-5 h-4 text-[#16A34A]' />
@@ -347,6 +347,23 @@ export default function Navbar() {
                 <span className='font-medium text-base leading-6 text-[#FB2C36]'>Sign Out</span>
                </div>
          </button>
+      </> : <>
+
+      <div className="flex items-center justify-center gap-2 pb-4">
+
+        <Link href='/login' className="flex justify-center items-center gap-2 px-5 py-2.5 rounded-md bg-green-600 hover:bg-green-700 text-white text-sm font-semibold transition-colors shadow-sm shadow-green-600/20 cursor-pointer">
+        <RiUserLine  className='w-4 h-4'/>
+        Sign In
+      </Link>
+
+      <Link href='/register' className="flex justify-center items-center gap-2 px-5 py-2.5 rounded-md bg-green-600 hover:bg-green-700 text-white text-sm font-semibold transition-colors shadow-sm shadow-green-600/20 cursor-pointer">
+        <FaUserPlus  className='w-4 h-4'/>
+       Sign Up
+      </Link>
+
+      </div>
+      </>}
+       
            <div className='border-t border-[#F3F4F6] pl-[16px] pr-[16px]'></div>
      </div>
 
@@ -363,13 +380,11 @@ export default function Navbar() {
         </div>
        </div>
      </a>
-
      </div>
- 
+     </div>
     </div>
-
-     </div>
-     </div>
+    </div>
+    </div>
     </header>
    </>
   )
