@@ -253,7 +253,7 @@ export default function Navbar() {
 
         {/* Sidebar */}
         
-        <div class={`${open ? 'fixed inset-0 bg-black/50 z-50':''}  lg:hidden transition-opacity duration-300 opacity-100`} onClick={() => setOpen(!open)}>
+        <div className={`${open ? 'fixed inset-0 bg-black/50 z-50':''}  lg:hidden transition-opacity duration-300 opacity-100`} onClick={() => setOpen(!open)}>
           <div
             className={`${!open ? 'hidden' :''} absolute right-0 top-0  w-[320px] bg-white z-50   shadow-[0px_25px_50px_-12px_#00000040] transition-all duration-300 h-[100%] overflow-y-auto`}
           >
