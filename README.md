@@ -13,7 +13,7 @@ A modern, responsive full-featured e-commerce web application built with React.j
 ## 🛠️ Tech Stack
 
 * **Framework:** React.js / Next.js
-* **Language:** TypeScript, JavaScript (ES6+)
+* **Language:** TypeScript
 * **Styling:** Tailwind CSS
 * **API Integration:** RESTful APIs (Axios / Fetch)
 ## Getting Started
